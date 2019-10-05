@@ -8,8 +8,6 @@ import { environment } from './../environments/environment';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'are-fe-main';
-
   constructor(private translate: TranslateService) {
     this.translate.setDefaultLang(environment.locale);
     this.translate.use(environment.locale);

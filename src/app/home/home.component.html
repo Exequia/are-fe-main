@@ -1,27 +1,5 @@
-<div class="jumbotron px-1">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h1 class="display-3">{{getAuthor()}}</h1>
-                <p>
-                    {{'home.description' | translate}}.
-                </p>
-                <p>
-                    {{'home.moreInfo' | translate}}: 
-                    <a [href]="getMailTo()"
-                    target="_top">{{getEmail()}}</a>
-                </p>
-            </div>
-            <div class="col">
-                <video width="400" autoplay loop>
-                    <source src="./assets/videos/scriptsTyped.mp4" type="video/mp4">
-                    Your browser does not support HTML5 video.
-                    {{'home.videoError' | translate}}
-                </video>
-            </div>
-        </div>
-    </div> <!-- /container -->
-</div>
+<app-summary></app-summary>
+<app-architecture></app-architecture>
     
 <!-- <div class="container">
     <div class="row">

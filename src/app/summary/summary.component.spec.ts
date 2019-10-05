@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NavbarComponent } from './navbar.component';
+import { SummaryComponent } from './summary.component';
 
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
@@ -11,13 +11,13 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
 }
 
-describe('NavbarComponent', () => {
-  let component: NavbarComponent;
-  let fixture: ComponentFixture<NavbarComponent>;
+describe('SummaryComponent', () => {
+  let component: SummaryComponent;
+  let fixture: ComponentFixture<SummaryComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [NavbarComponent],
+      declarations: [SummaryComponent],
       imports: [
         HttpClientTestingModule,
         TranslateModule.forRoot({
@@ -32,7 +32,7 @@ describe('NavbarComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NavbarComponent);
+    fixture = TestBed.createComponent(SummaryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
