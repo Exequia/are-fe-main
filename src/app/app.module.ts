@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ArchitectureComponent } from './architecture/architecture.component';
 import { SummaryComponent } from './summary/summary.component';
+import { LoginComponent } from './login/login.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -25,7 +26,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     HomeComponent,
     PageNotFoundComponent,
     ArchitectureComponent,
-    SummaryComponent
+    SummaryComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

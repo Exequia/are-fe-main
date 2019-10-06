@@ -33,5 +33,15 @@
       "title": "Datos",
       "summary": "Se ofrecen recursos de bases de datos de todo tipo. Desde gratuitas para pequeños presupuestos, a grandes y solidas utilizadas por grandes compañías de nivel mundial."
     }
+  },
+  "login": {
+    "signIn": "Acceso",
+    "userName": "Nombre de usuario",
+    "password": "Contraseña",
+    "rememberMe": "Recordarme",
+    "login": "Entrar",
+    "haveNotAccount": "No tiene cuenta",
+    "signUp": "Registrarse",
+    "getNewPassword": "Conseguir una nueva contraseña"
   }
 }

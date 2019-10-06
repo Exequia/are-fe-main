@@ -1,0 +1,74 @@
+@import '../../assets/css/variables.scss';
+
+.card {
+  // height: 370px;
+  // margin-top: auto;
+  // margin-bottom: auto;
+  // width: 400px;
+  background-image: $bg;
+}
+
+// .social_icon span {
+//   font-size: 60px;
+//   margin-left: 10px;
+//   color: #ffc312;
+// }
+
+// .social_icon span:hover {
+//   color: white;
+//   cursor: pointer;
+// }
+
+.card-header h3 {
+  color: white;
+}
+
+// .social_icon {
+//   position: absolute;
+//   right: 20px;
+//   top: -45px;
+// }
+
+.input-group-prepend span {
+  width: 50px;
+  background-color: $btn-bg;
+  color: black;
+  border: 0 !important;
+}
+
+input:focus {
+  outline: 0 0 0 0 !important;
+  box-shadow: 0 0 0 0 !important;
+}
+
+.remember {
+  color: white;
+}
+
+.remember input {
+  width: 20px;
+  height: 20px;
+  margin-left: 15px;
+  margin-right: 5px;
+}
+
+.login_btn {
+  // color: black;
+  // background-color: #ffc312;
+  background-image: $bg;
+  // width: 100px;
+}
+
+.login_btn:hover {
+  color: black;
+  background-color: white;
+}
+
+a {
+  color: white;
+  text-decoration: underline;
+}
+
+.links a {
+  margin-left: 4px;
+}
