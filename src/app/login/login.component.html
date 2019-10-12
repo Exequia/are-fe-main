@@ -9,9 +9,9 @@
               <span class="input-group-text"><i class="fas fa-user"></i></span>
             </div>
             <input
-              type="text"
+              type="email"
               class="form-control"
-              [placeholder]="'login.userName' | translate"
+              [placeholder]="'login.email' | translate"
             />
           </div>
           <div class="input-group form-group">
@@ -24,27 +24,27 @@
               [placeholder]="'login.password' | translate"
             />
           </div>
-          <div class="row align-items-center remember">
+          <!-- <div class="row align-items-center remember">
             <input type="checkbox" />{{ 'login.rememberMe' | translate }}
-          </div>
-          <div class="form-group">
+          </div> -->
+          <div class="form-group text-alingment-right">
             <input
               type="submit"
               [value]="'login.login' | translate"
-              class="btn float-right login_btn"
+              class="btn btn-info login_btn"
             />
           </div>
         </form>
       </div>
-      <div class="card-footer mt-3">
+      <div class="card-footer">
         <div class="d-flex justify-content-center links">
           {{ 'login.haveNotAccount' | translate }}?<a href="#">{{
             'login.signUp' | translate
           }}</a>
         </div>
-        <div class="d-flex justify-content-center">
+        <!-- <div class="d-flex justify-content-center">
           <a href="#">{{ 'login.getNewPassword' | translate }}</a>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

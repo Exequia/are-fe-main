@@ -1,24 +1,40 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-custom">
-    <a class="navbar-brand homeIcon" routerLink="home" title="{{'navbar.home' | translate}}">
+  <a
+    class="navbar-brand homeIcon"
+    routerLink="home"
+    title="{{ 'navbar.home' | translate }}"
+  >
     <!-- <img src="/assets/img/fnx.png" width="30" height="30" alt="Inicio de la aplicación" title="Inicio de la aplicación"> -->
     <i class="fab fa-phoenix-framework"></i>
-    </a>
+  </a>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBarMenu" aria-controls="navBarMenu" aria-expanded="false" aria-label="Toggle navigation">
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navBarMenu"
+    aria-controls="navBarMenu"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
     <span class="navbar-toggler-icon"></span>
-    </button>
+  </button>
 
-    <div class="navbar-collapse collapse show" id="navBarMenu">
+  <div class="navbar-collapse collapse show" id="navBarMenu">
     <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-        <a class="nav-link text-capitalize" routerLink="home" routerLinkActive="active">
-            <i class="fas fa-home mr-2"></i>
-            {{'navbar.home' | translate}}
-            <span class="sr-only">(current)</span>
+      <li class="nav-item">
+        <a
+          class="nav-link text-capitalize"
+          routerLink="home"
+          routerLinkActive="active"
+        >
+          <i class="fas fa-home mr-2"></i>
+          {{ 'navbar.home' | translate }}
+          <span class="sr-only">(current)</span>
         </a>
-        </li>
+      </li>
     </ul>
-        <!-- <li class="nav-item" *ngIf="user">
+    <!-- <li class="nav-item" *ngIf="user">
         <a class="nav-link text-capitalize" routerLink="null">{{tags.experience}}</a>
         </li>
         <li class="nav-item dropdown">
@@ -46,7 +62,14 @@
         </div>
         </li>
     </ul> -->
-<!-- 
+
+    <div class="align-middle">
+      <a routerLink="/login" routerLinkActive="active">
+        {{ 'navbar.login' | translate }}
+        <i class="fas fa-sign-in-alt"></i
+      ></a>
+    </div>
+    <!-- 
     <div class="align-middle">
         <form class="form-inline needs-validation" [formGroup]="loginForm" (ngSubmit)="onSubmit()"  *ngIf="!user">
         <label class="sr-only" for="email">{{tags.email}}</label>
@@ -102,6 +125,5 @@
         </div>
         </div>
     </div> -->
-
-    </div>
+  </div>
 </nav>

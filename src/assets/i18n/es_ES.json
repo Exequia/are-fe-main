@@ -7,7 +7,8 @@
     "subject": "Solicitud de contacto desde nuestra web"
   },
   "navbar": {
-    "home": "Inicio"
+    "home": "Inicio",
+    "login": "Entrar"
   },
   "summary": {
     "videoError": "Your browser does not support HTML5 video",
@@ -36,11 +37,11 @@
   },
   "login": {
     "signIn": "Acceso",
-    "userName": "Nombre de usuario",
+    "email": "Email",
     "password": "Contraseña",
     "rememberMe": "Recordarme",
     "login": "Entrar",
-    "haveNotAccount": "No tiene cuenta",
+    "haveNotAccount": "Aun no tienes cuenta",
     "signUp": "Registrarse",
     "getNewPassword": "Conseguir una nueva contraseña"
   }

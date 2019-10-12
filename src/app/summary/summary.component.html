@@ -1,24 +1,21 @@
 <div class="jumbotron px-1">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h1 class="display-3">{{getAuthor()}}</h1>
-                <p>
-                    {{'summary.description' | translate}}.
-                </p>
-                <p>
-                    {{'summary.moreInfo' | translate}}: 
-                    <a [href]="getMailTo()"
-                    target="_top">{{getEmail()}}</a>
-                </p>
-            </div>
-            <div class="col">
-                <video width="400" autoplay loop>
-                    <source src="./assets/videos/scriptsTyped.mp4" type="video/mp4">
-                    Your browser does not support HTML5 video.
-                    {{'summary.videoError' | translate}}
-                </video>
-            </div>
-        </div>
-    </div> <!-- /container -->
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1 class="display-3">{{ getAuthor() }}</h1>
+        <p>{{ 'summary.description' | translate }}.</p>
+        <p>
+          {{ 'summary.moreInfo' | translate }}:
+          <a [href]="getMailTo()" target="_top">{{ getEmail() }}</a>
+        </p>
+      </div>
+      <div class="col">
+        <video autoplay loop class="w-100">
+          <source src="./assets/videos/scriptsTyped.mp4" type="video/mp4" />
+          {{ 'summary.videoError' | translate }}
+        </video>
+      </div>
+    </div>
+  </div>
+  <!-- /container -->
 </div>
