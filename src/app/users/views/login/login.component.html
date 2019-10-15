@@ -1,7 +1,7 @@
 <div class="d-flex justify-content-center h-100 pt-5">
   <div class="card">
     <div class="card-header">
-      <h3>{{ 'login.signIn' | translate }}</h3>
+      <h3>{{ 'users.login.signIn' | translate }}</h3>
       <div class="card-body">
         <form>
           <div class="input-group form-group">
@@ -11,7 +11,7 @@
             <input
               type="email"
               class="form-control"
-              [placeholder]="'login.email' | translate"
+              [placeholder]="'users.login.email' | translate"
             />
           </div>
           <div class="input-group form-group">
@@ -21,16 +21,16 @@
             <input
               type="password"
               class="form-control"
-              [placeholder]="'login.password' | translate"
+              [placeholder]="'users.login.password' | translate"
             />
           </div>
           <!-- <div class="row align-items-center remember">
-            <input type="checkbox" />{{ 'login.rememberMe' | translate }}
+            <input type="checkbox" />{{ 'users.login.rememberMe' | translate }}
           </div> -->
-          <div class="form-group text-alingment-right">
+          <div class="form-group text-right mb-0 ">
             <input
               type="submit"
-              [value]="'login.login' | translate"
+              [value]="'users.login.login' | translate"
               class="btn btn-info login_btn"
             />
           </div>
@@ -38,12 +38,13 @@
       </div>
       <div class="card-footer">
         <div class="d-flex justify-content-center links">
-          {{ 'login.haveNotAccount' | translate }}?<a href="#">{{
-            'login.signUp' | translate
-          }}</a>
+          {{ 'users.login.haveNotAccount' | translate }}?<a
+            routerLink="/users/signUp"
+            >{{ 'users.login.signUp' | translate }}</a
+          >
         </div>
         <!-- <div class="d-flex justify-content-center">
-          <a href="#">{{ 'login.getNewPassword' | translate }}</a>
+          <a href="#">{{ 'users.login.getNewPassword' | translate }}</a>
         </div> -->
       </div>
     </div>

@@ -7,9 +7,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { ArchitectureComponent } from './architecture/architecture.component';
+import { ArchitectureComponent } from './pro/architecture/architecture.component';
 import { SummaryComponent } from './summary/summary.component';
-import { LoginComponent } from './login/login.component';
 
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
@@ -26,8 +25,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     HomeComponent,
     PageNotFoundComponent,
     ArchitectureComponent,
-    SummaryComponent,
-    LoginComponent
+    SummaryComponent
   ],
   imports: [
     BrowserModule,

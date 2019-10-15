@@ -35,14 +35,16 @@
       "summary": "Se ofrecen recursos de bases de datos de todo tipo. Desde gratuitas para pequeños presupuestos, a grandes y solidas utilizadas por grandes compañías de nivel mundial."
     }
   },
-  "login": {
-    "signIn": "Acceso",
-    "email": "Email",
-    "password": "Contraseña",
-    "rememberMe": "Recordarme",
-    "login": "Entrar",
-    "haveNotAccount": "Aun no tienes cuenta",
-    "signUp": "Registrarse",
-    "getNewPassword": "Conseguir una nueva contraseña"
+  "users": {
+    "login": {
+      "signIn": "Acceso",
+      "email": "Email",
+      "password": "Contraseña",
+      "rememberMe": "Recordarme",
+      "login": "Entrar",
+      "haveNotAccount": "Aun no tienes cuenta",
+      "signUp": "Registrarse",
+      "getNewPassword": "Conseguir una nueva contraseña"
+    }
   }
 }
