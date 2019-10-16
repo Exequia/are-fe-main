@@ -1,7 +1,14 @@
 {
   "common": {
     "yes": "Sí",
-    "no": "No"
+    "no": "No",
+    "validations": {
+      "required": "Es necesario informar este campo",
+      "minLength": "El campo debe tener al menos {{value}} carácteres",
+      "maxLength": "El campo debe tener máximo {{value}} carácteres",
+      "mustMatch": "El valor indicado no coincide",
+      "email": "El formato indicado no es correcto"
+    }
   },
   "contact": {
     "subject": "Solicitud de contacto desde nuestra web"
@@ -45,6 +52,22 @@
       "haveNotAccount": "Aun no tienes cuenta",
       "signUp": "Registrarse",
       "getNewPassword": "Conseguir una nueva contraseña"
+    },
+    "userForm": {
+      "userData": "Datos del usuario",
+      "alias": "Alias",
+      "aliasPH": "Nombre de usuario público",
+      "password": "Contraseña",
+      "passwordPH": "Contraseña del usuario",
+      "confirmPassword": "Confirmar contraseña",
+      "confirmPasswordPH": "Volver a escribir la constraseña"
+    },
+    "contactForm": {
+      "contactData": "Datos de contacto",
+      "email": "Correo electrónico",
+      "emailPH": "Introducir email",
+      "phone": "Teléfono",
+      "phonePH": "Número de teléfono de contacto"
     }
   }
 }

@@ -1,0 +1,48 @@
+<form [formGroup]="contactForm">
+  <fieldset>
+    <legend>{{ 'users.contactForm.contactData' | translate }}:</legend>
+    <div class="form-row">
+      <div class="col-sm-12 col-md-6">
+        <div class="form-group">
+          <label for="userEmail"
+            >*{{ 'users.contactForm.email' | translate }}:</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="userEmail"
+            aria-describedby="user Email contact"
+            [placeholder]="'users.contactForm.emailPH' | translate"
+            formControlName="email"
+          />
+          <div
+            *ngIf="email.invalid && (email.dirty || email.touched)"
+            class="form-error alert alert-danger"
+          >
+            <div *ngIf="email.errors.required">
+              {{ 'common.validations.required' | translate }}
+            </div>
+            <div *ngIf="email.errors.email">
+              {{ 'common.validations.email' | translate }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <div class="form-group">
+          <label for="userPhone"
+            >{{ 'users.contactForm.phone' | translate }}:</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="userPhone"
+            aria-describedby="userPass"
+            [placeholder]="'users.contactForm.phonePH' | translate"
+            formControlName="phone"
+          />
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</form>
