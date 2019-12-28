@@ -6,7 +6,7 @@
       "required": "Es necesario informar este campo",
       "minLength": "El campo debe tener al menos {{value}} carácteres",
       "maxLength": "El campo debe tener máximo {{value}} carácteres",
-      "mustMatch": "El valor indicado no coincide",
+      "mustMatch": "Error confirmación. Los valores de los campos son diferentes",
       "email": "El formato indicado no es correcto"
     }
   },

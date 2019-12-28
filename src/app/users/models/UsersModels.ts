@@ -20,6 +20,12 @@ export enum EnumGender {
 }
 
 export interface ContactModel {
-  phone: string;
   email: string;
+  confirmEmail: string;
+  phone: string;
+}
+
+export interface LoginModel {
+  email: string;
+  password: string;
 }

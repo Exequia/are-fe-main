@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { ContactModel } from '../../models/UsersModels';
 
 @Component({
   selector: 'app-user-contact-form',
@@ -7,14 +8,18 @@ import { FormGroup } from '@angular/forms';
   styleUrls: ['./user-contact-form.component.scss']
 })
 export class UserContactFormComponent implements OnInit {
-  @Input() contactForm: FormGroup;
+  @Input() contact: ContactModel;
   @Output() emitContactForm = new EventEmitter();
 
   constructor() {}
 
-  ngOnInit() {}
-
-  get email() {
-    return this.contactForm.get('email');
+  ngOnInit() {
+    this.contact = this.contact
+      ? this.contact
+      : {
+          email: '',
+          phone: '',
+          confirmEmail: ''
+        };
   }
 }

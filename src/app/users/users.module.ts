@@ -18,6 +18,9 @@ export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
 
+import { MustMatchDirective } from './components/user-form/MustMatchDirective';
+import { LoginFormComponent } from './components/login-form/login-form.component';
+
 @NgModule({
   declarations: [
     LoginComponent,
@@ -25,7 +28,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     NewUserComponent,
     UpdateUserComponent,
     PersonFormComponent,
-    UserContactFormComponent
+    UserContactFormComponent,
+    MustMatchDirective,
+    LoginFormComponent
   ],
   imports: [
     CommonModule,

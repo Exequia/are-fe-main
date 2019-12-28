@@ -4,10 +4,11 @@
 
 export const environment = {
   production: false,
-  locale: 'es_ES',
+  locale: "es_ES",
   mock: true,
-  author: 'Alberto Real',
-  email: 'real.estepa@gmail.com'
+  author: "Alberto Real",
+  email: "real.estepa@gmail.com",
+  baseUrl: "http://localhost:8080/api"
 };
 
 /*

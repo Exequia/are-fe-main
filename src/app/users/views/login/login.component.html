@@ -1,46 +1,15 @@
 <div class="d-flex justify-content-center h-100 pt-5">
   <div class="card">
     <div class="card-header">
-      <h3>{{ 'users.login.signIn' | translate }}</h3>
+      <h3>{{ "users.login.signIn" | translate }}</h3>
       <div class="card-body">
-        <form>
-          <div class="input-group form-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text"><i class="fas fa-user"></i></span>
-            </div>
-            <input
-              type="email"
-              class="form-control"
-              [placeholder]="'users.login.email' | translate"
-            />
-          </div>
-          <div class="input-group form-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text"><i class="fas fa-key"></i></span>
-            </div>
-            <input
-              type="password"
-              class="form-control"
-              [placeholder]="'users.login.password' | translate"
-            />
-          </div>
-          <!-- <div class="row align-items-center remember">
-            <input type="checkbox" />{{ 'users.login.rememberMe' | translate }}
-          </div> -->
-          <div class="form-group text-right mb-0 ">
-            <input
-              type="submit"
-              [value]="'users.login.login' | translate"
-              class="btn btn-info login_btn"
-            />
-          </div>
-        </form>
+        <app-login-form></app-login-form>
       </div>
       <div class="card-footer">
         <div class="d-flex justify-content-center links">
-          {{ 'users.login.haveNotAccount' | translate }}?<a
+          {{ "users.login.haveNotAccount" | translate }}?<a
             routerLink="/users/signUp"
-            >{{ 'users.login.signUp' | translate }}</a
+            >{{ "users.login.signUp" | translate }}</a
           >
         </div>
         <!-- <div class="d-flex justify-content-center">
