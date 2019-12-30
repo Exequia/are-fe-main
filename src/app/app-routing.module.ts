@@ -5,13 +5,12 @@ import { PageNotFoundComponent } from "./page-not-found/page-not-found.component
 import { AuthGuardService } from "./services/auth-guard.service";
 
 const routes: Routes = [
-  { path: "", component: HomeComponent, canActivate: [AuthGuardService] },
+  { path: "", component: HomeComponent },
   { path: "home", redirectTo: "" },
   {
     path: "users",
     loadChildren: () =>
-      import("./users/users.module").then(mod => mod.UsersModule),
-    canActivate: [AuthGuardService]
+      import("./users/users.module").then(mod => mod.UsersModule)
   },
   {
     path: "bets",

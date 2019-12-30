@@ -15,7 +15,8 @@
   },
   "navbar": {
     "home": "Inicio",
-    "login": "Entrar"
+    "login": "Entrar",
+    "logout": "Cerrar sesión"
   },
   "summary": {
     "videoError": "Your browser does not support HTML5 video",

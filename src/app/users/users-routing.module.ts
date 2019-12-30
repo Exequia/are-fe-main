@@ -8,7 +8,7 @@ import { UpdateUserComponent } from "./views/update-user/update-user.component";
 import { AuthGuardService } from "../services/auth-guard.service";
 
 const routes: Routes = [
-  { path: "login", component: LoginComponent, canActivate: [AuthGuardService] },
+  { path: "login", component: LoginComponent },
   {
     path: "signUp",
     component: NewUserComponent,
