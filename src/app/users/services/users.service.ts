@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable, throwError } from "rxjs";
 import { retry, catchError } from "rxjs/operators";
-import { UserModel } from "../models/UsersModels";
+import { User } from "../../models/Users";
 import { environment } from "../../../environments/environment";
 import { AuthService } from "src/app/services/auth.service";
 
@@ -12,7 +12,7 @@ import { AuthService } from "src/app/services/auth.service";
 export class UserService {
   constructor(private http: HttpClient, private authService: AuthService) {}
   // Base url
-  baseurl = environment.baseUrl + "/users/";
+  baseurl = environment.apiUrl + "/users/";
   // Http Headers
   httpOptions = {
     headers: new HttpHeaders({
@@ -43,19 +43,16 @@ export class UserService {
     return throwError(errorMessage);
   }
 
-  getUserByEmail(email: string): Observable<UserModel> {
+  getUserByEmail(email: string): Observable<User> {
     // this.httpOptions.headers. ["Authorization"] = token;
 
-    this.httpOptions.headers = this.httpOptions.headers.append(
-      "Authorization",
-      this.authService.getAuthorizationToken()
-    );
+    // this.httpOptions.headers = this.httpOptions.headers.append(
+    //   "Authorization",
+    //   this.authService.getAuthorizationToken()
+    // );
 
     return this.http
-      .get<UserModel>(
-        this.baseurl + "getByEmail?email=" + email,
-        this.httpOptions
-      )
+      .get<User>(this.baseurl + "getByEmail?email=" + email, this.httpOptions)
       .pipe(retry(2), catchError(this.errorHandl));
   }
 }

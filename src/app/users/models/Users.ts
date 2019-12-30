@@ -1,11 +1,11 @@
-export interface UserModel {
+export interface User {
   alias: string;
   password: string;
-  person: PersonModel;
-  contact: ContactModel;
+  person: Person;
+  contact: Contact;
 }
 
-export interface PersonModel {
+export interface Person {
   name: string;
   firstSurname: string;
   secondSurname: string;
@@ -19,13 +19,13 @@ export enum EnumGender {
   female
 }
 
-export interface ContactModel {
+export interface Contact {
   email: string;
   confirmEmail: string;
   phone: string;
 }
 
-export interface LoginModel {
+export interface Login {
   email: string;
   password: string;
 }

@@ -10,14 +10,19 @@ import { PageNotFoundComponent } from "./page-not-found/page-not-found.component
 import { ArchitectureComponent } from "./pro/architecture/architecture.component";
 import { SummaryComponent } from "./summary/summary.component";
 
-import { HttpClientModule, HttpClient } from "@angular/common/http";
+import {
+  HttpClientModule,
+  HttpClient,
+  HTTP_INTERCEPTORS
+} from "@angular/common/http";
 import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
-import { httpInterceptorProviders } from "./http-interceptors";
+import { JwtInterceptor } from "./services/jwt.interceptor";
+import { ErrorInterceptor } from "./services/error.interceptor";
 
 @NgModule({
   declarations: [
@@ -40,7 +45,10 @@ import { httpInterceptorProviders } from "./http-interceptors";
       }
     })
   ],
-  providers: [httpInterceptorProviders],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

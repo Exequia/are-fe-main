@@ -8,7 +8,7 @@ export const environment = {
   mock: true,
   author: "Alberto Real",
   email: "real.estepa@gmail.com",
-  baseUrl: "http://localhost:8080/api"
+  apiUrl: "http://localhost:8080/api"
 };
 
 /*

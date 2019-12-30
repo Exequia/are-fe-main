@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { LoginModel, UserModel } from "../../models/UsersModels";
+import { Login } from "../../models/Users";
 import { UserService } from "../../services/users.service";
 import { AuthService } from "src/app/services/auth.service";
 
@@ -9,7 +9,7 @@ import { AuthService } from "src/app/services/auth.service";
   styleUrls: ["./login-form.component.scss"]
 })
 export class LoginFormComponent implements OnInit {
-  private loginModel: LoginModel;
+  private loginModel: Login;
   private loading: boolean = false;
 
   constructor(
@@ -27,14 +27,15 @@ export class LoginFormComponent implements OnInit {
 
   invokeAuthenticate(requestData) {
     this.loading = true;
-    this.authService.authenticate(requestData).subscribe(
-      response => {
-        const token = response.headers.get("Authorization");
-        this.authService.setAuthorizationToken(token);
-        this.invokeGetUser(this.loginModel.email);
-      },
-      error => (this.loading = false)
-    );
+    // this.authService.authenticate(requestData).subscribe(
+    //   response => {
+    //     const token = response.headers.get("Authorization");
+    //     this.authService.setAuthorizationToken(token);
+    //     this.invokeGetUser(this.loginModel.email);
+    //   },
+    //   error => (this.loading = false)
+    // );
+    this.authService.login(requestData);
   }
 
   invokeGetUser(email: string) {

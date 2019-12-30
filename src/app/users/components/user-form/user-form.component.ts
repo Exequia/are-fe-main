@@ -1,21 +1,21 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, OnInit, Input, Output } from "@angular/core";
 import {
   FormBuilder,
   FormGroup,
   FormControl,
   Validators
-} from '@angular/forms';
-import { UserModel } from '../../models/UsersModels';
-import { EventEmitter } from 'events';
+} from "@angular/forms";
+import { EventEmitter } from "events";
+import { User } from "../../models/Users";
 // import { MustMatch } from './MustMatchValidator';
 
 @Component({
-  selector: 'app-user-form',
-  templateUrl: './user-form.component.html',
-  styleUrls: ['./user-form.component.scss']
+  selector: "app-user-form",
+  templateUrl: "./user-form.component.html",
+  styleUrls: ["./user-form.component.scss"]
 })
 export class UserFormComponent implements OnInit {
-  @Input() userData: UserModel;
+  @Input() userData: User;
   @Output() emitUser = new EventEmitter();
   // private userForm: FormGroup;
   // private personForm: FormGroup;
@@ -26,20 +26,20 @@ export class UserFormComponent implements OnInit {
 
   ngOnInit() {
     this.userData = {
-      alias: '',
-      password: '',
+      alias: "",
+      password: "",
       person: {
         birthDate: undefined,
-        dni: '',
-        firstSurname: '',
+        dni: "",
+        firstSurname: "",
         gender: 0,
-        name: '',
-        secondSurname: ''
+        name: "",
+        secondSurname: ""
       },
       contact: {
-        email: '',
-        confirmEmail: '',
-        phone: ''
+        email: "",
+        confirmEmail: "",
+        phone: ""
       }
     };
     // this.initUserForm();
@@ -110,6 +110,6 @@ export class UserFormComponent implements OnInit {
   // }
 
   onSubmit() {
-    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.userData));
+    alert("SUCCESS!! :-)\n\n" + JSON.stringify(this.userData));
   }
 }

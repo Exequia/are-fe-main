@@ -1,14 +1,14 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { FormGroup } from '@angular/forms';
-import { ContactModel } from '../../models/UsersModels';
+import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
+import { FormGroup } from "@angular/forms";
+import { Contact } from "../../models/Users";
 
 @Component({
-  selector: 'app-user-contact-form',
-  templateUrl: './user-contact-form.component.html',
-  styleUrls: ['./user-contact-form.component.scss']
+  selector: "app-user-contact-form",
+  templateUrl: "./user-contact-form.component.html",
+  styleUrls: ["./user-contact-form.component.scss"]
 })
 export class UserContactFormComponent implements OnInit {
-  @Input() contact: ContactModel;
+  @Input() contact: Contact;
   @Output() emitContactForm = new EventEmitter();
 
   constructor() {}
@@ -17,9 +17,9 @@ export class UserContactFormComponent implements OnInit {
     this.contact = this.contact
       ? this.contact
       : {
-          email: '',
-          phone: '',
-          confirmEmail: ''
+          email: "",
+          phone: "",
+          confirmEmail: ""
         };
   }
 }
