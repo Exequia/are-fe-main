@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { Login } from "../../models/Users";
 import { UserService } from "../../services/users.service";
 import { AuthService } from "src/app/services/auth.service";
+import { environment } from "../../../../environments/environment";
 
 @Component({
   selector: "app-login-form",
@@ -18,14 +19,17 @@ export class LoginFormComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.loginModel = { email: "aa@aa.aa", password: "pass" };
+    this.loginModel = {
+      email: environment.loginEmail,
+      password: environment.loginPass
+    };
   }
 
-  onLoginSubmit() {
+  private onLoginSubmit() {
     this.invokeAuthenticate(this.loginModel);
   }
 
-  invokeAuthenticate(requestData) {
+  private invokeAuthenticate(requestData) {
     this.loading = true;
     // this.authService.authenticate(requestData).subscribe(
     //   response => {
@@ -38,13 +42,13 @@ export class LoginFormComponent implements OnInit {
     this.authService.login(requestData);
   }
 
-  invokeGetUser(email: string) {
-    this.userService.getUserByEmail(email).subscribe(
-      response => {
-        console.info(response);
-        this.loading = false;
-      },
-      () => (this.loading = false)
-    );
-  }
+  // private invokeGetUser(email: string) {
+  //   this.userService.getUserByEmail(email).subscribe(
+  //     response => {
+  //       console.info(response);
+  //       this.loading = false;
+  //     },
+  //     (_error) => (this.loading = false)
+  //   );
+  // }
 }
