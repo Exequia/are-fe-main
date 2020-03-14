@@ -1,10 +1,8 @@
 import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
-//Translation
-import { TranslateLoader, TranslateModule } from "@ngx-translate/core";
-import { TranslateHttpLoader } from "@ngx-translate/http-loader";
-import { HttpClient, HttpClientModule } from "@angular/common/http";
+
+import { SharedModule } from "src/app/shared/shared.module";
 import { CommonModule } from "@angular/common";
 import { BetsRoutingModule } from "./bets-routing.module";
 import { DatepickerI18nComponent } from "./components/datepicker-i18n/datepicker-i18n.component";
@@ -24,16 +22,7 @@ import { HomeComponent } from "./views/home/home.component";
     BetsRoutingModule,
     FormsModule,
     NgbModule,
-    HttpClientModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: (http: HttpClient) => {
-          return new TranslateHttpLoader(http);
-        },
-        deps: [HttpClient]
-      }
-    })
+    SharedModule
   ]
 })
 export class BetsModule {}
