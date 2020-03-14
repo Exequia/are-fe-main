@@ -10,18 +10,39 @@ import { AuthService } from "../services/auth.service";
 })
 export class NavbarComponent implements OnInit {
   user: User;
+  menus = [];
 
   constructor(private router: Router, private authService: AuthService) {
     this.authService.currentUser.subscribe((user: User) => {
       this.user = user;
-      this.router.navigate(["/"]);
     });
+    this.menus = this.getMenus();
   }
 
   ngOnInit() {}
 
-  logout() {
+  private logout() {
     this.authService.logout();
     this.router.navigate(["/users/login"]);
+  }
+
+  private getMenus() {
+    const bets = {
+      authorized: ["admin", "bets"],
+      key: "bets",
+      link: "bets",
+      icon: "fa-dice",
+      items: [{ key: "summary", icon: "fa-tachometer-alt", link: "summary" }]
+    };
+
+    return [bets];
+  }
+
+  private checkCredentials(): boolean {
+    let renderItem = true;
+    if (!this.user) {
+      renderItem = false;
+    }
+    return renderItem;
   }
 }

@@ -16,7 +16,11 @@
   "navbar": {
     "home": "Inicio",
     "login": "Entrar",
-    "logout": "Cerrar sesión"
+    "logout": "Cerrar sesión",
+    "bets": {
+      "title": "Apuestas",
+      "summary": "Resumen"
+    }
   },
   "summary": {
     "videoError": "Your browser does not support HTML5 video",
