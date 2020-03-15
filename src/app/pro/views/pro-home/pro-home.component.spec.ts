@@ -1,16 +1,35 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { ProHomeComponent } from './pro-home.component';
+import { ProHomeComponent } from "./pro-home.component";
+import { ArchitectureComponent } from "../../components/architecture/architecture.component";
 
-describe('ProHomeComponent', () => {
+import { HttpClientTestingModule } from "@angular/common/http/testing";
+import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
+import { TranslateHttpLoader } from "@ngx-translate/http-loader";
+import { HttpClient } from "@angular/common/http";
+
+export function HttpLoaderFactory(httpClient: HttpClient) {
+  return new TranslateHttpLoader(httpClient);
+}
+
+describe("ProHomeComponent", () => {
   let component: ProHomeComponent;
   let fixture: ComponentFixture<ProHomeComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProHomeComponent ]
-    })
-    .compileComponents();
+      declarations: [ProHomeComponent, ArchitectureComponent],
+      imports: [
+        HttpClientTestingModule,
+        TranslateModule.forRoot({
+          loader: {
+            provide: TranslateLoader,
+            useFactory: HttpLoaderFactory,
+            deps: [HttpClient]
+          }
+        })
+      ]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +38,7 @@ describe('ProHomeComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
