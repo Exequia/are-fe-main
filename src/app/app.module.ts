@@ -3,11 +3,10 @@ import { NgModule } from "@angular/core";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import { NavbarComponent } from "./navbar/navbar.component";
+import { NavbarComponent } from "./template/navbar/navbar.component";
 
-import { HomeComponent } from "./home/home.component";
-import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
-import { SummaryComponent } from "./summary/summary.component";
+import { HomeComponent } from "./template/home/home.component";
+import { SummaryComponent } from "./template/summary/summary.component";
 
 import {
   HttpClientModule,
@@ -22,6 +21,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 }
 import { JwtInterceptor } from "./services/jwt.interceptor";
 import { ErrorInterceptor } from "./services/error.interceptor";
+import { PageNotFoundComponent } from "./template/page-not-found/page-not-found.component";
 
 @NgModule({
   declarations: [

@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
 import { HomeComponent } from "./home.component";
-import { ArchitectureComponent } from "../pro/components/architecture/architecture.component";
+import { ArchitectureComponent } from "../../pro/components/architecture/architecture.component";
 import { SummaryComponent } from "../summary/summary.component";
 
 import { HttpClientTestingModule } from "@angular/common/http/testing";
