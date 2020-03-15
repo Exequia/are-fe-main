@@ -43,6 +43,17 @@
         "title": "Inauguración web",
         "body": "Se actualiza la página y se inagura con nuevas tecnologías destacando Angular 6 en el FrontEnd e Spring Microservices en Back End"
       }
+    },
+    "studies": {
+      "title": "Últimas Formaciones",
+      "0": {
+        "title": "Diseño de patrones",
+        "body": "Autoformación de los principales patroñes de diseño de programación"
+      },
+      "1": {
+        "title": "Web Components",
+        "body": "Autoformación de funcionamiento y creación de web components para API HTML5"
+      }
     }
   },
   "pro": {
