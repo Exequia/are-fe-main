@@ -17,6 +17,10 @@
     "home": "Inicio",
     "login": "Entrar",
     "logout": "Cerrar sesión",
+    "pro": {
+      "title": "Profesional",
+      "architecture": "Arquitectura"
+    },
     "bets": {
       "title": "Apuestas",
       "summary": "Resumen"

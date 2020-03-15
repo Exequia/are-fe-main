@@ -5,14 +5,14 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { SharedModule } from "src/app/shared/shared.module";
 import { CommonModule } from "@angular/common";
 import { BetsRoutingModule } from "./bets-routing.module";
+import { BetsHomeComponent } from "./views/bets-home/bets-home.component";
 import { DatepickerI18nComponent } from "./components/datepicker-i18n/datepicker-i18n.component";
 import { ListBetsComponent } from "./views/list-bets/list-bets.component";
 import { BetComponent } from "./components/bet/bet.component";
-import { HomeComponent } from "./views/home/home.component";
 
 @NgModule({
   declarations: [
-    HomeComponent,
+    BetsHomeComponent,
     DatepickerI18nComponent,
     ListBetsComponent,
     BetComponent

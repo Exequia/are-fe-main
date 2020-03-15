@@ -7,7 +7,6 @@ import { NavbarComponent } from "./navbar/navbar.component";
 
 import { HomeComponent } from "./home/home.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
-import { ArchitectureComponent } from "./pro/architecture/architecture.component";
 import { SummaryComponent } from "./summary/summary.component";
 
 import {
@@ -30,7 +29,6 @@ import { ErrorInterceptor } from "./services/error.interceptor";
     NavbarComponent,
     HomeComponent,
     PageNotFoundComponent,
-    ArchitectureComponent,
     SummaryComponent
   ],
   imports: [

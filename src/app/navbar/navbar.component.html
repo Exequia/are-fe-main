@@ -31,7 +31,7 @@
           data-toggle="dropdown"
           aria-haspopup="true"
           aria-expanded="false"
-          *ngIf="checkCredentials()"
+          *ngIf="checkCredentials(menu)"
           ><i class="fas {{ menu.icon }}"></i>
           {{ "navbar." + menu.key + ".title" | translate }}
         </a>
@@ -43,7 +43,7 @@
             routerLinkActive="active"
           >
             <i class="fas {{ item.icon }}"></i>
-            {{ "navbar." + menu.key + ".title" | translate }}</a
+            {{ "navbar." + menu.key + "." + item.key | translate }}</a
           >
         </div>
       </li>
