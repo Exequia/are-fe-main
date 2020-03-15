@@ -1,12 +1,12 @@
 import { Component, OnInit } from "@angular/core";
-import { User } from "../../models/Users";
+import { User } from "../../../models/Users";
 import { Router } from "@angular/router";
-import { AuthService } from "../../services/auth.service";
+import { AuthService } from "../../../services/auth.service";
 import {
   NabvarMenu,
   NabvarMenuItem,
   NabvarCredentials
-} from "../../models/NabvarMenu";
+} from "../../../models/NabvarMenu";
 
 @Component({
   selector: "app-navbar",

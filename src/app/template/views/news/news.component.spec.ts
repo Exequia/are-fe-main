@@ -1,8 +1,7 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { HomeComponent } from "./home.component";
-import { ArchitectureComponent } from "../../pro/components/architecture/architecture.component";
-import { SummaryComponent } from "../summary/summary.component";
+import { NewsComponent } from "./news.component";
+import { CardComponent } from "../../components/card/card.component";
 
 import { HttpClientTestingModule } from "@angular/common/http/testing";
 import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
@@ -13,13 +12,13 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
 }
 
-describe("HomeComponent", () => {
-  let component: HomeComponent;
-  let fixture: ComponentFixture<HomeComponent>;
+describe("NewsComponent", () => {
+  let component: NewsComponent;
+  let fixture: ComponentFixture<NewsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [HomeComponent, ArchitectureComponent, SummaryComponent],
+      declarations: [NewsComponent, CardComponent],
       imports: [
         HttpClientTestingModule,
         TranslateModule.forRoot({
@@ -34,7 +33,7 @@ describe("HomeComponent", () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HomeComponent);
+    fixture = TestBed.createComponent(NewsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
