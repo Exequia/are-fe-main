@@ -24,6 +24,29 @@
           <span class="sr-only">(current)</span>
         </a>
       </li>
+      <li class="nav-item dropdown" *ngFor="let menu of menus">
+        <a
+          class="nav-link dropdown-toggle"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+          *ngIf="checkCredentials(menu)"
+          ><i class="fas {{ menu.icon }}"></i>
+          {{ "navbar." + menu.key + ".title" | translate }}
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a
+            class="dropdown-item"
+            *ngFor="let item of menu.items"
+            [routerLink]="'/' + menu.link"
+            routerLinkActive="active"
+          >
+            <i class="fas {{ item.icon }}"></i>
+            {{ "navbar." + menu.key + "." + item.key | translate }}</a
+          >
+        </div>
+      </li>
     </ul>
 
     <div class="align-middle">

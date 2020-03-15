@@ -1,7 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { Login } from "../../models/Users";
-import { UserService } from "../../services/users.service";
 import { AuthService } from "src/app/services/auth.service";
+import { environment } from "../../../../environments/environment";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-login-form",
@@ -10,41 +11,26 @@ import { AuthService } from "src/app/services/auth.service";
 })
 export class LoginFormComponent implements OnInit {
   private loginModel: Login;
-  private loading: boolean = false;
+  private loading = false;
 
-  constructor(
-    private authService: AuthService,
-    private userService: UserService
-  ) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   ngOnInit() {
-    this.loginModel = { email: "aa@aa.aa", password: "pass" };
+    this.loginModel = {
+      email: environment.loginEmail,
+      password: environment.loginPass
+    };
   }
 
-  onLoginSubmit() {
+  private onLoginSubmit() {
     this.invokeAuthenticate(this.loginModel);
   }
 
-  invokeAuthenticate(requestData) {
+  private invokeAuthenticate(requestData) {
     this.loading = true;
-    // this.authService.authenticate(requestData).subscribe(
-    //   response => {
-    //     const token = response.headers.get("Authorization");
-    //     this.authService.setAuthorizationToken(token);
-    //     this.invokeGetUser(this.loginModel.email);
-    //   },
-    //   error => (this.loading = false)
-    // );
-    this.authService.login(requestData);
-  }
-
-  invokeGetUser(email: string) {
-    this.userService.getUserByEmail(email).subscribe(
-      response => {
-        console.info(response);
-        this.loading = false;
-      },
-      () => (this.loading = false)
-    );
+    this.authService.login(requestData).then(() => {
+      this.loading = false;
+      this.router.navigate(["/"]);
+    });
   }
 }

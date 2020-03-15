@@ -1,0 +1,31 @@
+<pre>bets: {{bets | json}}</pre>
+
+<div class="row">
+    <div class="col">
+        <h1>{{'listBets.title' | translate}}</h1>
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">{{'listBets.id' | translate}}</th>
+                <th scope="col">{{'listBets.name' | translate}}</th>
+                <th scope="col">{{'listBets.type' | translate}}</th>
+                <th scope="col">{{'listBets.private' | translate}}</th>
+                <th scope="col">{{'listBets.dateInit' | translate}}</th>
+                <th scope="col">{{'listBets.dateEnd' | translate}}</th>
+                <th scope="col">{{'listBets.active' | translate}}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let bet of bets">
+                <th scope="row">{{bet.id}}</th>
+                <td>{{bet.name}}</td>
+                <td>{{bet.type}}</td>
+                <td>{{bet.config.private}}</td>
+                <td>{{bet.config.dateInit}}</td>
+                <td>{{bet.config.dateEnd}}</td>
+                <td>{{bet.config.active}}</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>

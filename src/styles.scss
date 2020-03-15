@@ -6,7 +6,7 @@ body {
 
 // .ng-valid[required],
 // .ng-valid.required {
-.ng-valid:not(form) {
+.ng-valid:not(form) .ng-valid:not(ngb-datepicker) {
   border-left: 5px solid #42a948 !important; /* green */
 }
 
