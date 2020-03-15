@@ -23,7 +23,7 @@ import { JwtInterceptor } from "./services/jwt.interceptor";
 import { ErrorInterceptor } from "./services/error.interceptor";
 import { PageNotFoundComponent } from "./template/views/page-not-found/page-not-found.component";
 import { CardComponent } from "./template/components/card/card.component";
-import { NewsComponent } from "./template/views/news/news.component";
+import { ListCardsComponent } from "./template/views/list-cards/list-cards.component";
 
 @NgModule({
   declarations: [
@@ -33,7 +33,7 @@ import { NewsComponent } from "./template/views/news/news.component";
     PageNotFoundComponent,
     SummaryComponent,
     CardComponent,
-    NewsComponent
+    ListCardsComponent
   ],
   imports: [
     BrowserModule,

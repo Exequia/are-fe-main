@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
 import { HomeComponent } from "./home.component";
 import { SummaryComponent } from "../summary/summary.component";
-import { NewsComponent } from "../news/news.component";
+import { ListCardsComponent } from "../list-cards/list-cards.component";
 import { CardComponent } from "../../components/card/card.component";
 
 import { HttpClientTestingModule } from "@angular/common/http/testing";
@@ -23,7 +23,7 @@ describe("HomeComponent", () => {
       declarations: [
         HomeComponent,
         SummaryComponent,
-        NewsComponent,
+        ListCardsComponent,
         CardComponent
       ],
       imports: [
