@@ -3,10 +3,10 @@ import { NgModule } from "@angular/core";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import { NavbarComponent } from "./template/navbar/navbar.component";
+import { NavbarComponent } from "./template/views/navbar/navbar.component";
 
-import { HomeComponent } from "./template/home/home.component";
-import { SummaryComponent } from "./template/summary/summary.component";
+import { HomeComponent } from "./template/views/home/home.component";
+import { SummaryComponent } from "./template/views/summary/summary.component";
 
 import {
   HttpClientModule,
@@ -21,7 +21,9 @@ export function HttpLoaderFactory(http: HttpClient) {
 }
 import { JwtInterceptor } from "./services/jwt.interceptor";
 import { ErrorInterceptor } from "./services/error.interceptor";
-import { PageNotFoundComponent } from "./template/page-not-found/page-not-found.component";
+import { PageNotFoundComponent } from "./template/views/page-not-found/page-not-found.component";
+import { CardComponent } from "./template/components/card/card.component";
+import { NewsComponent } from "./template/views/news/news.component";
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { PageNotFoundComponent } from "./template/page-not-found/page-not-found.
     NavbarComponent,
     HomeComponent,
     PageNotFoundComponent,
-    SummaryComponent
+    SummaryComponent,
+    CardComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,

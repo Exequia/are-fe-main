@@ -1,0 +1,16 @@
+<div class="card" *ngIf="card">
+  <div class="card-body">
+    <h5 class="card-title">
+      {{ "template.news." + card.id + ".title" | translate }}
+    </h5>
+    <h6 class="card-subtitle mb-2 text-muted text-right">
+      {{ card.date | date: "dd-MM-yyyy" }}
+    </h6>
+    <p class="card-text">
+      {{ "template.news." + card.id + ".body" | translate }}.
+    </p>
+    <div class="text-right">
+      <!-- <a routerLink="#" class="card-link text-capitalize">{{ tags.details }}</a> -->
+    </div>
+  </div>
+</div>

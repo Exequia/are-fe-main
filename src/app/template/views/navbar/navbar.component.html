@@ -20,7 +20,7 @@
           routerLinkActive="active"
         >
           <i class="fas fa-home mr-2"></i>
-          {{ "navbar.home" | translate }}
+          {{ "template.navbar.home" | translate }}
           <span class="sr-only">(current)</span>
         </a>
       </li>
@@ -33,7 +33,7 @@
           aria-expanded="false"
           *ngIf="checkCredentials(menu)"
           ><i class="fas {{ menu.icon }}"></i>
-          {{ "navbar." + menu.key + ".title" | translate }}
+          {{ "template.navbar." + menu.key + ".title" | translate }}
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a
@@ -43,7 +43,7 @@
             routerLinkActive="active"
           >
             <i class="fas {{ item.icon }}"></i>
-            {{ "navbar." + menu.key + "." + item.key | translate }}</a
+            {{ "template.navbar." + menu.key + "." + item.key | translate }}</a
           >
         </div>
       </li>

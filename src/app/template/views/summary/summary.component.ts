@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { TranslateService } from "@ngx-translate/core";
-import { environment } from "../../../environments/environment";
+import { environment } from "../../../../environments/environment";
 
 @Component({
   selector: "app-summary",
@@ -21,9 +21,11 @@ export class SummaryComponent implements OnInit {
   }
 
   getSubject() {
-    this.translate.get("contact.subject").subscribe((res: string) => {
-      this.subject = res;
-    });
+    this.translate
+      .get("template.summary.contact.subject")
+      .subscribe((res: string) => {
+        this.subject = res;
+      });
   }
 
   getEmail(): string {
