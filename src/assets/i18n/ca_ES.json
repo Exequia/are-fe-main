@@ -3,34 +3,34 @@
     "yes": "Sí",
     "no": "No",
     "validations": {
-      "required": "Es necesario informar este campo",
+      "required": "És necessari informar aquest camp",
       "minLength": "El campo debe tener al menos {{value}} carácteres",
       "maxLength": "El campo debe tener máximo {{value}} carácteres",
       "mustMatch": "Error confirmación. Los valores de los campos son diferentes",
       "email": "El formato indicado no es correcto"
     },
     "languages": {
-      "es_ES": "Castellano",
-      "ca_ES": "Catalán",
-      "en_EN": "Inglés"
+      "es_ES": "Castellà",
+      "ca_ES": "Català",
+      "en_EN": "Anglés"
     }
   },
   "template": {
     "navbar": {
-      "home": "Inicio",
+      "home": "Inici",
       "login": "Entrar",
-      "logout": "Cerrar sesión",
+      "logout": "Tancar sessió",
       "pro": {
         "title": "Profesional",
         "architecture": "Arquitectura"
       },
       "bets": {
-        "title": "Apuestas",
+        "title": "Apostas",
         "summary": "Resumen"
       },
       "configuration": {
-        "title": "Configuración",
-        "languages": "Idiomas"
+        "title": "Configuració",
+        "languages": "Idiomes"
       }
     },
     "summary": {
