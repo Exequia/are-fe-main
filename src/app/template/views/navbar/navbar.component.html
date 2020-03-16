@@ -50,18 +50,32 @@
     </ul>
 
     <div class="align-middle">
-      <a routerLink="/users/login" routerLinkActive="active" *ngIf="!user">
-        {{ "navbar.login" | translate }}
-        <i class="fas fa-sign-in-alt"></i
-      ></a>
-      <a routerLink="/users/update" routerLinkActive="active" *ngIf="user">
-        <span>
-          {{ user.username }}
-        </span>
-        <span (click)="logout()" [title]="'navbar.logout' | translate">
-          <i class="fas fa-sign-out-alt"></i>
-        </span>
-      </a>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" *ngIf="!user">
+          <a
+            class="nav-link"
+            routerLink="/users/login"
+            routerLinkActive="active"
+          >
+            {{ "template.navbar.login" | translate }}
+            <i class="fas fa-sign-in-alt"></i
+          ></a>
+        </li>
+        <li class="nav-item" *ngIf="user">
+          <a routerLink="/users/update" routerLinkActive="active">
+            <span>
+              {{ user.username }}
+            </span>
+            <span
+              (click)="logout()"
+              [title]="'template.navbar.logout' | translate"
+            >
+              <i class="fas fa-sign-out-alt"></i>
+            </span>
+          </a>
+        </li>
+        <app-configuration></app-configuration>
+      </ul>
     </div>
   </div>
 </nav>

@@ -24,6 +24,7 @@ import { ErrorInterceptor } from "./services/error.interceptor";
 import { PageNotFoundComponent } from "./template/views/page-not-found/page-not-found.component";
 import { CardComponent } from "./template/components/card/card.component";
 import { ListCardsComponent } from "./template/views/list-cards/list-cards.component";
+import { ConfigurationComponent } from "./template/components/configuration/configuration.component";
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ListCardsComponent } from "./template/views/list-cards/list-cards.compo
     PageNotFoundComponent,
     SummaryComponent,
     CardComponent,
-    ListCardsComponent
+    ListCardsComponent,
+    ConfigurationComponent
   ],
   imports: [
     BrowserModule,
