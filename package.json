@@ -15,9 +15,6 @@
     "postinstall": "ng build --prod",
     "heroku-postbuild": "ng build --prod"
   },
-  "cacheDirectories": [
-    "src/app/template/components/card/models/"
-  ],
   "private": true,
   "dependencies": {
     "@angular/animations": "~8.2.3",
