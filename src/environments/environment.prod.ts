@@ -5,5 +5,7 @@ export const environment = {
   author: "Alberto Real",
   email: "real.estepa@gmail.com",
   apiUrl: "http://localhost:8080/api",
-  apiVersion: "v1"
+  apiVersion: "v1",
+  loginEmail: undefined,
+  loginPass: undefined
 };
