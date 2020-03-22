@@ -2,17 +2,14 @@ import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 
 import { ProHomeComponent } from "./views/pro-home/pro-home.component";
-import { AuthGuardService } from "../services/auth-guard.service";
+import { StudiesComponent } from "./views/studies/studies.component";
 
 const routes: Routes = [
   {
     path: "",
-    component: ProHomeComponent,
-    canActivate: [AuthGuardService]
+    component: ProHomeComponent
   },
-  { path: "/", redirectTo: "" },
-  { path: "/pro", redirectTo: "" },
-  { path: "/home", redirectTo: "" }
+  { path: "studies", component: StudiesComponent }
 ];
 
 @NgModule({

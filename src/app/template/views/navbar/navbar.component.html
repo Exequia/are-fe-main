@@ -39,7 +39,7 @@
           <a
             class="dropdown-item"
             *ngFor="let item of menu.items"
-            [routerLink]="'/' + menu.link"
+            [routerLink]="'/' + menu.link + '/' + item.link"
             routerLinkActive="active"
           >
             <i class="fas {{ item.icon }}"></i>
