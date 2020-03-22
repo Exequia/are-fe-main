@@ -51,11 +51,9 @@ export class CustomDatepickerI18nService extends NgbDatepickerI18n {
     super();
     this.translate.get("arrWeekdays").subscribe((res: string[]) => {
       this.arrWeekdays = res;
-      console.log("arrWeekdays", this.arrWeekdays);
     });
     this.translate.get("arrMonths").subscribe((res: string[]) => {
       this.arrMonths = res;
-      console.log("arrMonths", this.arrMonths);
     });
   }
 

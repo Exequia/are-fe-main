@@ -22,7 +22,8 @@
       "logout": "Cerrar sesión",
       "pro": {
         "title": "Profesional",
-        "architecture": "Arquitectura"
+        "architecture": "Arquitectura",
+        "studies": "Estudios"
       },
       "bets": {
         "title": "Apuestas",

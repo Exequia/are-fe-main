@@ -20,8 +20,8 @@ const routes: Routes = [
   },
   {
     path: "pro",
-    loadChildren: () => import("./pro/pro.module").then(mod => mod.ProModule),
-    canActivate: [AuthGuardService]
+    loadChildren: () => import("./pro/pro.module").then(mod => mod.ProModule)
+    // canActivate: [AuthGuardService]
   },
   { path: "**", component: PageNotFoundComponent }
 ];
