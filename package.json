@@ -3,13 +3,16 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "npm-run-all --parallel dev mockserver",
-    "dev": "ng serve",
+    "start": "node server.js",
+    "dev": "npm-run-all --parallel dev:only mockserver",
+    "dev:only": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "mockserver": "node mockserver"
+    "lite": "lite-server",
+    "mockserver": "node mockserver",
+    "postinstall": "ng build --prod"
   },
   "private": true,
   "dependencies": {
@@ -25,11 +28,14 @@
     "@ngx-translate/core": "^11.0.1",
     "@ngx-translate/http-loader": "^4.0.0",
     "bootstrap": "^4.3.1",
+    "express": "^4.17.1",
     "jquery": "^3.4.1",
+    "path": "^0.12.7",
     "popper": "^1.0.1",
     "popper.js": "^1.15.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
+    "typescript": "~3.5.3",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
@@ -54,5 +60,9 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
     "typescript": "~3.5.3"
+  },
+  "engines": {
+    "node": "10.14.2",
+    "npm": "6.4.1"
   }
 }
