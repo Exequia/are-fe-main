@@ -45,4 +45,4 @@ testem.log
 .DS_Store
 Thumbs.db
 
-mockserver/rest/*/*/*/mock/response.txt
+mockserver/rest/*/*/*/mock/response.txtnode_modules
