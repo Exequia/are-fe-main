@@ -6,13 +6,13 @@
     "start": "node server.js",
     "dev": "npm-run-all --parallel dev:only mockserver",
     "dev:only": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "lite": "lite-server",
     "mockserver": "node mockserver",
-    "postinstall": "ng build"
+    "postinstall": "ng build --prod"
   },
   "private": true,
   "dependencies": {
