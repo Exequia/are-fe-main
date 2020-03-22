@@ -9,7 +9,7 @@ import { Card } from "../../components/card/models/card";
 })
 export class ListCardsComponent implements OnInit {
   @Input() type = "";
-  private cards: Array<Card>;
+  public cards: Array<Card>;
 
   constructor(private translate: TranslateService) {}
 

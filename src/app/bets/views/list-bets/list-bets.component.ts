@@ -8,7 +8,7 @@ import { environment } from "src/environments/environment";
   styleUrls: ["./list-bets.component.scss"]
 })
 export class ListBetsComponent implements OnInit {
-  private bets: Array<BetModel>;
+  public bets: Array<BetModel>;
 
   constructor() {}
 

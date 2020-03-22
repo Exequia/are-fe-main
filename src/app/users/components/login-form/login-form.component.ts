@@ -10,8 +10,8 @@ import { Router } from "@angular/router";
   styleUrls: ["./login-form.component.scss"]
 })
 export class LoginFormComponent implements OnInit {
-  private loginModel: Login;
-  private loading = false;
+  public loginModel: Login;
+  public loading = false;
 
   constructor(private authService: AuthService, private router: Router) {}
 
@@ -22,7 +22,7 @@ export class LoginFormComponent implements OnInit {
     };
   }
 
-  private onLoginSubmit() {
+  public onLoginSubmit() {
     this.invokeAuthenticate(this.loginModel);
   }
 

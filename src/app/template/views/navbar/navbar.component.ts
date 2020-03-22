@@ -14,8 +14,8 @@ import {
   styleUrls: ["./navbar.component.scss"]
 })
 export class NavbarComponent implements OnInit {
-  private user: User;
-  private menus: NabvarMenu[] = [];
+  public user: User;
+  public menus: NabvarMenu[] = [];
 
   constructor(private router: Router, private authService: AuthService) {
     this.authService.currentUser.subscribe((user: User) => {
@@ -26,7 +26,7 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {}
 
-  private logout() {
+  public logout() {
     this.authService.logout();
     this.router.navigate(["/"]);
   }
@@ -88,7 +88,7 @@ export class NavbarComponent implements OnInit {
     return [betSummaryItem];
   }
 
-  private checkCredentials(menu: NabvarMenu): boolean {
+  public checkCredentials(menu: NabvarMenu): boolean {
     let renderItem = true;
     if (menu.authorized.indexOf(NabvarCredentials.All) < 0) {
       if (!this.user) {

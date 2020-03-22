@@ -7,7 +7,7 @@ import { TimeLineItem } from "../../components/time-line/models/TimeLine";
   styleUrls: ["./studies.component.scss"]
 })
 export class StudiesComponent implements OnInit {
-  private studies: TimeLineItem[];
+  public studies: TimeLineItem[];
 
   constructor() {}
 

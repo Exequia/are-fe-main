@@ -20,7 +20,7 @@ export class UserFormComponent implements OnInit {
   // private userForm: FormGroup;
   // private personForm: FormGroup;
   // private contactForm: FormGroup;
-  private minLength = 4;
+  public minLength = 4;
 
   constructor(private fb: FormBuilder) {}
 
