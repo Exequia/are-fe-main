@@ -1,7 +1,17 @@
 import { Component, OnInit, Input } from "@angular/core";
 
-import { ActivatedRoute } from "@angular/router";
-import { TimeLineItem } from "./models/TimeLine";
+// import { ActivatedRoute } from "@angular/router";
+// import { TimeLineItem } from "./models/TimeLine";
+interface TimeLineItem {
+  id: number;
+  name: string;
+  center: string;
+  dateInit: string;
+  endDate: string;
+  qualify?: string;
+  comments?: string;
+  link?: string;
+}
 
 @Component({
   selector: "app-time-line",

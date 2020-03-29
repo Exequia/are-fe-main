@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { User } from "../../../models/Users";
+// import { User } from "../../../models/Users";
 import { Router } from "@angular/router";
 import { AuthService } from "../../../services/auth.service";
 import {
@@ -7,6 +7,19 @@ import {
   NabvarMenuItem,
   NabvarCredentials
 } from "../../../models/NabvarMenu";
+interface User {
+  id?: number;
+  username: string;
+  password?: string;
+  email?: string;
+  token?: string;
+  role?: Role;
+}
+
+interface Role {
+  id: number;
+  name: string;
+}
 
 @Component({
   selector: "app-navbar",

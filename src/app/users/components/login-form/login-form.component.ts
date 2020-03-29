@@ -1,8 +1,13 @@
 import { Component, OnInit } from "@angular/core";
-import { Login } from "../../models/Users";
+// import { Login } from "../../models/Users";
 import { AuthService } from "src/app/services/auth.service";
 import { environment } from "../../../../environments/environment";
 import { Router } from "@angular/router";
+
+interface Login {
+  email: string;
+  password: string;
+}
 
 @Component({
   selector: "app-login-form",

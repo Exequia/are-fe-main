@@ -3,7 +3,20 @@ import { HttpClient, HttpParams } from "@angular/common/http";
 import { BehaviorSubject, Observable } from "rxjs";
 import { retry, delay } from "rxjs/operators";
 import { environment } from "../../environments/environment";
-import { User } from "../models/Users";
+// import { User } from "../models/Users";
+interface User {
+  id?: number;
+  username: string;
+  password?: string;
+  email?: string;
+  token?: string;
+  role?: Role;
+}
+
+interface Role {
+  id: number;
+  name: string;
+}
 
 @Injectable({
   providedIn: "root"

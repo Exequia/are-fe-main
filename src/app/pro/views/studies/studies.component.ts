@@ -1,5 +1,15 @@
 import { Component, OnInit } from "@angular/core";
-import { TimeLineItem } from "../../components/time-line/models/TimeLine";
+// import { TimeLineItem } from "../../components/time-line/models/TimeLine";
+interface TimeLineItem {
+  id: number;
+  name: string;
+  center: string;
+  dateInit: string;
+  endDate: string;
+  qualify?: string;
+  comments?: string;
+  link?: string;
+}
 
 @Component({
   selector: "app-studies",

@@ -1,6 +1,10 @@
 import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
-import { FormGroup } from "@angular/forms";
-import { Contact } from "../../models/Users";
+// import { Contact } from "../../models/Users";
+interface Contact {
+  email: string;
+  confirmEmail: string;
+  phone: string;
+}
 
 @Component({
   selector: "app-user-contact-form",
