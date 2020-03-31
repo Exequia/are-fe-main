@@ -1,6 +1,6 @@
 export interface TimeLineItem {
   id: number;
-  name: string;
+  key: string;
   center: string;
   dateInit: string;
   endDate: string;

@@ -4,7 +4,7 @@ import { Component, OnInit, Input } from "@angular/core";
 // import { TimeLineItem } from "./models/TimeLine";
 interface TimeLineItem {
   id: number;
-  name: string;
+  key: string;
   center: string;
   dateInit: string;
   endDate: string;

@@ -1,0 +1,118 @@
+[
+  {
+    "id": 100,
+    "key": "designPatterns",
+    "center": "youtube",
+    "dateInit": "2020-02-01T00:00:00.000Z",
+    "endDate": "2020-03-01T00:00:00.000Z",
+    "link": "https://www.youtube.com/playlist?list=PLvimn1Ins-41Uiugt1WbpyFo1XT1WOquL"
+  },
+  {
+    "id": 99,
+    "key": "webComponents",
+    "center": "youtube",
+    "dateInit": "2020-01-01T00:00:00.000Z",
+    "endDate": "2020-02-01T00:00:00.000Z",
+    "link": "https://www.youtube.com/playlist?list=PLTd5ehIj0goNQNCgtu-M2oGGpyQ1m6nxo"
+  },
+  {
+    "id": 98,
+    "key": "aws",
+    "center": "youtube",
+    "dateInit": "2019-09-01T00:00:00.000Z",
+    "endDate": "2019-12-01T00:00:00.000Z",
+    "link": "https://www.youtube.com/playlist?list=PLfW3im2fiA7WoyFLDxP8TtR8UmKdpu3A2"
+  },
+  {
+    "id": 97,
+    "key": "angular8",
+    "center": "Angular",
+    "dateInit": "2019-07-01T00:00:00.000Z",
+    "endDate": "2019-09-01T00:00:00.000Z",
+    "link": "https://angular.io/"
+  },
+  {
+    "id": 96,
+    "key": "java11",
+    "center": "youtube",
+    "dateInit": "2019-04-01T00:00:00.000Z",
+    "endDate": "2019-07-01T00:00:00.000Z",
+    "link": "https://www.youtube.com/playlist?list=PLvimn1Ins-41uwtb28Jj0Aw4gKV6FGsyH"
+  },
+  {
+    "id": 95,
+    "key": "netcore",
+    "center": "DotNet",
+    "dateInit": "2019-02-01T00:00:00.000Z",
+    "endDate": "2019-04-01T00:00:00.000Z",
+    "link": "https://dotnet.microsoft.com/learn"
+  },
+  {
+    "id": 94,
+    "key": "vue",
+    "center": "VueJs",
+    "dateInit": "2019-01-01T00:00:00.000Z",
+    "endDate": "2019-02-01T00:00:00.000Z",
+    "link": "https://vuejs.org/v2/guide/"
+  },
+  {
+    "id": 93,
+    "key": "angular67",
+    "center": "Angular",
+    "dateInit": "2018-10-01T00:00:00.000Z",
+    "endDate": "2018-12-31T00:00:00.000Z",
+    "link": "https://angular.io/"
+  },
+  {
+    "id": 92,
+    "key": "java8",
+    "center": "youtube",
+    "dateInit": "2018-07-01T00:00:00.000Z",
+    "endDate": "2018-08-01T00:00:00.000Z",
+    "link": "https://www.youtube.com/watch?v=4WEOzOndA68&list=PLvimn1Ins-419yVe5iPfiXrg4mZJl5kLS"
+  },
+  {
+    "id": 91,
+    "key": "springboot",
+    "center": "youtube",
+    "dateInit": "2018-02-01T00:00:00.000Z",
+    "endDate": "2018-07-01T00:00:00.000Z",
+    "link": "https://www.youtube.com/playlist?list=PLvimn1Ins-40wR4PC-YtTQ5TKt3vRrVwl"
+  },
+  {
+    "id": 90,
+    "key": "spring",
+    "center": "youtube",
+    "dateInit": "2017-10-01T00:00:00.000Z",
+    "endDate": "2017-12-31T00:00:00.000Z",
+    "link": "https://www.youtube.com/playlist?list=PLvimn1Ins-40CImsffjCkv_TrKzYiB1gb"
+  },
+  {
+    "id": 89,
+    "key": "angular2",
+    "center": "Udemy",
+    "dateInit": "2017-09-01T00:00:00.000Z",
+    "endDate": "2017-10-01T00:00:00.000Z"
+  },
+  {
+    "id": 88,
+    "key": "angularjs",
+    "center": "Udemy",
+    "dateInit": "2016-09-01T00:00:00.000Z",
+    "endDate": "2016-10-01T00:00:00.000Z"
+  },
+  {
+    "id": 87,
+    "key": "frameworkNet",
+    "center": "Élogos",
+    "dateInit": "2014-03-01T00:00:00.000Z",
+    "endDate": "2014-07-01T00:00:00.000Z"
+  },
+  {
+    "id": 86,
+    "key": "jee",
+    "center": "Vapor Llonch, Ajuntament de Sabadell”",
+    "dateInit": "2013-02-01T00:00:00.000Z",
+    "endDate": "2013-07-01T00:00:00.000Z"
+  }
+]

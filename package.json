@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "node server.js",
     "dev": "npm-run-all --parallel dev:only mockserver",
-    "dev:only": "ng serve",
+    "dev:s": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

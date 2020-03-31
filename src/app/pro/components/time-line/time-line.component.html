@@ -8,15 +8,13 @@
       >
         <div class="content">
           <h3>
-            {{ item.dateInit | date: "MMM-yyyy" }} -
-            {{ item.dateEnd | date: "MMM-yyyy" }}
+            {{ item.dateInit | date: "MMM-yyyy" }} ->
+            {{ item.endDate | date: "MMM-yyyy" }}
           </h3>
-          <h4>
-            {{ item.name }}
-          </h4>
-          <p>
-            {{ item.center }}
-          </p>
+          <h4 [innerHTML]="'studies.' + item.key + '.title' | translate"></h4>
+          <p
+            [innerHTML]="'studies.' + item.key + '.description' | translate"
+          ></p>
           <p *ngIf="item.qualify">
             {{ item.qualify }}
           </p>
@@ -24,13 +22,15 @@
             {{ item.comments }}
           </p>
           <p *ngIf="item.qualify">
-            Qualificación: {{ item.qualify }}
+            {{ "pro.timeLine.qualify" | translate }}: {{ item.qualify }}
+          </p>
+          <p *ngIf="item.link" class="text-right">
             <a
               *ngIf="item.link"
               [href]="item.link"
               [title]="item.link"
               target="_blank"
-              >Verificalo tú mismo...</a
+              >{{ item.center }}</a
             >
           </p>
         </div>

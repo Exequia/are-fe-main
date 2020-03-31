@@ -85,6 +85,12 @@
         "title": "Datos",
         "summary": "Se ofrecen recursos de bases de datos de todo tipo. Desde gratuitas para pequeños presupuestos, a grandes y solidas utilizadas por grandes compañías de nivel mundial."
       }
+    },
+    "studies": {
+      "title": "Formación"
+    },
+    "timeLine": {
+      "qualify": "Calificación"
     }
   },
   "users": {
@@ -113,6 +119,68 @@
       "emailPH": "Introducir email",
       "phone": "Teléfono",
       "phonePH": "Número de teléfono de contacto"
+    }
+  },
+  "studies": {
+    "webComponents": {
+      "title": "Web Components",
+      "description": "Curso de creación de web componentes con API HTML 5"
+    },
+    "designPatterns": {
+      "title": "Patrones de diseños",
+      "description": "Curso de los principales patrones de diseños con ejemplos en Java"
+    },
+    "aws": {
+      "title": "Amazon Web Service",
+      "description": "Curso de las principales funcionalidades de AWS. Instancias, EBS, VPC, Cloud, LB, RDS, IAM, KMS, S3, Lambdas, SQS, Developers Tools"
+    },
+    "angular8": {
+      "title": "Angular 8",
+      "description": "Revisión de las mejoras y nuevas funcionalidades de la nueva versión 8 del framework Angular"
+    },
+    "java11": {
+      "title": "Java 11",
+      "description": "Revisión de las mejoras y nuevas funcionalidades de la nueva versión de Java LTS"
+    },
+    "netcore": {
+      "title": ".NET Core",
+      "description": "Formación de las principales novedades del nuevo framework"
+    },
+    "vue": {
+      "title": "Vue.js",
+      "description": "Curso de formación sobre el framework Vue.js para aplicaciones frontend"
+    },
+    "angular67": {
+      "title": "Angular 6 & 7",
+      "description": "Revisión de las mejoras y nuevas funcionalidades de las versiones 6 y 7 del framework Angular"
+    },
+    "java8": {
+      "title": "Java 8",
+      "description": "Revisión de las mejoras y nuevas funcionalidades de la nueva versión de Java"
+    },
+    "springboot": {
+      "title": "Microservicios con Springboot",
+      "description": "Curso para creación de microservicios basados en springboot"
+    },
+    "spring": {
+      "title": "Spring",
+      "description": "Curso del framework de spring para Java"
+    },
+    "angular2": {
+      "title": "Angular +",
+      "description": "Curso del framework Angular para conocer los cambios respecto a Angular.js"
+    },
+    "angularjs": {
+      "title": "Angular.js",
+      "description": "Curso del framework Angular Js para creaciones de aplicaciones web"
+    },
+    "frameworkNet": {
+      "title": ".NET Framework",
+      "description": "Curso Fundamentos en tecnología y programación .NET Framework. 250horas"
+    },
+    "jee": {
+      "title": "Aplicaciones web",
+      "description": "Certificado de profesionalidad (nivel 3) Desarrollo de aplicaciones con tecnología web. 610h"
     }
   }
 }
