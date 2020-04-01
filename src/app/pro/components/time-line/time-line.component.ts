@@ -1,9 +1,9 @@
 import { Component, OnInit, Input } from "@angular/core";
-
 // import { ActivatedRoute } from "@angular/router";
 // import { TimeLineItem } from "./models/TimeLine";
 interface TimeLineItem {
   id: number;
+  type: StudiesType;
   key: string;
   center: string;
   dateInit: string;
@@ -11,6 +11,12 @@ interface TimeLineItem {
   qualify?: string;
   comments?: string;
   link?: string;
+}
+
+enum StudiesType {
+  All = "",
+  Regular = "regular",
+  Other = "other"
 }
 
 @Component({

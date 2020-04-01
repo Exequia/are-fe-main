@@ -1,2 +1,32 @@
-<h2>{{ "pro.studies.title" | translate }}</h2>
-<app-time-line [items]="studies"></app-time-line>
+<div class="row text-center">
+  <div class="col">
+    <h2>{{ "pro.studies.title" | translate }}</h2>
+  </div>
+</div>
+<div class="row text-center mb-3">
+  <div class="col">
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <button
+        type="button"
+        class="btn btn-outline-primary"
+        (click)="filter('')"
+      >
+        {{ "pro.studies.all" | translate }}</button
+      ><button
+        type="button"
+        class="btn btn-outline-primary"
+        (click)="filter('regular')"
+      >
+        {{ "pro.studies.regular" | translate }}</button
+      ><button
+        type="button"
+        class="btn btn-outline-primary"
+        (click)="filter('other')"
+      >
+        {{ "pro.studies.other" | translate }}
+      </button>
+    </div>
+  </div>
+</div>
+
+<app-time-line [items]="filterStudies"></app-time-line>

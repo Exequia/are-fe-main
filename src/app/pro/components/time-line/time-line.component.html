@@ -15,9 +15,6 @@
           <p
             [innerHTML]="'studies.' + item.key + '.description' | translate"
           ></p>
-          <p *ngIf="item.qualify">
-            {{ item.qualify }}
-          </p>
           <p *ngIf="item.comments">
             {{ item.comments }}
           </p>

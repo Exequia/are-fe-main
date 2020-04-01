@@ -1,5 +1,6 @@
 export interface TimeLineItem {
   id: number;
+  type: StudiesType;
   key: string;
   center: string;
   dateInit: string;
@@ -7,4 +8,10 @@ export interface TimeLineItem {
   qualify?: string;
   comments?: string;
   link?: string;
+}
+
+export enum StudiesType {
+  All = "",
+  Regular = "regular",
+  Other = "other"
 }

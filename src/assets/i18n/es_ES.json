@@ -87,7 +87,10 @@
       }
     },
     "studies": {
-      "title": "Formación"
+      "title": "Formación",
+      "all": " Toda",
+      "regular": "Reglada",
+      "other": "Complementaria"
     },
     "timeLine": {
       "qualify": "Calificación"
@@ -181,6 +184,14 @@
     "jee": {
       "title": "Aplicaciones web",
       "description": "Certificado de profesionalidad (nivel 3) Desarrollo de aplicaciones con tecnología web. 610h"
+    },
+    "dam": {
+      "title": "Desarrollo de Aplicaciones Multiplataforma",
+      "description": "Certificate of Higher Education of platform application development. 2 200 hours"
+    },
+    "admin": {
+      "title": "Administración y finances",
+      "description": "Higher cycle of administration and finance. 2,500h"
     }
   }
 }
