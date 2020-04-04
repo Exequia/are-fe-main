@@ -1,37 +1,7 @@
 <div class="row">
   <div class="col">
-    <div class="timeline" *ngIf="items">
-      <div
-        class="container"
-        *ngFor="let item of items; let odd = odd"
-        [ngClass]="odd ? 'right' : 'left'"
-      >
-        <div class="content">
-          <h3>
-            {{ item.dateInit | date: "MMM-yyyy" }} ->
-            {{ item.endDate | date: "MMM-yyyy" }}
-          </h3>
-          <h4 [innerHTML]="'studies.' + item.key + '.title' | translate"></h4>
-          <p
-            [innerHTML]="'studies.' + item.key + '.description' | translate"
-          ></p>
-          <p *ngIf="item.comments">
-            {{ item.comments }}
-          </p>
-          <p *ngIf="item.qualify">
-            {{ "pro.timeLine.qualify" | translate }}: {{ item.qualify }}
-          </p>
-          <p *ngIf="item.link" class="text-right">
-            <a
-              *ngIf="item.link"
-              [href]="item.link"
-              [title]="item.link"
-              target="_blank"
-              >{{ item.center }}</a
-            >
-          </p>
-        </div>
-      </div>
+    <div class="timeline">
+      <ng-content></ng-content>
     </div>
   </div>
 </div>

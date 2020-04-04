@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
-    "dev": "npm-run-all --parallel dev:only mockserver",
+    "dev": "npm-run-all --parallel dev:s mockserver",
     "dev:s": "ng serve",
     "build": "ng build",
     "test": "ng test",
