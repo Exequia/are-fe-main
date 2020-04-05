@@ -68,7 +68,7 @@ export class NavbarComponent implements OnInit {
     const proArchitectureItem: NabvarMenuItem = {
       key: "architecture",
       icon: "fa-object-group",
-      link: ""
+      link: "home"
     };
     const proStudiesItem: NabvarMenuItem = {
       key: "studies",

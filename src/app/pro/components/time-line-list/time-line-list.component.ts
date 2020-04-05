@@ -7,8 +7,16 @@ import { Component, OnInit, Input } from "@angular/core";
 })
 export class TimeLineListComponent implements OnInit {
   @Input() items: any[];
+  @Input() filterProp: string;
+  public filteredItems: any[];
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.filteredItems = this.items;
+  }
+
+  public doFilteredItems(filterResults: any[]) {
+    this.filteredItems = filterResults;
+  }
 }

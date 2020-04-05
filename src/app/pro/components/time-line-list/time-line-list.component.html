@@ -1,7 +1,14 @@
+<app-time-line-filter
+  *ngIf="filterProp"
+  [items]="items"
+  [filterProp]="filterProp"
+  (filteredItems)="doFilteredItems($event)"
+></app-time-line-filter>
+
 <div class="h-line">
   <div
     class="container"
-    *ngFor="let item of items; let odd = odd"
+    *ngFor="let item of filteredItems; let odd = odd"
     [ngClass]="odd ? 'right' : 'left'"
   >
     <app-time-line>

@@ -2,6 +2,7 @@ import { TestBed, async } from "@angular/core/testing";
 import { RouterTestingModule } from "@angular/router/testing";
 import { AppComponent } from "./app.component";
 import { NavbarComponent } from "./template/views/navbar/navbar.component";
+import { ConfigurationComponent } from "./template/components/configuration/configuration.component";
 
 import { HttpClientTestingModule } from "@angular/common/http/testing";
 import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
@@ -26,7 +27,7 @@ describe("AppComponent", () => {
           }
         })
       ],
-      declarations: [AppComponent, NavbarComponent]
+      declarations: [AppComponent, NavbarComponent, ConfigurationComponent]
     }).compileComponents();
   }));
 

@@ -26,7 +26,8 @@ enum StudiesType {
 })
 export class StudiesComponent implements OnInit {
   public studies: TimeLineItem[];
-  public filterStudies: TimeLineItem[];
+  public filterProp = "type";
+  public loadingStudies = false;
 
   constructor(private filesService: FilesService) {}
 
@@ -35,22 +36,16 @@ export class StudiesComponent implements OnInit {
   }
 
   private invokeGetStudies() {
+    this.loadingStudies = true;
     this.filesService.getLocalFile("assets/files/studies.json").subscribe(
       (studiesResponse: TimeLineItem[]) => {
+        this.loadingStudies = false;
         this.studies = studiesResponse;
-        this.filter(StudiesType.All);
       },
-      error => console.error("invokeGetStudies", error)
+      error => {
+        this.loadingStudies = false;
+        console.error("invokeGetStudies", error);
+      }
     );
-  }
-
-  public filter(filterValue: StudiesType) {
-    if (filterValue === StudiesType.All) {
-      this.filterStudies = this.studies;
-    } else if (this.studies) {
-      this.filterStudies = this.studies.filter(
-        study => study.type === filterValue
-      );
-    }
   }
 }

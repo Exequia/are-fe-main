@@ -87,13 +87,16 @@
       }
     },
     "studies": {
-      "title": "Formación",
-      "all": " Toda",
-      "regular": "Reglada",
-      "other": "Complementaria"
+      "title": "Formación"
     },
     "timeLine": {
-      "qualify": "Calificación"
+      "qualify": "Calificación",
+      "filter": {
+        "itemsMatch": "Resultados",
+        "": " Todas",
+        "regular": "Reglada",
+        "other": "Complementaria"
+      }
     }
   },
   "users": {

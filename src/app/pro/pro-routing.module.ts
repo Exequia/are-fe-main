@@ -6,7 +6,7 @@ import { StudiesComponent } from "./views/studies/studies.component";
 
 const routes: Routes = [
   {
-    path: "",
+    path: "home",
     component: ProHomeComponent
   },
   { path: "studies", component: StudiesComponent }
