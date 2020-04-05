@@ -35,7 +35,7 @@ export class LoginFormComponent implements OnInit {
     this.loading = true;
     this.authService.login(requestData).then(() => {
       this.loading = false;
-      this.router.navigate(["/"]);
+      this.router.navigate(["/home"]);
     });
   }
 }
