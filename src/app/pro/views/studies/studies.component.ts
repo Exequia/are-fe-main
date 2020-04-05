@@ -1,14 +1,22 @@
 import { Component, OnInit } from "@angular/core";
+import { FilesService } from "src/app/services/files/files.service";
 // import { TimeLineItem } from "../../components/time-line/models/TimeLine";
 interface TimeLineItem {
   id: number;
-  name: string;
+  type: StudiesType;
+  key: string;
   center: string;
   dateInit: string;
   endDate: string;
   qualify?: string;
   comments?: string;
   link?: string;
+}
+
+enum StudiesType {
+  All = "",
+  Regular = "regular",
+  Other = "other"
 }
 
 @Component({
@@ -18,31 +26,26 @@ interface TimeLineItem {
 })
 export class StudiesComponent implements OnInit {
   public studies: TimeLineItem[];
+  public filterProp = "type";
+  public loadingStudies = false;
 
-  constructor() {}
+  constructor(private filesService: FilesService) {}
 
   ngOnInit() {
-    this.studies = this.getStudies();
+    this.invokeGetStudies();
   }
 
-  private getStudies(): TimeLineItem[] {
-    let studies: TimeLineItem[] = [];
-    studies.push(
-      {
-        id: 0,
-        name: "web components",
-        center: "youtube",
-        dateInit: new Date().toISOString(),
-        endDate: new Date().toISOString()
+  private invokeGetStudies() {
+    this.loadingStudies = true;
+    this.filesService.getLocalFile("assets/files/studies.json").subscribe(
+      (studiesResponse: TimeLineItem[]) => {
+        this.loadingStudies = false;
+        this.studies = studiesResponse;
       },
-      {
-        id: 1,
-        name: "web components",
-        center: "youtube",
-        dateInit: new Date().toISOString(),
-        endDate: new Date().toISOString()
+      error => {
+        this.loadingStudies = false;
+        console.error("invokeGetStudies", error);
       }
     );
-    return studies;
   }
 }

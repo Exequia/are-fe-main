@@ -1,9 +1,8 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { NavbarComponent } from "./navbar.component";
-import { RouterTestingModule } from "@angular/router/testing";
-
-import { ConfigurationComponent } from "../../components/configuration/configuration.component";
+import { TimeLineListComponent } from "./time-line-list.component";
+import { TimeLineComponent } from "../time-line/time-line.component";
+import { TimeLineFilterComponent } from "../time-line-filter/time-line-filter.component";
 
 import { HttpClientTestingModule } from "@angular/common/http/testing";
 import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
@@ -14,15 +13,13 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
 }
 
-describe("NavbarComponent", () => {
-  let component: NavbarComponent;
-  let fixture: ComponentFixture<NavbarComponent>;
+describe("TimeLineListComponent", () => {
+  let component: TimeLineListComponent;
+  let fixture: ComponentFixture<TimeLineListComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [NavbarComponent, ConfigurationComponent],
       imports: [
-        RouterTestingModule,
         HttpClientTestingModule,
         TranslateModule.forRoot({
           loader: {
@@ -31,12 +28,17 @@ describe("NavbarComponent", () => {
             deps: [HttpClient]
           }
         })
+      ],
+      declarations: [
+        TimeLineListComponent,
+        TimeLineComponent,
+        TimeLineFilterComponent
       ]
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NavbarComponent);
+    fixture = TestBed.createComponent(TimeLineListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
