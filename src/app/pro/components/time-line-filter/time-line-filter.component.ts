@@ -56,6 +56,7 @@ export class TimeLineFilterComponent implements OnInit {
           return { value: val, items: 0 };
         });
         filterButtons = this.getFiltersItems(filterButtons.concat(itemValues));
+        console.info("filter", filterButtons);
       }
 
       return filterButtons;
