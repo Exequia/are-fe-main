@@ -9,7 +9,8 @@
   <div
     class="container"
     *ngFor="let item of filteredItems; let odd = odd"
-    [ngClass]="odd ? 'right' : 'left'"
+    [ngClass]="getClass(odd)"
+    [attr.data-aos]="getAos(odd)"
   >
     <app-time-line>
       <ng-container

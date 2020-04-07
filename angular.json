@@ -26,12 +26,14 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "src/styles.scss",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/aos/src/sass/aos.scss"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.slim.min.js",
               "src/assets/js/popper.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/aos/dist/aos.js"
             ]
           },
           "configurations": {

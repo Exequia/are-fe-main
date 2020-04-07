@@ -20,4 +20,12 @@ export class TimeLineListComponent implements OnInit {
   public doFilteredItems(filterResults: any[]) {
     this.filteredItems = filterResults;
   }
+
+  public getClass(odd: boolean): string {
+    return odd ? "right" : "left";
+  }
+
+  public getAos(odd: boolean): string {
+    return odd ? "fade-left" : "fade-right";
+  }
 }
