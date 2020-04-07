@@ -9,9 +9,18 @@ const routes: Routes = [
   {
     path: "home",
     component: ProHomeComponent,
+    pathMatch: "full",
   },
-  { path: "works", component: WorksComponent },
-  { path: "studies", component: StudiesComponent },
+  {
+    path: "works",
+    component: WorksComponent,
+    pathMatch: "full",
+  },
+  {
+    path: "studies",
+    component: StudiesComponent,
+    pathMatch: "full",
+  },
 ];
 
 @NgModule({

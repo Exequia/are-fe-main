@@ -44,20 +44,17 @@ export class TimeLineFilterComponent implements OnInit {
         },
       ];
 
-      if (this.items) {
-        const values: string[] = [];
+      const values: string[] = [];
 
-        this.items.forEach((option) => {
-          if (values.indexOf(option[this.filterProp]) === -1) {
-            values.push(option[this.filterProp]);
-          }
-        });
-        const itemValues = values.map<FilterButtons>((val: string) => {
-          return { value: val, items: 0 };
-        });
-        filterButtons = this.getFiltersItems(filterButtons.concat(itemValues));
-        console.info("filter", filterButtons);
-      }
+      this.items.forEach((option) => {
+        if (values.indexOf(option[this.filterProp]) === -1) {
+          values.push(option[this.filterProp]);
+        }
+      });
+      const itemValues = values.map<FilterButtons>((val: string) => {
+        return { value: val, items: 0 };
+      });
+      filterButtons = this.getFiltersItems(filterButtons.concat(itemValues));
 
       return filterButtons;
     }

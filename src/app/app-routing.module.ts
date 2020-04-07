@@ -5,7 +5,7 @@ import { PageNotFoundComponent } from "./template/views/page-not-found/page-not-
 import { AuthGuardService } from "./services/auth-guard.service";
 
 const routes: Routes = [
-  { path: "", component: HomeComponent },
+  { path: "", component: HomeComponent, pathMatch: "full" },
   {
     path: "users",
     loadChildren: () =>
