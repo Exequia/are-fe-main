@@ -9,7 +9,7 @@ export interface FilterButtons {
 @Component({
   selector: "app-time-line-filter",
   templateUrl: "./time-line-filter.component.html",
-  styleUrls: ["./time-line-filter.component.scss"]
+  styleUrls: ["./time-line-filter.component.scss"],
 })
 export class TimeLineFilterComponent implements OnInit {
   /** Array with the full data of component */
@@ -40,16 +40,16 @@ export class TimeLineFilterComponent implements OnInit {
       let filterButtons: FilterButtons[] = [
         {
           value: "",
-          items: this.items.length
-        }
+          items: this.items.length,
+        },
       ];
 
       if (this.items) {
         const values: string[] = [];
 
-        this.items.forEach(option => {
-          if (values.indexOf(option.type) === -1) {
-            values.push(option.type);
+        this.items.forEach((option) => {
+          if (values.indexOf(option[this.filterProp]) === -1) {
+            values.push(option[this.filterProp]);
           }
         });
         const itemValues = values.map<FilterButtons>((val: string) => {
@@ -72,7 +72,9 @@ export class TimeLineFilterComponent implements OnInit {
       if (option.value === "") {
         option.items = this.items.length;
       } else {
-        const filtered = this.items.filter(item => item.type === option.value);
+        const filtered = this.items.filter(
+          (item) => item[this.filterProp] === option.value
+        );
         option.items = filtered.length;
       }
     });
@@ -90,7 +92,7 @@ export class TimeLineFilterComponent implements OnInit {
 
     if (this.items && filterValue) {
       filteredItems = this.items.filter(
-        study => study[this.filterProp] === filterValue
+        (study) => study[this.filterProp] === filterValue
       );
     }
 
