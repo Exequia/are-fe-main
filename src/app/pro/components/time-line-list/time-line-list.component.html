@@ -21,8 +21,8 @@
       <ng-template #studiesTemplate>
         <div class="content">
           <h4>
-            {{ item.dateInit | date: "MMM-yyyy" }} ->
-            {{ item.endDate | date: "MMM-yyyy" }}
+            {{ item.dateInit | date: "MMMM yyyy":undefined:locale }} -
+            {{ item.endDate | date: "MMMM yyyy":undefined:locale }}
           </h4>
           <h5 [innerHTML]="'studies.' + item.key + '.title' | translate"></h5>
           <p
@@ -47,10 +47,10 @@
       </ng-template>
 
       <ng-template #worksTemplate>
-        <div class="content">
+        <div class="content text-capitalize">
           <h4>
-            {{ item.dateInit | date: "MMM-yyyy" }} ->
-            {{ item.endDate | date: "MMM-yyyy" }}
+            {{ item.dateInit | date: "MMMM yyyy":undefined:locale }} -
+            {{ item.endDate | date: "MMMM yyyy":undefined:locale }}
           </h4>
           <h5 *ngIf="item.company">
             {{ "pro.works.workingIn" | translate }}

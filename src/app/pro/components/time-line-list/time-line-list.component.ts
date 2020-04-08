@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, TemplateRef } from "@angular/core";
+import { TranslateService, LangChangeEvent } from "@ngx-translate/core";
 
 @Component({
   selector: "app-time-line-list",
@@ -10,11 +11,19 @@ export class TimeLineListComponent implements OnInit {
   @Input() filterProp: string;
   @Input() targetTemplate: string;
   public filteredItems: any[];
+  public locale: string;
 
-  constructor() {}
+  constructor(private _translateService: TranslateService) {}
 
   ngOnInit() {
     this.filteredItems = this.items;
+    this.locale = this._translateService.currentLang;
+    // don't forget to unsubscribe!
+    this._translateService.onLangChange.subscribe(
+      (langChangeEvent: LangChangeEvent) => {
+        this.locale = langChangeEvent.lang;
+      }
+    );
   }
 
   public doFilteredItems(filterResults: any[]) {
