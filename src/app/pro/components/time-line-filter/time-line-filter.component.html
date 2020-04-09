@@ -1,0 +1,18 @@
+<div class="row text-center mb-3">
+  <div class="col">
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <button
+        *ngFor="let option of filterButtons"
+        type="button"
+        class="btn btn-outline-primary"
+        (click)="filter(option.value)"
+      >
+        {{ "pro.timeLine.filter." + option.value | translate }}
+        <span class="badge badge-primary">{{ option.items }}</span>
+        <span class="sr-only">{{
+          "pro.timeLine.filter.itemsMatch" | translate
+        }}</span>
+      </button>
+    </div>
+  </div>
+</div>

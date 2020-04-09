@@ -1,0 +1,248 @@
+<!-- <form [formGroup]="userForm" (ngSubmit)="onSubmit(userForm)">
+  <fieldset>
+    <legend>{{ 'users.userForm.userData' | translate }}:</legend>
+    <div class="form-row">
+      <div class="col-sm-12 col-md-4">
+        <div class="form-group">
+          <label for="userAlias"
+            >*{{ 'users.userForm.alias' | translate }}:</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="userAlias"
+            aria-describedby="userAlias"
+            [placeholder]="'users.userForm.aliasPH' | translate"
+            formControlName="alias"
+          />
+          <div
+            *ngIf="alias.invalid && (alias.dirty || alias.touched)"
+            class="alert alert-danger"
+          >
+            <div *ngIf="alias.errors.required">
+              {{ 'common.validations.required' | translate }}
+            </div>
+            <div *ngIf="alias.errors.minlength">
+              {{
+                'common.validations.minLength' | translate: { value: minLength }
+              }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <div class="form-group">
+          <label for="userPass"
+            >*{{ 'users.userForm.password' | translate }}:</label
+          >
+          <input
+            type="password"
+            class="form-control"
+            id="userPass"
+            aria-describedby="userPass"
+            [placeholder]="'users.userForm.passwordPH' | translate"
+            formControlName="password"
+          />
+          <div
+            *ngIf="password.invalid && (password.dirty || password.touched)"
+            class="alert alert-danger"
+          >
+            <div *ngIf="password.errors.required">
+              {{ 'common.validations.required' | translate }}
+            </div>
+            <div *ngIf="password.errors.minlength">
+              {{
+                'common.validations.minLength' | translate: { value: minLength }
+              }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <div class="form-group">
+          <label for="userConfirmPass"
+            >*{{ 'users.userForm.confirmPassword' | translate }}:</label
+          >
+          <input
+            type="password"
+            class="form-control"
+            id="userConfirmPass"
+            aria-describedby="userConfirmPass"
+            [placeholder]="'users.userForm.confirmPasswordPH' | translate"
+            formControlName="confirmPassword"
+          />
+          <div
+            *ngIf="
+              confirmPassword.invalid &&
+              (confirmPassword.dirty || confirmPassword.touched)
+            "
+            class="alert alert-danger"
+          >
+            <div *ngIf="confirmPassword.errors.required">
+              {{ 'common.validations.required' | translate }}
+            </div>
+            <div *ngIf="confirmPassword.errors.minlength">
+              {{
+                'common.validations.minLength' | translate: { value: minLength }
+              }}
+            </div>
+            <div *ngIf="confirmPassword.errors.mustMatch">
+              {{ 'common.validations.mustMatch' | translate }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+  <!-- <app-user-contact-form [contactForm]="contactForm"></app-user-contact-form -->
+<!-- >
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<pre>valid: {{ userForm.valid }}</pre>
+<pre>userModel : {{ confirmPassword.errors | json }}</pre>-->
+<pre>userData : {{ userData | json }}</pre>
+
+<form
+  #user="ngForm"
+  name="form"
+  (ngSubmit)="user.form.valid && onSubmit()"
+  [mustMatch]="['email', 'confirmEmail']"
+  novalidate
+>
+  <fieldset>
+    <legend>{{ 'users.userForm.userData' | translate }}:</legend>
+    <div class="form-row">
+      <div class="col-sm-12 col-md-4">
+        <div class="form-group">
+          <label for="userAlias"
+            >*{{ 'users.userForm.alias' | translate }}:</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="userAlias"
+            aria-describedby="userAlias"
+            [placeholder]="'users.userForm.aliasPH' | translate"
+            name="userAlias"
+            [(ngModel)]="userData.alias"
+            #userAlias="ngModel"
+            required
+            [minlength]="minLength"
+          />
+          <div
+            *ngIf="userAlias.invalid && (userAlias.dirty || userAlias.touched)"
+            class="alert alert-danger"
+          >
+            <div *ngIf="userAlias.errors.required">
+              {{ 'common.validations.required' | translate }}
+            </div>
+            <div *ngIf="userAlias.errors.minlength">
+              {{
+                'common.validations.minLength' | translate: { value: minLength }
+              }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+
+  <!-- <app-user-contact-form
+    #contact="ngModel"
+    name="contact"
+    [contact]="userData.contact"
+  ></app-user-contact-form> -->
+  <fieldset>
+    <legend>{{ 'users.contactForm.contactData' | translate }}:</legend>
+    <div class="form-row">
+      <div class="col-sm-12 col-md-4">
+        <div class="form-group">
+          <label for="userEmail"
+            >*{{ 'users.contactForm.email' | translate }}:</label
+          >
+          <input
+            id="email"
+            name="email"
+            class="form-control"
+            required
+            email
+            [placeholder]="'users.contactForm.emailPH' | translate"
+            [(ngModel)]="userData.contact.email"
+            #email="ngModel"
+          />
+          <div
+            *ngIf="email.invalid && (email.dirty || email.touched)"
+            class="alert alert-danger"
+          >
+            <div *ngIf="email.errors.required">
+              {{ 'common.validations.required' | translate }}
+            </div>
+            <div *ngIf="email.errors.email">
+              {{ 'common.validations.email' | translate }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <div class="form-group">
+          <label for="confirmEmail"
+            >*{{ 'users.contactForm.email' | translate }}:</label
+          >
+          <input
+            id="confirmEmail"
+            name="confirmEmail"
+            class="form-control"
+            required
+            email
+            [placeholder]="'users.contactForm.emailPH' | translate"
+            [(ngModel)]="userData.contact.confirmEmail"
+            #confirmEmail="ngModel"
+          />
+          <div
+            *ngIf="
+              confirmEmail.invalid &&
+              (confirmEmail.dirty || confirmEmail.touched)
+            "
+            class="alert alert-danger"
+          >
+            <div *ngIf="confirmEmail.errors.required">
+              {{ 'common.validations.required' | translate }}
+            </div>
+            <div *ngIf="confirmEmail.errors.email">
+              {{ 'common.validations.email' | translate }}
+            </div>
+            <div *ngIf="confirmEmail.errors.mustMatch">
+              {{ 'common.validations.mustMatch' | translate }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <div class="form-group">
+          <label for="userPhone"
+            >{{ 'users.contactForm.phone' | translate }}:</label
+          >
+          <input
+            id="phone"
+            name="phone"
+            class="form-control"
+            [placeholder]="'users.contactForm.phonePH' | translate"
+            [(ngModel)]="userData.contact.phone"
+            #phone="ngModel"
+          />
+        </div>
+      </div>
+    </div>
+  </fieldset>
+
+  <div class="form-group">
+    <!-- <button class="btn btn-primary">Register</button> -->
+    <button
+      class="btn btn-primary"
+      [ngClass]="{ disabled: !user.form.valid }"
+      [disabled]="!user.form.valid"
+    >
+      Register
+    </button>
+  </div>
+</form>

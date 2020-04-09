@@ -1,0 +1,86 @@
+<app-time-line-filter
+  *ngIf="filterProp"
+  [items]="items"
+  [filterProp]="filterProp"
+  (filteredItems)="doFilteredItems($event)"
+></app-time-line-filter>
+
+<div class="h-line">
+  <div
+    class="container"
+    *ngFor="let item of filteredItems; let odd = odd"
+    [ngClass]="getClass(odd)"
+    [attr.data-aos]="getAos(odd)"
+  >
+    <app-time-line>
+      <ng-container
+        *ngTemplateOutlet="
+          targetTemplate == 'studies' ? studiesTemplate : worksTemplate
+        "
+      ></ng-container>
+      <ng-template #studiesTemplate>
+        <div class="content">
+          <h4>
+            {{ item.dateInit | date: "MMMM yyyy":undefined:locale }} -
+            {{ item.endDate | date: "MMMM yyyy":undefined:locale }}
+          </h4>
+          <h5 [innerHTML]="'studies.' + item.key + '.title' | translate"></h5>
+          <p
+            [innerHTML]="'studies.' + item.key + '.description' | translate"
+          ></p>
+          <p *ngIf="item.comments">
+            {{ item.comments }}
+          </p>
+          <p *ngIf="item.qualify">
+            {{ "pro.timeLine.qualify" | translate }}: {{ item.qualify }}
+          </p>
+          <p *ngIf="item.link" class="text-right">
+            <a
+              *ngIf="item.link"
+              [href]="item.link"
+              [title]="item.link"
+              target="_blank"
+              >{{ item.center }}</a
+            >
+          </p>
+        </div>
+      </ng-template>
+
+      <ng-template #worksTemplate>
+        <div class="content text-capitalize">
+          <h4>
+            {{ item.dateInit | date: "MMMM yyyy":undefined:locale }} -
+            {{ item.endDate | date: "MMMM yyyy":undefined:locale }}
+          </h4>
+          <h5 *ngIf="item.company">
+            {{ "pro.works.workingIn" | translate }}
+            <a
+              *ngIf="item.company"
+              [href]="item.companyUrl"
+              [title]="item.company"
+              target="_blank"
+              >{{ item.company }}</a
+            >
+            <span *ngIf="item.customer">
+              {{ "pro.works.forCustomer" | translate }}
+            </span>
+            <a
+              *ngIf="item.customer"
+              [href]="item.customerUrl"
+              [title]="item.customer"
+              target="_blank"
+              >{{ item.customer }}</a
+            >
+          </h5>
+          <p [innerHTML]="'works.' + item.key + '.description' | translate"></p>
+        </div>
+      </ng-template>
+
+      <ng-template #noTemplate>
+        <div class="content text-center">
+          <p [innerHTML]="'timeLine.noTemplate' | translate"></p>
+        </div>
+      </ng-template>
+    </app-time-line>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+{
+  "id": 0,
+  "username": "Fénix",
+  "token": "token-server-test",
+  "role": {
+    "id": 0,
+    "name": "admin"
+  }
+}

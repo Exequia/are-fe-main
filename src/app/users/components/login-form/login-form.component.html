@@ -1,0 +1,48 @@
+<form
+  #login="ngForm"
+  name="form"
+  (ngSubmit)="login.form.valid && onLoginSubmit()"
+  novalidate
+>
+  <div class="input-group form-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text"><i class="fas fa-user"></i></span>
+    </div>
+    <input
+      type="email"
+      class="form-control"
+      [placeholder]="'users.login.email' | translate"
+      id="loginEmail"
+      name="loginEmail"
+      [(ngModel)]="loginModel.email"
+      #loginEmail="ngModel"
+      required
+    />
+  </div>
+  <div class="input-group form-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text"><i class="fas fa-key"></i></span>
+    </div>
+    <input
+      type="password"
+      class="form-control"
+      [placeholder]="'users.login.password' | translate"
+      id="loginPass"
+      name="loginPass"
+      [(ngModel)]="loginModel.password"
+      #loginPass="ngModel"
+      required
+    />
+  </div>
+  <!-- <div class="row align-items-center remember">
+            <input type="checkbox" />{{ 'users.login.rememberMe' | translate }}
+          </div> -->
+  <div class="form-group text-right mb-0 ">
+    <button type="submit" class="btn btn-info login_btn" [disabled]="loading">
+      {{ "users.login.login" | translate }}
+      <span *ngIf="loading">
+        <i class="fas fa-spinner fa-pulse"></i>
+      </span>
+    </button>
+  </div>
+</form>

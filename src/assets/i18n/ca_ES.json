@@ -1,0 +1,117 @@
+{
+  "common": {
+    "yes": "Sí",
+    "no": "No",
+    "validations": {
+      "required": "És necessari informar aquest camp",
+      "minLength": "El campo debe tener al menos {{value}} carácteres",
+      "maxLength": "El campo debe tener máximo {{value}} carácteres",
+      "mustMatch": "Error confirmación. Los valores de los campos son diferentes",
+      "email": "El formato indicado no es correcto"
+    },
+    "languages": {
+      "es_ES": "Castellà",
+      "ca_ES": "Català",
+      "en_EN": "Anglés"
+    }
+  },
+  "template": {
+    "navbar": {
+      "home": "Inici",
+      "login": "Entrar",
+      "logout": "Tancar sessió",
+      "pro": {
+        "title": "Profesional",
+        "architecture": "Arquitectura"
+      },
+      "bets": {
+        "title": "Apostas",
+        "summary": "Resumen"
+      },
+      "configuration": {
+        "title": "Configuració",
+        "languages": "Idiomes"
+      }
+    },
+    "summary": {
+      "contact": {
+        "subject": "Solicitud de contacto desde nuestra web"
+      },
+      "videoError": "Your browser does not support HTML5 video",
+      "description": "Desarrollador informático de aplicaciones completas adaptadas a cualquier necesidad",
+      "moreInfo": "Si quieres más información, puedes enviar un mail a",
+      "contactMailSubject": "Contacto%20a%20través%20de%20la%20web"
+    },
+    "news": {
+      "title": "Últimas Noticias",
+      "0": {
+        "title": "Inauguración web",
+        "body": "Se actualiza la página y se inagura con nuevas tecnologías destacando Angular 6 en el FrontEnd e Spring Microservices en Back End"
+      },
+      "1": {
+        "title": "Inauguración web",
+        "body": "Se actualiza la página y se inagura con nuevas tecnologías destacando Angular 6 en el FrontEnd e Spring Microservices en Back End"
+      }
+    },
+    "studies": {
+      "title": "Últimas Formaciones",
+      "0": {
+        "title": "Diseño de patrones",
+        "body": "Autoformación de los principales patroñes de diseño de programación"
+      },
+      "1": {
+        "title": "Web Components",
+        "body": "Autoformación de funcionamiento y creación de web components para API HTML5"
+      }
+    }
+  },
+  "pro": {
+    "architecture": {
+      "title": "Arquitectura de las aplicaciones",
+      "cloud": {
+        "title": "Nube",
+        "summary": "So ofrece (y recomienda) el alojamiento de la aplicación en 'La Nube' (o cloud).<br/>'La Nube' es un espacio virtual donde instalaremos y almacenaremos todo lo necesario para nuestras aplicaciones. Así bastará con disponer de una conexión a internet para acceder nuestras aplicaciones desde cualquier parte del mundo y con cualquier dispositivo con conexión a internet (móvil, PC, tablet, etc)."
+      },
+      "front": {
+        "title": "Webs",
+        "summary": "Se ofrecen creaciónes de páginas web para poder maximizar el alcance de nuestra presencia en la red, a la vez que facilitar el acceso de los clientes u usuarios.<br>Aplicaciones basadas en HTML5 y CSS3 para facilitar visualización en cualquier dispositivo y/o plataforma."
+      },
+      "back": {
+        "title": "Negocio",
+        "summary": "Para aplicaciones medianas o grandes, es necesario tener la lógica de negocio separada de la presentación web. Se ofrecen soluciones con microservidios basados en los principales lenguajes de programación y sus frameworks más potentes para garantizar eficiencia y seguridad."
+      },
+      "data": {
+        "title": "Datos",
+        "summary": "Se ofrecen recursos de bases de datos de todo tipo. Desde gratuitas para pequeños presupuestos, a grandes y solidas utilizadas por grandes compañías de nivel mundial."
+      }
+    }
+  },
+  "users": {
+    "login": {
+      "signIn": "Acceso",
+      "email": "Email",
+      "password": "Contraseña",
+      "rememberMe": "Recordarme",
+      "login": "Entrar",
+      "haveNotAccount": "Aun no tienes cuenta",
+      "signUp": "Registrarse",
+      "getNewPassword": "Conseguir una nueva contraseña"
+    },
+    "userForm": {
+      "userData": "Datos del usuario",
+      "alias": "Alias",
+      "aliasPH": "Nombre de usuario público",
+      "password": "Contraseña",
+      "passwordPH": "Contraseña del usuario",
+      "confirmPassword": "Confirmar contraseña",
+      "confirmPasswordPH": "Volver a escribir la constraseña"
+    },
+    "contactForm": {
+      "contactData": "Datos de contacto",
+      "email": "Correo electrónico",
+      "emailPH": "Introducir email",
+      "phone": "Teléfono",
+      "phonePH": "Número de teléfono de contacto"
+    }
+  }
+}

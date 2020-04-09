@@ -1,37 +1,248 @@
 {
   "common": {
     "yes": "Sí",
-    "no": "No"
-  },
-  "contact": {
-    "subject": "Solicitud de contacto desde nuestra web"
-  },
-  "navbar": {
-    "home": "Inicio"
-  },
-  "summary": {
-    "videoError": "Your browser does not support HTML5 video",
-    "description": "Desarrollador informático de aplicaciones completas adaptadas a cualquier necesidad",
-    "moreInfo": "Si quieres más información, puedes enviar un mail a",
-    "contactMailSubject": "Contacto%20a%20través%20de%20la%20web"
-  },
-  "architecture": {
-    "title": "Arquitectura de las aplicaciones",
-    "cloud": {
-      "title": "Nube",
-      "summary": "So ofrece (y recomienda) el alojamiento de la aplicación en 'La Nube' (o cloud).<br/>'La Nube' es un espacio virtual donde instalaremos y almacenaremos todo lo necesario para nuestras aplicaciones. Así bastará con disponer de una conexión a internet para acceder nuestras aplicaciones desde cualquier parte del mundo y con cualquier dispositivo con conexión a internet (móvil, PC, tablet, etc)."
+    "no": "No",
+    "validations": {
+      "required": "Es necesario informar este campo",
+      "minLength": "El campo debe tener al menos {{value}} carácteres",
+      "maxLength": "El campo debe tener máximo {{value}} carácteres",
+      "mustMatch": "Error confirmación. Los valores de los campos son diferentes",
+      "email": "El formato indicado no es correcto"
     },
-    "front": {
-      "title": "Webs",
-      "summary": "Se ofrecen creaciónes de páginas web para poder maximizar el alcance de nuestra presencia en la red, a la vez que facilitar el acceso de los clientes u usuarios."
+    "languages": {
+      "es_ES": "Castellano",
+      "ca_ES": "Catalán",
+      "en_EN": "Inglés"
+    }
+  },
+  "template": {
+    "navbar": {
+      "home": "Inicio",
+      "login": "Entrar",
+      "logout": "Cerrar sesión",
+      "pro": {
+        "title": "Profesional",
+        "architecture": "Arquitectura",
+        "works": "Experiencia",
+        "studies": "Estudios"
+      },
+      "bets": {
+        "title": "Apuestas",
+        "summary": "Resumen"
+      },
+      "configuration": {
+        "title": "Configuración",
+        "languages": "Idiomas"
+      }
     },
-    "back": {
-      "title": "Negocio",
-      "summary": "Para aplicaciones medianas o grandes, es necesario tener la lógica de negocio separada de la presentación web. Se ofrecen soluciones con microservidios basados en los principales lenguajes de programación y sus frameworks más potentes para garantizar eficiencia y seguridad."
+    "summary": {
+      "contact": {
+        "subject": "Solicitud de contacto desde nuestra web"
+      },
+      "videoError": "Your browser does not support HTML5 video",
+      "description": "Desarrollador informático de aplicaciones completas adaptadas a cualquier necesidad",
+      "moreInfo": "Si quieres más información, puedes enviar un mail a",
+      "contactMailSubject": "Contacto%20a%20través%20de%20la%20web"
     },
-    "data": {
-      "title": "Datos",
-      "summary": "Se ofrecen recursos de bases de datos de todo tipo. Desde gratuitas para pequeños presupuestos, a grandes y solidas utilizadas por grandes compañías de nivel mundial."
+    "news": {
+      "title": "Últimas Noticias",
+      "0": {
+        "title": "Inauguración web",
+        "body": "Se actualiza la página y se inagura con nuevas tecnologías destacando Angular 6 en el FrontEnd e Spring Microservices en Back End"
+      },
+      "1": {
+        "title": "Inauguración web",
+        "body": "Se actualiza la página y se inagura con nuevas tecnologías destacando Angular 6 en el FrontEnd e Spring Microservices en Back End"
+      }
+    },
+    "studies": {
+      "title": "Últimas Formaciones",
+      "0": {
+        "title": "Diseño de patrones",
+        "body": "Autoformación de los principales patroñes de diseño de programación"
+      },
+      "1": {
+        "title": "Web Components",
+        "body": "Autoformación de funcionamiento y creación de web components para API HTML5"
+      }
+    }
+  },
+  "pro": {
+    "architecture": {
+      "title": "Arquitectura de las aplicaciones",
+      "cloud": {
+        "title": "Nube",
+        "summary": "So ofrece (y recomienda) el alojamiento de la aplicación en 'La Nube' (o cloud).<br/>'La Nube' es un espacio virtual donde instalaremos y almacenaremos todo lo necesario para nuestras aplicaciones. Así bastará con disponer de una conexión a internet para acceder nuestras aplicaciones desde cualquier parte del mundo y con cualquier dispositivo con conexión a internet (móvil, PC, tablet, etc)."
+      },
+      "front": {
+        "title": "Webs",
+        "summary": "Se ofrecen creaciónes de páginas web para poder maximizar el alcance de nuestra presencia en la red, a la vez que facilitar el acceso de los clientes u usuarios.<br>Aplicaciones basadas en HTML5 y CSS3 para facilitar visualización en cualquier dispositivo y/o plataforma."
+      },
+      "back": {
+        "title": "Negocio",
+        "summary": "Para aplicaciones medianas o grandes, es necesario tener la lógica de negocio separada de la presentación web. Se ofrecen soluciones con microservidios basados en los principales lenguajes de programación y sus frameworks más potentes para garantizar eficiencia y seguridad."
+      },
+      "data": {
+        "title": "Datos",
+        "summary": "Se ofrecen recursos de bases de datos de todo tipo. Desde gratuitas para pequeños presupuestos, a grandes y solidas utilizadas por grandes compañías de nivel mundial."
+      }
+    },
+    "works": {
+      "title": "Experiencia Laboral",
+      "workingIn": "En",
+      "forCustomer": "para",
+      "fullstack": "Fullstack",
+      "frontend": "Frontend",
+      "backend": "Backend"
+    },
+    "studies": {
+      "title": "Formación"
+    },
+    "timeLine": {
+      "qualify": "Calificación",
+      "filter": {
+        "itemsMatch": "Resultados",
+        "": " Todas",
+        "regular": "Reglada",
+        "other": "Complementaria",
+        "admin": "Administración",
+        "developer": "Programador",
+        "management": "Gestión"
+      },
+      "noTemplate": "No se ha encontrado una estructura para mostrar los datos"
+    }
+  },
+  "users": {
+    "login": {
+      "signIn": "Acceso",
+      "email": "Email",
+      "password": "Contraseña",
+      "rememberMe": "Recordarme",
+      "login": "Entrar",
+      "haveNotAccount": "Aun no tienes cuenta",
+      "signUp": "Registrarse",
+      "getNewPassword": "Conseguir una nueva contraseña"
+    },
+    "userForm": {
+      "userData": "Datos del usuario",
+      "alias": "Alias",
+      "aliasPH": "Nombre de usuario público",
+      "password": "Contraseña",
+      "passwordPH": "Contraseña del usuario",
+      "confirmPassword": "Confirmar contraseña",
+      "confirmPasswordPH": "Volver a escribir la constraseña"
+    },
+    "contactForm": {
+      "contactData": "Datos de contacto",
+      "email": "Correo electrónico",
+      "emailPH": "Introducir email",
+      "phone": "Teléfono",
+      "phonePH": "Número de teléfono de contacto"
+    }
+  },
+  "studies": {
+    "webComponents": {
+      "title": "Web Components",
+      "description": "Curso de creación de web componentes con API HTML 5"
+    },
+    "designPatterns": {
+      "title": "Patrones de diseños",
+      "description": "Curso de los principales patrones de diseños con ejemplos en Java"
+    },
+    "aws": {
+      "title": "Amazon Web Service",
+      "description": "Curso de las principales funcionalidades de AWS. Instancias, EBS, VPC, Cloud, LB, RDS, IAM, KMS, S3, Lambdas, SQS, Developers Tools"
+    },
+    "angular8": {
+      "title": "Angular 8",
+      "description": "Revisión de las mejoras y nuevas funcionalidades de la nueva versión 8 del framework Angular"
+    },
+    "java11": {
+      "title": "Java 11",
+      "description": "Revisión de las mejoras y nuevas funcionalidades de la nueva versión de Java LTS"
+    },
+    "netcore": {
+      "title": ".NET Core",
+      "description": "Formación de las principales novedades del nuevo framework"
+    },
+    "vue": {
+      "title": "Vue.js",
+      "description": "Curso de formación sobre el framework Vue.js para aplicaciones frontend"
+    },
+    "angular67": {
+      "title": "Angular 6 & 7",
+      "description": "Revisión de las mejoras y nuevas funcionalidades de las versiones 6 y 7 del framework Angular"
+    },
+    "java8": {
+      "title": "Java 8",
+      "description": "Revisión de las mejoras y nuevas funcionalidades de la nueva versión de Java"
+    },
+    "springboot": {
+      "title": "Microservicios con Springboot",
+      "description": "Curso para creación de microservicios basados en springboot"
+    },
+    "spring": {
+      "title": "Spring",
+      "description": "Curso del framework de spring para Java"
+    },
+    "angular2": {
+      "title": "Angular +",
+      "description": "Curso del framework Angular para conocer los cambios respecto a Angular.js"
+    },
+    "angularjs": {
+      "title": "Angular.js",
+      "description": "Curso del framework Angular Js para creaciones de aplicaciones web"
+    },
+    "frameworkNet": {
+      "title": ".NET Framework",
+      "description": "Curso Fundamentos en tecnología y programación .NET Framework. 250horas"
+    },
+    "jee": {
+      "title": "Aplicaciones web",
+      "description": "Certificado de profesionalidad (nivel 3) Desarrollo de aplicaciones con tecnología web. 610h"
+    },
+    "dam": {
+      "title": "Desarrollo de Aplicaciones Multiplataforma",
+      "description": "Certificate of Higher Education of platform application development. 2 200 hours"
+    },
+    "admin": {
+      "title": "Administración y finances",
+      "description": "Higher cycle of administration and finance. 2,500h"
+    }
+  },
+  "works": {
+    "admin": {
+      "description": "Administrativo Contable durante más de 10 años como administrativo contable en varias compañías antes de hacer un cambio profesional al mundo de la programación"
+    },
+    "i3e": {
+      "description": "Desarrollo en diferentes proyectos tanto en Java, JEE, PHP, .Net Oracle SQLServer, Java Script, Hibernate, Maven, Swing, Apache, IIS, Laravel, etc Clientes como Aigües de Barcelona, Xarxa Oberta, Merak, etc... Web services, formularios, módulos para Sugar CRM, migración de bases de datos"
+    },
+    "disalfarm": {
+      "description": "Actualización de código de Borlan C++ a formularios Java SWING. DDBB Oracle, PL/SQL"
+    },
+    "mediaMarkt": {
+      "description": "Gestión de Información de artículos, pedidos, consultas, para Media Markt. Arquitectura del proyecto basada en J2EE, Maven, JUnit, SQL Server, Web services, ficheros XML e Interfaces. Repositorio Git"
+    },
+    "optimissa1": {
+      "description": "Desarrollador Java: Mantenimiento de aplicación web con J2EE (Hibernate, JSF, EJB, Maven, Spring) y evolutivo de aplicación Java con Swing. Base de datos Oracle. Repositorio Subversion"
+    },
+    "optimissa2": {
+      "description": "Analista Java: Toma de requerimientos y redacción de funcionales. Y diseño de pruebas unitarias e implementación con Junit4"
+    },
+    "optimissa3": {
+      "description": "Responsable Departamento de Soporte técnico: Gestión de un equipo de 6 personas para dar soporte de incidencias a las aplicaciones de la entidad basadas en J2EE (Maven) y Swing"
+    },
+    "cerba": {
+      "description": "Gestión de equipo de 2 programadores para un nuevo programa de laboratorio propio basado en Angular 5 con Caché y Java Microservicios (MVC + JPA) con Maven. Evolutivo de Mirth (Java) para comunicaciones e integraciones con SQL Server. Mantenimiento aplicaciones internas en .NET. Repositorio TFS"
+    },
+    "deloitte": {
+      "description": "Jefe de equipo y desarrollador en un proyecto internacional. SCRUM con meeting en inglés. Proyecto de Angular JS, Angular+ y Java Microservicios (MVC + JPA) con conexión a Oracle. Repositorio GIT con GITLAB"
+    },
+    "antares": {
+      "description": "Jefe de equipo y desarrollador como Full Stack. Front End con VueJs y Servicios Rest con .Net Core. Azure Devops para CI/CD. SQL server y metodologías SCRUM y Kanban. Repositorio GIT"
+    },
+    "dxc": {
+      "description": "Jefe de equipo y desarrollador de FrontEnd con Stenciljs. Creación de webcomponentes propios para su importación y uso en todas las webs de la entidad del cliente. Repositorio GIT"
     }
   }
 }

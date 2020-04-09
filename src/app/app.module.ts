@@ -1,22 +1,32 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { registerLocaleData } from "@angular/common";
+import localesEs from "@angular/common/locales/es";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { NavbarComponent } from "./template/views/navbar/navbar.component";
 
-import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { HomeComponent } from './home/home.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { ArchitectureComponent } from './architecture/architecture.component';
-import { SummaryComponent } from './summary/summary.component';
+import { HomeComponent } from "./template/views/home/home.component";
+import { SummaryComponent } from "./template/views/summary/summary.component";
 
+import {
+  HttpClientModule,
+  HttpClient,
+  HTTP_INTERCEPTORS,
+} from "@angular/common/http";
+import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
+import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
+import { JwtInterceptor } from "./services/jwt.interceptor";
+import { ErrorInterceptor } from "./services/error.interceptor";
+import { PageNotFoundComponent } from "./template/views/page-not-found/page-not-found.component";
+import { CardComponent } from "./template/components/card/card.component";
+import { ListCardsComponent } from "./template/views/list-cards/list-cards.component";
+import { ConfigurationComponent } from "./template/components/configuration/configuration.component";
 
 @NgModule({
   declarations: [
@@ -24,8 +34,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     NavbarComponent,
     HomeComponent,
     PageNotFoundComponent,
-    ArchitectureComponent,
-    SummaryComponent
+    SummaryComponent,
+    CardComponent,
+    ListCardsComponent,
+    ConfigurationComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,11 +47,18 @@ export function HttpLoaderFactory(http: HttpClient) {
       loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
-      }
-    })
+        deps: [HttpClient],
+      },
+    }),
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+  constructor() {
+    registerLocaleData(localesEs, "es");
+  }
+}

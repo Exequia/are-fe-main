@@ -1,0 +1,139 @@
+<!-- 
+<form [formGroup]="contactForm">
+  <fieldset>
+    <legend>{{ 'users.contactForm.contactData' | translate }}:</legend>
+    <div class="form-row">
+      <div class="col-sm-12 col-md-4">
+        <div class="form-group">
+          <label for="userEmail"
+            >*{{ 'users.contactForm.email' | translate }}:</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="userEmail"
+            aria-describedby="user Email contact"
+            [placeholder]="'users.contactForm.emailPH' | translate"
+            formControlName="email"
+            [(ngModel)]="hero.name"
+            #name="ngModel"
+          />
+          <div
+            *ngIf="email.invalid && (email.dirty || email.touched)"
+            class="alert alert-danger"
+          >
+            <div *ngIf="email.errors.required">
+              {{ 'common.validations.required' | translate }}
+            </div>
+            <div *ngIf="email.errors.email">
+              {{ 'common.validations.email' | translate }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <div class="form-group">
+          <label for="userPhone"
+            >{{ 'users.contactForm.phone' | translate }}:</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="userPhone"
+            aria-describedby="userPass"
+            [placeholder]="'users.contactForm.phonePH' | translate"
+            formControlName="phone"
+          />
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</form> -->
+<!-- <form
+  #contact="ngForm"
+  name="form"
+  [mustMatch]="['email', 'confirmEmail']"
+  novalidate
+> -->
+<fieldset>
+  <legend>{{ 'users.contactForm.contactData' | translate }}:</legend>
+  <div class="form-row">
+    <div class="col-sm-12 col-md-4">
+      <div class="form-group">
+        <label for="userEmail"
+          >*{{ 'users.contactForm.email' | translate }}:</label
+        >
+        <input
+          id="email"
+          name="email"
+          class="form-control"
+          required
+          email
+          [placeholder]="'users.contactForm.emailPH' | translate"
+          [(ngModel)]="contact.email"
+          #email="ngModel"
+        />
+        <div
+          *ngIf="email.invalid && (email.dirty || email.touched)"
+          class="alert alert-danger"
+        >
+          <div *ngIf="email.errors.required">
+            {{ 'common.validations.required' | translate }}
+          </div>
+          <div *ngIf="email.errors.email">
+            {{ 'common.validations.email' | translate }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-4">
+      <div class="form-group">
+        <label for="confirmEmail"
+          >*{{ 'users.contactForm.email' | translate }}:</label
+        >
+        <input
+          id="confirmEmail"
+          name="confirmEmail"
+          class="form-control"
+          required
+          email
+          [placeholder]="'users.contactForm.emailPH' | translate"
+          [(ngModel)]="contact.confirmEmail"
+          #confirmEmail="ngModel"
+        />
+        <div
+          *ngIf="
+            confirmEmail.invalid && (confirmEmail.dirty || confirmEmail.touched)
+          "
+          class="alert alert-danger"
+        >
+          <div *ngIf="confirmEmail.errors.required">
+            {{ 'common.validations.required' | translate }}
+          </div>
+          <div *ngIf="confirmEmail.errors.email">
+            {{ 'common.validations.email' | translate }}
+          </div>
+          <div *ngIf="confirmEmail.errors.mustMatch">
+            {{ 'common.validations.mustMatch' | translate }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-4">
+      <div class="form-group">
+        <label for="userPhone"
+          >{{ 'users.contactForm.phone' | translate }}:</label
+        >
+        <input
+          id="phone"
+          name="phone"
+          class="form-control"
+          [placeholder]="'users.contactForm.phonePH' | translate"
+          [(ngModel)]="contact.phone"
+          #phone="ngModel"
+        />
+      </div>
+    </div>
+  </div>
+</fieldset>
+<!-- </form> -->
