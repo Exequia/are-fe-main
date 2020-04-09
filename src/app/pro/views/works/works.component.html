@@ -1,12 +1,12 @@
 <div class="row text-center">
   <div class="col">
-    <h2>{{ "pro.studies.title" | translate }}</h2>
+    <h2>{{ "pro.works.title" | translate }}</h2>
   </div>
 </div>
 
 <div class="row">
   <div class="col">
-    <div class="d-flex justify-content-center" *ngIf="loadingStudies">
+    <div class="d-flex justify-content-center" *ngIf="loadingWorks">
       <div
         class="spinner-grow text-primary"
         style="width: 3rem; height: 3rem;"
@@ -17,8 +17,8 @@
     </div>
 
     <app-time-line-list
-      *ngIf="studies"
-      [items]="studies"
+      *ngIf="works"
+      [items]="works"
       [filterProp]="filterProp"
       [targetTemplate]="templateId"
     ></app-time-line-list>

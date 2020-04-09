@@ -23,6 +23,7 @@
       "pro": {
         "title": "Profesional",
         "architecture": "Arquitectura",
+        "works": "Experiencia",
         "studies": "Estudios"
       },
       "bets": {
@@ -86,6 +87,14 @@
         "summary": "Se ofrecen recursos de bases de datos de todo tipo. Desde gratuitas para pequeños presupuestos, a grandes y solidas utilizadas por grandes compañías de nivel mundial."
       }
     },
+    "works": {
+      "title": "Experiencia Laboral",
+      "workingIn": "En",
+      "forCustomer": "para",
+      "fullstack": "Fullstack",
+      "frontend": "Frontend",
+      "backend": "Backend"
+    },
     "studies": {
       "title": "Formación"
     },
@@ -95,8 +104,12 @@
         "itemsMatch": "Resultados",
         "": " Todas",
         "regular": "Reglada",
-        "other": "Complementaria"
-      }
+        "other": "Complementaria",
+        "admin": "Administración",
+        "developer": "Programador",
+        "management": "Gestión"
+      },
+      "noTemplate": "No se ha encontrado una estructura para mostrar los datos"
     }
   },
   "users": {
@@ -195,6 +208,41 @@
     "admin": {
       "title": "Administración y finances",
       "description": "Higher cycle of administration and finance. 2,500h"
+    }
+  },
+  "works": {
+    "admin": {
+      "description": "Administrativo Contable durante más de 10 años como administrativo contable en varias compañías antes de hacer un cambio profesional al mundo de la programación"
+    },
+    "i3e": {
+      "description": "Desarrollo en diferentes proyectos tanto en Java, JEE, PHP, .Net Oracle SQLServer, Java Script, Hibernate, Maven, Swing, Apache, IIS, Laravel, etc Clientes como Aigües de Barcelona, Xarxa Oberta, Merak, etc... Web services, formularios, módulos para Sugar CRM, migración de bases de datos"
+    },
+    "disalfarm": {
+      "description": "Actualización de código de Borlan C++ a formularios Java SWING. DDBB Oracle, PL/SQL"
+    },
+    "mediaMarkt": {
+      "description": "Gestión de Información de artículos, pedidos, consultas, para Media Markt. Arquitectura del proyecto basada en J2EE, Maven, JUnit, SQL Server, Web services, ficheros XML e Interfaces. Repositorio Git"
+    },
+    "optimissa1": {
+      "description": "Desarrollador Java: Mantenimiento de aplicación web con J2EE (Hibernate, JSF, EJB, Maven, Spring) y evolutivo de aplicación Java con Swing. Base de datos Oracle. Repositorio Subversion"
+    },
+    "optimissa2": {
+      "description": "Analista Java: Toma de requerimientos y redacción de funcionales. Y diseño de pruebas unitarias e implementación con Junit4"
+    },
+    "optimissa3": {
+      "description": "Responsable Departamento de Soporte técnico: Gestión de un equipo de 6 personas para dar soporte de incidencias a las aplicaciones de la entidad basadas en J2EE (Maven) y Swing"
+    },
+    "cerba": {
+      "description": "Gestión de equipo de 2 programadores para un nuevo programa de laboratorio propio basado en Angular 5 con Caché y Java Microservicios (MVC + JPA) con Maven. Evolutivo de Mirth (Java) para comunicaciones e integraciones con SQL Server. Mantenimiento aplicaciones internas en .NET. Repositorio TFS"
+    },
+    "deloitte": {
+      "description": "Jefe de equipo y desarrollador en un proyecto internacional. SCRUM con meeting en inglés. Proyecto de Angular JS, Angular+ y Java Microservicios (MVC + JPA) con conexión a Oracle. Repositorio GIT con GITLAB"
+    },
+    "antares": {
+      "description": "Jefe de equipo y desarrollador como Full Stack. Front End con VueJs y Servicios Rest con .Net Core. Azure Devops para CI/CD. SQL server y metodologías SCRUM y Kanban. Repositorio GIT"
+    },
+    "dxc": {
+      "description": "Jefe de equipo y desarrollador de FrontEnd con Stenciljs. Creación de webcomponentes propios para su importación y uso en todas las webs de la entidad del cliente. Repositorio GIT"
     }
   }
 }

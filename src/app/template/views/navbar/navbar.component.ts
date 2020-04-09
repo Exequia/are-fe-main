@@ -5,7 +5,7 @@ import { AuthService } from "../../../services/auth.service";
 import {
   NabvarMenu,
   NabvarMenuItem,
-  NabvarCredentials
+  NabvarCredentials,
 } from "../../../models/NabvarMenu";
 interface User {
   id?: number;
@@ -24,7 +24,7 @@ interface Role {
 @Component({
   selector: "app-navbar",
   templateUrl: "./navbar.component.html",
-  styleUrls: ["./navbar.component.scss"]
+  styleUrls: ["./navbar.component.scss"],
 })
 export class NavbarComponent implements OnInit {
   public user: User;
@@ -58,7 +58,7 @@ export class NavbarComponent implements OnInit {
       key: "pro",
       link: "pro",
       icon: "fa-user-tie",
-      items: proItems
+      items: proItems,
     };
     return pro;
   }
@@ -68,14 +68,19 @@ export class NavbarComponent implements OnInit {
     const proArchitectureItem: NabvarMenuItem = {
       key: "architecture",
       icon: "fa-object-group",
-      link: "home"
+      link: "home",
+    };
+    const proWorksItem: NabvarMenuItem = {
+      key: "works",
+      icon: "fa-laptop-code",
+      link: "works",
     };
     const proStudiesItem: NabvarMenuItem = {
       key: "studies",
       icon: "fa-user-graduate",
-      link: "studies"
+      link: "studies",
     };
-    return [proArchitectureItem, proStudiesItem];
+    return [proArchitectureItem, proWorksItem, proStudiesItem];
   }
 
   /** Return array for nabvar menú with bets info */
@@ -86,7 +91,7 @@ export class NavbarComponent implements OnInit {
       key: "bets",
       link: "bets",
       icon: "fa-dice",
-      items: betsItems
+      items: betsItems,
     };
     return bets;
   }
@@ -96,7 +101,7 @@ export class NavbarComponent implements OnInit {
     const betSummaryItem: NabvarMenuItem = {
       key: "summary",
       icon: "fa-tachometer-alt",
-      link: "summary"
+      link: "summary",
     };
     return [betSummaryItem];
   }

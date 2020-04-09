@@ -5,29 +5,28 @@ import { PageNotFoundComponent } from "./template/views/page-not-found/page-not-
 import { AuthGuardService } from "./services/auth-guard.service";
 
 const routes: Routes = [
-  { path: "home", component: HomeComponent },
-  { path: "#", redirectTo: "home" },
+  { path: "", component: HomeComponent, pathMatch: "full" },
   {
     path: "users",
     loadChildren: () =>
-      import("./users/users.module").then(mod => mod.UsersModule)
+      import("./users/users.module").then((mod) => mod.UsersModule),
   },
   {
     path: "bets",
     loadChildren: () =>
-      import("./bets/bets.module").then(mod => mod.BetsModule),
-    canActivate: [AuthGuardService]
+      import("./bets/bets.module").then((mod) => mod.BetsModule),
+    canActivate: [AuthGuardService],
   },
   {
     path: "pro",
-    loadChildren: () => import("./pro/pro.module").then(mod => mod.ProModule)
+    loadChildren: () => import("./pro/pro.module").then((mod) => mod.ProModule),
     // canActivate: [AuthGuardService]
   },
-  { path: "**", component: PageNotFoundComponent }
+  { path: "**", component: PageNotFoundComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}

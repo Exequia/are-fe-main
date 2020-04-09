@@ -16,17 +16,18 @@ interface TimeLineItem {
 enum StudiesType {
   All = "",
   Regular = "regular",
-  Other = "other"
+  Other = "other",
 }
 
 @Component({
   selector: "app-studies",
   templateUrl: "./studies.component.html",
-  styleUrls: ["./studies.component.scss"]
+  styleUrls: ["./studies.component.scss"],
 })
 export class StudiesComponent implements OnInit {
   public studies: TimeLineItem[];
   public filterProp = "type";
+  public templateId = "studies";
   public loadingStudies = false;
 
   constructor(private filesService: FilesService) {}
@@ -42,7 +43,7 @@ export class StudiesComponent implements OnInit {
         this.loadingStudies = false;
         this.studies = studiesResponse;
       },
-      error => {
+      (error) => {
         this.loadingStudies = false;
         console.error("invokeGetStudies", error);
       }
