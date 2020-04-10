@@ -1,0 +1,38 @@
+[
+  {
+    "authorized": [1],
+    "key": "pro",
+    "link": "pro",
+    "icon": "fa-user-tie",
+    "items": [
+      {
+        "key": "architecture",
+        "icon": "fa-object-group",
+        "link": "home"
+      },
+      {
+        "key": "works",
+        "icon": "fa-laptop-code",
+        "link": "works"
+      },
+      {
+        "key": "studies",
+        "icon": "fa-user-graduate",
+        "link": "studies"
+      }
+    ]
+  },
+  {
+    "authorized": [0, 2],
+    "key": "bets",
+    "link": "bets",
+    "icon": "fa-dice",
+    "items": [
+      {
+        "key": "summary",
+        "icon": "fa-tachometer-alt",
+        "link": "summary"
+      }
+    ]
+  }
+]
