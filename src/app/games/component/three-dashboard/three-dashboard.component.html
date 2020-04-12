@@ -1,0 +1,16 @@
+<div class="dashboard px-2 py-2 text-center">
+  <div class="row" *ngFor="let row of data; index as r">
+    <div
+      class="col"
+      [ngClass]="{ 'cursor-invalid': status === 2 }"
+      *ngFor="let col of row; index as c"
+      (click)="emitPosition(r, c)"
+    >
+      <div
+        class="cell px-3 py-3"
+        [ngClass]="getStyle(col)"
+        [innerHTML]="getIcon(col)"
+      ></div>
+    </div>
+  </div>
+</div>

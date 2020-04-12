@@ -26,6 +26,11 @@
         "works": "Experiencia",
         "studies": "Estudios"
       },
+      "games": {
+        "title": "Juegos",
+        "summary": "Resumen",
+        "3x3": "Tren en raya"
+      },
       "bets": {
         "title": "Apuestas",
         "summary": "Resumen"
@@ -243,6 +248,13 @@
     },
     "dxc": {
       "description": "Jefe de equipo y desarrollador de FrontEnd con Stenciljs. Creación de webcomponentes propios para su importación y uso en todas las webs de la entidad del cliente. Repositorio GIT"
+    }
+  },
+  "games": {
+    "3x3": {
+      "newGame": "Nueva partida",
+      "tie": "Empate",
+      "finished": "¡{{winner}} Ganan!"
     }
   }
 }

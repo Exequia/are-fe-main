@@ -1,0 +1,59 @@
+$size: 65px;
+$border: 5px solid #e6dede;
+
+.dashboard {
+  .row {
+    border-bottom: $border;
+
+    .col {
+      border-right: $border;
+      cursor: pointer;
+
+      .finished-hidden {
+        visibility: hidden;
+      }
+
+      .finished-hidden {
+        visibility: hidden;
+      }
+
+      .hidden {
+        visibility: hidden;
+      }
+
+      .red {
+        color: red;
+      }
+
+      .green {
+        color: green;
+      }
+    }
+
+    .col:last-child {
+      border-right: none;
+    }
+
+    .col:hover {
+      background-color: lightgrey;
+
+      .hidden {
+        visibility: visible;
+      }
+    }
+  }
+
+  .row:last-child {
+    border-bottom: none;
+  }
+
+  .cursor-invalid {
+    cursor: not-allowed !important;
+    background-color: none !important;
+  }
+
+  .cursor-invalid:hover {
+    cursor: not-allowed !important;
+    background-color: transparent !important;
+  }
+}

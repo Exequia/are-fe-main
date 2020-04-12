@@ -22,6 +22,12 @@ const routes: Routes = [
     loadChildren: () => import("./pro/pro.module").then((mod) => mod.ProModule),
     // canActivate: [AuthGuardService]
   },
+  {
+    path: "games",
+    loadChildren: () =>
+      import("./games/games.module").then((mod) => mod.GamesModule),
+    // canActivate: [AuthGuardService]
+  },
   { path: "**", component: PageNotFoundComponent },
 ];
 

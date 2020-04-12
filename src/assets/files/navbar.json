@@ -3,22 +3,40 @@
     "authorized": [1],
     "key": "pro",
     "link": "pro",
-    "icon": "fa-user-tie",
+    "icon": "fas fa-user-tie",
     "items": [
       {
         "key": "architecture",
-        "icon": "fa-object-group",
+        "icon": "fas fa-object-group",
         "link": "home"
       },
       {
         "key": "works",
-        "icon": "fa-laptop-code",
+        "icon": "fas fa-laptop-code",
         "link": "works"
       },
       {
         "key": "studies",
-        "icon": "fa-user-graduate",
+        "icon": "fas fa-user-graduate",
         "link": "studies"
+      }
+    ]
+  },
+  {
+    "authorized": [1],
+    "key": "games",
+    "link": "games",
+    "icon": "fas fa-gamepad",
+    "items": [
+      {
+        "key": "summary",
+        "icon": "fas fa-list-alt",
+        "link": ""
+      },
+      {
+        "key": "3x3",
+        "icon": "fas fa-hashtag",
+        "link": "3x3"
       }
     ]
   },
@@ -26,11 +44,11 @@
     "authorized": [0, 2],
     "key": "bets",
     "link": "bets",
-    "icon": "fa-dice",
+    "icon": "fas fa-dice",
     "items": [
       {
         "key": "summary",
-        "icon": "fa-tachometer-alt",
+        "icon": "fas fa-tachometer-alt",
         "link": "summary"
       }
     ]
