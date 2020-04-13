@@ -254,7 +254,10 @@
     "3x3": {
       "newGame": "Nueva partida",
       "tie": "Empate",
-      "finished": "¡{{winner}} Ganan!"
+      "active": "Tu turno",
+      "waiting": "Esperando",
+      "finished": "Fin de juego",
+      "winner": "¡{{winner}} Ganan!"
     }
   }
 }

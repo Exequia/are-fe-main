@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from "@angular/core";
-import { Player } from "../models/three-in-line";
+import { Player, GameStatus } from "../models/three-in-line";
 
 @Component({
   selector: "app-three-player",
@@ -12,4 +12,38 @@ export class ThreePlayerComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  public getClass(): string {
+    let className = "inactive";
+
+    if (this.player.status === GameStatus.Active) {
+      className = "active";
+    }
+
+    return className;
+  }
+
+  public getStatusText(): string {
+    let text = "";
+
+    switch (this.player.status) {
+      case GameStatus.Waiting:
+        text = "games.3x3.waiting";
+        break;
+
+      case GameStatus.Finished:
+        text = "games.3x3.finished";
+        break;
+
+      case GameStatus.Tie:
+        text = "games.3x3.tie";
+        break;
+
+      default:
+        text = "games.3x3.active";
+        break;
+    }
+
+    return text;
+  }
 }

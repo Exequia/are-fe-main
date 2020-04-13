@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 import { GameRound, CellPosition, GameStatus } from "../models/three-in-line";
+import { UtilsService } from "src/app/services/utils/utils.service";
 
 @Component({
   selector: "app-three-dashboard",
@@ -12,7 +13,7 @@ export class ThreeDashboardComponent implements OnInit {
   @Input() status: GameStatus;
   @Output() cellSelected: EventEmitter<CellPosition> = new EventEmitter();
 
-  constructor() {}
+  constructor(private utils: UtilsService) {}
 
   ngOnInit() {}
 
@@ -21,8 +22,15 @@ export class ThreeDashboardComponent implements OnInit {
   }
 
   public emitPosition(row: number, col: number) {
-    if (this.status !== GameStatus.Finished) {
+    if (
+      this.status === GameStatus.Active &&
+      this.data[row][col] === GameRound.Empty
+    ) {
       this.cellSelected.emit({ row: row, col: col });
+      const target: HTMLElement = document.querySelector(".col:hover");
+      if (target) {
+        target.blur();
+      }
     }
   }
 
@@ -41,9 +49,9 @@ export class ThreeDashboardComponent implements OnInit {
       cl = "bg-danger";
     } else if (content) {
       if (content === GameRound.X) {
-        cl = "red";
+        cl = "text-danger";
       } else {
-        cl = "green";
+        cl = "text-success";
       }
     }
 
@@ -64,5 +72,19 @@ export class ThreeDashboardComponent implements OnInit {
     }
 
     return `<i class="${icon}"></i>`;
+  }
+
+  public getClass(): string {
+    let classes = "col";
+
+    if (!this.utils.isMobile()) {
+      classes += " web";
+    }
+
+    if (this.status !== GameStatus.Active) {
+      classes += " cursor-invalid";
+    }
+
+    return classes;
   }
 }

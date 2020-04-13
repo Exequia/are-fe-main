@@ -23,7 +23,7 @@ export class ThreeInLineGameComponent implements OnInit {
     this.resetGame();
   }
 
-  private resetGame() {
+  public resetGame() {
     this.game = this.getGameConfig();
     this.initGame();
   }
@@ -55,6 +55,8 @@ export class ThreeInLineGameComponent implements OnInit {
 
   private initGame() {
     this.game.data = this.initGameData();
+    this.game.status = GameStatus.Active;
+    this.game.playerX.status = GameStatus.Active;
   }
 
   private initGameData(): Array<Array<GameRound>> {
@@ -241,7 +243,7 @@ export class ThreeInLineGameComponent implements OnInit {
         break;
 
       case GameStatus.Finished:
-        text = this.translate.instant("games.3x3.finished", {
+        text = this.translate.instant("games.3x3.winner", {
           winner: this.game.round,
         });
         break;

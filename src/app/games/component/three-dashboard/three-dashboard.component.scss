@@ -1,4 +1,3 @@
-$size: 65px;
 $border: 5px solid #e6dede;
 
 .dashboard {
@@ -20,21 +19,13 @@ $border: 5px solid #e6dede;
       .hidden {
         visibility: hidden;
       }
-
-      .red {
-        color: red;
-      }
-
-      .green {
-        color: green;
-      }
     }
 
     .col:last-child {
       border-right: none;
     }
 
-    .col:hover {
+    .web:hover {
       background-color: lightgrey;
 
       .hidden {
