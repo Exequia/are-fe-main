@@ -16,6 +16,9 @@ export class GamesHomeComponent implements OnInit {
     this.invokeGetGames();
   }
 
+  /**
+   * Read the file game.json data
+   */
   private invokeGetGames() {
     this.loadingGames = true;
     this.filesService.getLocalFile("assets/files/games.json").subscribe(

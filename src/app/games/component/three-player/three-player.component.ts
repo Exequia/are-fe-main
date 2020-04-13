@@ -11,8 +11,19 @@ export class ThreePlayerComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    if (!this.player) {
+      this.player = {
+        name: `Jugador`,
+        status: GameStatus.Waiting,
+      };
+    }
+  }
 
+  /**
+   * Check the status for return the class
+   * @returns string class name for htmlelement
+   */
   public getClass(): string {
     let className = "inactive";
 
@@ -23,6 +34,10 @@ export class ThreePlayerComponent implements OnInit {
     return className;
   }
 
+  /**
+   * Check the status of the player to know the translated
+   * @retuns string with the translated text
+   */
   public getStatusText(): string {
     let text = "";
 

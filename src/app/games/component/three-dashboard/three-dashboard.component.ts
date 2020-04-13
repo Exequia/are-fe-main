@@ -17,10 +17,20 @@ export class ThreeDashboardComponent implements OnInit {
 
   ngOnInit() {}
 
-  public getStatusClass(): string {
-    return this.status === GameStatus.Finished ? "finished" : "dashboard";
-  }
+  // /**
+  //  * Check the Game status and return a class for the status
+  //  * @returns string with classes for the status
+  //  */
+  // public getStatusClass(): string {
+  //   return this.status === GameStatus.Finished ? "finished" : "dashboard";
+  // }
 
+  /**
+   * Check the row and column selected and if the game is active and the cell is empty,
+   * send data to the parent
+   * @param row number
+   * @param col number
+   */
   public emitPosition(row: number, col: number) {
     if (
       this.status === GameStatus.Active &&
@@ -34,30 +44,40 @@ export class ThreeDashboardComponent implements OnInit {
     }
   }
 
-  public getStyle(content: GameRound): string {
-    let cl = "hidden";
+  /**
+   * Check every cell and return a style for it's content value
+   * @param content GameRound is the content of the cell
+   * @returns string with the classes to set in the cell
+   */
+  public getCellClass(content: GameRound): string {
+    let className = "hidden";
 
     if (this.status === GameStatus.Finished) {
       if (content === this.currentRound) {
-        cl = "bg-success";
+        className = "bg-success";
       } else if (!content) {
-        cl = "finished-hidden";
+        className = "finished-hidden";
       } else {
-        cl = "bg-danger";
+        className = "bg-danger";
       }
     } else if (this.status === GameStatus.Tie) {
-      cl = "bg-danger";
+      className = "bg-danger";
     } else if (content) {
       if (content === GameRound.X) {
-        cl = "text-danger";
+        className = "text-danger";
       } else {
-        cl = "text-success";
+        className = "text-success";
       }
     }
 
-    return cl;
+    return className;
   }
 
+  /**
+   * Check de value of cell and return the icon fo that content
+   * @param content GameRound is the value of the call
+   * @returns string with the icon to render
+   */
   public getIcon(content: GameRound): string {
     let icon = "far fa-circle";
 
@@ -74,6 +94,10 @@ export class ThreeDashboardComponent implements OnInit {
     return `<i class="${icon}"></i>`;
   }
 
+  /**
+   * Check the device to set a correct class for app
+   * @returns string classes to add at col
+   */
   public getClass(): string {
     let classes = "col";
 

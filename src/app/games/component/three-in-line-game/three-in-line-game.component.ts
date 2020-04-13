@@ -23,11 +23,18 @@ export class ThreeInLineGameComponent implements OnInit {
     this.resetGame();
   }
 
+  /**
+   * Set the default config values and init the main parameters
+   */
   public resetGame() {
     this.game = this.getGameConfig();
     this.initGame();
   }
 
+  /**
+   * Return a default config for the game
+   * @returns GameConfig with default values
+   */
   private getGameConfig(): GameConfig {
     return {
       playerX: this.getDefaultPlayer(GameRound.X),
@@ -39,6 +46,10 @@ export class ThreeInLineGameComponent implements OnInit {
     };
   }
 
+  /**
+   * Complete the name player and return with waiting status
+   * @param alias GameRound to complete de Player Name
+   */
   private getDefaultPlayer(alias: GameRound): Player {
     return {
       name: `Jugador ${alias}`,
@@ -46,6 +57,10 @@ export class ThreeInLineGameComponent implements OnInit {
     };
   }
 
+  /**
+   * Set the numbers of rows and cols of dashboard
+   * @returns GameDashboard with dashboard size
+   */
   private getDefaultDashboard(): GameDashboard {
     return {
       rows: 3,
@@ -53,12 +68,19 @@ export class ThreeInLineGameComponent implements OnInit {
     };
   }
 
+  /**
+   * Set the data nedded to start the game
+   */
   private initGame() {
     this.game.data = this.initGameData();
     this.game.status = GameStatus.Active;
     this.game.playerX.status = GameStatus.Active;
   }
 
+  /**
+   * Init the game data with an GameRound Empty
+   * @returns Array<Array<GameRound>> all with empty content
+   */
   private initGameData(): Array<Array<GameRound>> {
     let data: Array<Array<GameRound>> = [[]];
     for (let i = 0; i < this.game.dashboard.rows; i++) {
@@ -72,6 +94,9 @@ export class ThreeInLineGameComponent implements OnInit {
     return data;
   }
 
+  /**
+   * Check the current Round, and change the Rount of game and players status
+   */
   public changeRound() {
     if (this.game.round === GameRound.X) {
       this.game.round = GameRound.O;
@@ -84,6 +109,10 @@ export class ThreeInLineGameComponent implements OnInit {
     }
   }
 
+  /**
+   * Check the status of game with
+   * @param selectedCell CellPosition of the selectedCell
+   */
   public getCellSelected(selectedCell: CellPosition) {
     this.game.data[selectedCell.row][selectedCell.col] = this.game.round;
 
@@ -103,10 +132,15 @@ export class ThreeInLineGameComponent implements OnInit {
     }
   }
 
+  /**
+   * Since the selected cell, check close cells to check the game's status
+   * @param selectedCell CellPosition is the position of the selected cell
+   * @returns GameStatus with the status of the game after set new value in dashboard
+   */
   private checkContinueGame(selectedCell: CellPosition): GameStatus {
     let status = GameStatus.Active;
 
-    if (this.checkWiner(selectedCell)) {
+    if (this.checkWinner(selectedCell)) {
       status = GameStatus.Finished;
     }
 
@@ -117,7 +151,12 @@ export class ThreeInLineGameComponent implements OnInit {
     return status;
   }
 
-  private checkWiner(selectedCell: CellPosition): boolean {
+  /**
+   * Check many possibilities to check if the someone have won
+   * @param selectedCell to check if have a winner
+   * @returns boolean to set if someone have won
+   */
+  private checkWinner(selectedCell: CellPosition): boolean {
     let valid = true;
 
     valid = this.checkHorizontals(selectedCell);
@@ -133,11 +172,20 @@ export class ThreeInLineGameComponent implements OnInit {
     return valid;
   }
 
+  /**
+   * Check if the row is a winner row
+   * @param selectedCell to check only this row
+   */
   private checkHorizontals(selectedCell: CellPosition): boolean {
     const row = this.game.data[selectedCell.row];
     return this.checkValues(row);
   }
 
+  /**
+   * Check non empty and equals values
+   * @param values GameRound to check if are values to win
+   * @returns boolean true, when have values to won
+   */
   private checkValues(values: GameRound[]): boolean {
     let finished = false;
 
@@ -147,6 +195,11 @@ export class ThreeInLineGameComponent implements OnInit {
     return finished;
   }
 
+  /**
+   * Check if the row is a winner col
+   * @param selectedCell to check only this col
+   * @returns boolean true, when have values to won
+   */
   private checkVerticals(selectedCell: CellPosition): boolean {
     const cols: GameRound[] = [this.game.data[0][selectedCell.col]];
     cols.push(this.game.data[1][selectedCell.col]);
@@ -154,6 +207,11 @@ export class ThreeInLineGameComponent implements OnInit {
     return this.checkValues(cols);
   }
 
+  /**
+   * Check the diagonals values to check a winner
+   * @param selectedCell to check the diagonals have won
+   * @returns boolean true, when have values to won
+   */
   private checkDiagonals(selectedCell: CellPosition): boolean {
     let valid = false;
     let values: GameRound[];
@@ -199,6 +257,10 @@ export class ThreeInLineGameComponent implements OnInit {
     return valid;
   }
 
+  /**
+   * Check if the dashboard is full, to set a tie
+   * @returns boolean true when cannot continue playing
+   */
   private checkTie(): boolean {
     let tie = true;
 
@@ -221,12 +283,20 @@ export class ThreeInLineGameComponent implements OnInit {
     return tie && emptyCell === undefined;
   }
 
+  /**
+   * Set the status on the game and players
+   * @param status GameStatus to set a status to finish the game
+   */
   private finishGame(status: GameStatus) {
     this.game.status = status;
     this.game.playerX.status = status;
     this.game.playerO.status = status;
   }
 
+  /**
+   * Check if the game are finished
+   * @returns boolean true when status is finished or tie
+   */
   public checkFinishStatus(): boolean {
     return (
       this.game.status === GameStatus.Finished ||
@@ -234,6 +304,10 @@ export class ThreeInLineGameComponent implements OnInit {
     );
   }
 
+  /**
+   * Check the statsu and return a translation for that status
+   * @returns string with the text to render
+   */
   public getFinishedText(): string {
     let text = "";
 

@@ -251,7 +251,10 @@
     }
   },
   "games": {
+    "newGame": "Nueva partida",
     "3x3": {
+      "title": "3 en raya",
+      "description": "Se trata de un simple aplicación local en Angular 8 para el popular juego 3 en raya",
       "newGame": "Nueva partida",
       "tie": "Empate",
       "active": "Tu turno",

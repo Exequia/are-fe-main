@@ -1,12 +1,16 @@
 <div class="card" *ngIf="gameId">
-  <i class="fas fa-hashtag fa-5x"></i>
-  {{ gameId }}
+  <!-- <i class="fas fa-hashtag fa-5x"></i>
+  {{ gameId }} -->
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
+    <h5 class="card-title">{{ "games." + gameId + ".title" | translate }}</h5>
     <p class="card-text">
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
+      {{ "games." + gameId + ".description" | translate }}.
     </p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <a
+      [routerLink]="gameId"
+      routerLinkActive="router-link-active"
+      class="btn btn-primary"
+      >{{ "games.newGame" | translate }}</a
+    >
   </div>
 </div>

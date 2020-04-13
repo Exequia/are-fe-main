@@ -4,6 +4,8 @@ import { GamesHomeComponent } from "./games-home.component";
 import { CardListComponent } from "../../component/card-list/card-list.component";
 import { CardComponent } from "../../component/card/card.component";
 
+import { RouterTestingModule } from "@angular/router/testing";
+
 import { HttpClientTestingModule } from "@angular/common/http/testing";
 import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
@@ -21,6 +23,7 @@ describe("GamesHomeComponent", () => {
     TestBed.configureTestingModule({
       declarations: [GamesHomeComponent, CardListComponent, CardComponent],
       imports: [
+        RouterTestingModule,
         HttpClientTestingModule,
         TranslateModule.forRoot({
           loader: {
