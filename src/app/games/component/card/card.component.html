@@ -1,0 +1,16 @@
+<div class="card" *ngIf="gameId">
+  <!-- <i class="fas fa-hashtag fa-5x"></i>
+  {{ gameId }} -->
+  <div class="card-body">
+    <h5 class="card-title">{{ "games." + gameId + ".title" | translate }}</h5>
+    <p class="card-text">
+      {{ "games." + gameId + ".description" | translate }}.
+    </p>
+    <a
+      [routerLink]="gameId"
+      routerLinkActive="router-link-active"
+      class="btn btn-primary"
+      >{{ "games.newGame" | translate }}</a
+    >
+  </div>
+</div>

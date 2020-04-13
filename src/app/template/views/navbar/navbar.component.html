@@ -46,7 +46,7 @@
             [routerLink]="'/' + menu.link + '/' + item.link"
             routerLinkActive="active"
           >
-            <i class="fas {{ item.icon }}"></i>
+            <i class="{{ item.icon }}"></i>
             {{ "template.navbar." + menu.key + "." + item.key | translate }}</a
           >
         </div>

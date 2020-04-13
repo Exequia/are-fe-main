@@ -26,6 +26,11 @@
         "works": "Experiencia",
         "studies": "Estudios"
       },
+      "games": {
+        "title": "Juegos",
+        "summary": "Resumen",
+        "3x3": "Tren en raya"
+      },
       "bets": {
         "title": "Apuestas",
         "summary": "Resumen"
@@ -243,6 +248,19 @@
     },
     "dxc": {
       "description": "Jefe de equipo y desarrollador de FrontEnd con Stenciljs. Creación de webcomponentes propios para su importación y uso en todas las webs de la entidad del cliente. Repositorio GIT"
+    }
+  },
+  "games": {
+    "newGame": "Nueva partida",
+    "3x3": {
+      "title": "3 en raya",
+      "description": "Se trata de un simple aplicación local en Angular 8 para el popular juego 3 en raya",
+      "newGame": "Nueva partida",
+      "tie": "Empate",
+      "active": "Tu turno",
+      "waiting": "Esperando",
+      "finished": "Fin de juego",
+      "winner": "¡{{winner}} Ganan!"
     }
   }
 }

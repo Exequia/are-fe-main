@@ -1,0 +1,5 @@
+<div class="row" *ngIf="gamesIds">
+  <div class="col" *ngFor="let gameId of gamesIds">
+    <app-card [gameId]="gameId"></app-card>
+  </div>
+</div>
