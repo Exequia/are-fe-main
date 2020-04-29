@@ -1,18 +1,11 @@
-import { Component, OnInit } from "@angular/core";
-import {
-  GameConfig,
-  Player,
-  GameStatus,
-  GameRound,
-  GameDashboard,
-  CellPosition,
-} from "../models/three-in-line";
-import { TranslateService } from "@ngx-translate/core";
+import { Component, OnInit } from '@angular/core';
+import { GameConfig, Player, GameStatus, GameRound, GameDashboard, CellPosition } from '../models/three-in-line';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
-  selector: "app-three-in-line-game",
-  templateUrl: "./three-in-line-game.component.html",
-  styleUrls: ["./three-in-line-game.component.scss"],
+  selector: 'app-three-in-line-game',
+  templateUrl: './three-in-line-game.component.html',
+  styleUrls: ['./three-in-line-game.component.scss']
 })
 export class ThreeInLineGameComponent implements OnInit {
   public game: GameConfig;
@@ -42,7 +35,7 @@ export class ThreeInLineGameComponent implements OnInit {
       status: GameStatus.Waiting,
       round: GameRound.X,
       dashboard: this.getDefaultDashboard(),
-      data: null,
+      data: null
     };
   }
 
@@ -53,7 +46,7 @@ export class ThreeInLineGameComponent implements OnInit {
   private getDefaultPlayer(alias: GameRound): Player {
     return {
       name: `Jugador ${alias}`,
-      status: GameStatus.Waiting,
+      status: GameStatus.Waiting
     };
   }
 
@@ -64,7 +57,7 @@ export class ThreeInLineGameComponent implements OnInit {
   private getDefaultDashboard(): GameDashboard {
     return {
       rows: 3,
-      cols: 3,
+      cols: 3
     };
   }
 
@@ -189,8 +182,7 @@ export class ThreeInLineGameComponent implements OnInit {
   private checkValues(values: GameRound[]): boolean {
     let finished = false;
 
-    finished =
-      values[0] !== "" && values[0] === values[1] && values[1] === values[2];
+    finished = values[0] !== '' && values[0] === values[1] && values[1] === values[2];
 
     return finished;
   }
@@ -298,10 +290,7 @@ export class ThreeInLineGameComponent implements OnInit {
    * @returns boolean true when status is finished or tie
    */
   public checkFinishStatus(): boolean {
-    return (
-      this.game.status === GameStatus.Finished ||
-      this.game.status === GameStatus.Tie
-    );
+    return this.game.status === GameStatus.Finished || this.game.status === GameStatus.Tie;
   }
 
   /**
@@ -309,16 +298,16 @@ export class ThreeInLineGameComponent implements OnInit {
    * @returns string with the text to render
    */
   public getFinishedText(): string {
-    let text = "";
+    let text = '';
 
     switch (this.game.status) {
       case GameStatus.Tie:
-        text = this.translate.instant("games.3x3.tie");
+        text = this.translate.instant('games.3x3.tie');
         break;
 
       case GameStatus.Finished:
-        text = this.translate.instant("games.3x3.winner", {
-          winner: this.game.round,
+        text = this.translate.instant('games.3x3.winner', {
+          winner: this.game.round
         });
         break;
     }

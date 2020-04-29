@@ -1,21 +1,21 @@
-import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FormsModule } from "@angular/forms";
-import { RouterTestingModule } from "@angular/router/testing";
+import { FormsModule } from '@angular/forms';
+import { RouterTestingModule } from '@angular/router/testing';
 
-import { LoginComponent } from "./login.component";
-import { LoginFormComponent } from "../../components/login-form/login-form.component";
+import { LoginComponent } from './login.component';
+import { LoginFormComponent } from '../../components/login-form/login-form.component';
 
-import { HttpClientTestingModule } from "@angular/common/http/testing";
-import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
-import { TranslateHttpLoader } from "@ngx-translate/http-loader";
-import { HttpClient } from "@angular/common/http";
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient } from '@angular/common/http';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
 }
 
-describe("LoginComponent", () => {
+describe('LoginComponent', () => {
   let component: LoginComponent;
   let fixture: ComponentFixture<LoginComponent>;
 
@@ -43,7 +43,7 @@ describe("LoginComponent", () => {
     fixture.detectChanges();
   });
 
-  it("should create", () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });

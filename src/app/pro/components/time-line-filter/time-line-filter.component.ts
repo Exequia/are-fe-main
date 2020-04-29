@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 // import { FilterButtons } from "./models/filters";
 
 export interface FilterButtons {
@@ -7,9 +7,9 @@ export interface FilterButtons {
 }
 
 @Component({
-  selector: "app-time-line-filter",
-  templateUrl: "./time-line-filter.component.html",
-  styleUrls: ["./time-line-filter.component.scss"],
+  selector: 'app-time-line-filter',
+  templateUrl: './time-line-filter.component.html',
+  styleUrls: ['./time-line-filter.component.scss']
 })
 export class TimeLineFilterComponent implements OnInit {
   /** Array with the full data of component */
@@ -39,9 +39,9 @@ export class TimeLineFilterComponent implements OnInit {
     if (this.items) {
       let filterButtons: FilterButtons[] = [
         {
-          value: "",
-          items: this.items.length,
-        },
+          value: '',
+          items: this.items.length
+        }
       ];
 
       const values: string[] = [];
@@ -67,12 +67,10 @@ export class TimeLineFilterComponent implements OnInit {
    */
   private getFiltersItems(filterButtons: FilterButtons[]): FilterButtons[] {
     filterButtons.forEach((option, index, array) => {
-      if (option.value === "") {
+      if (option.value === '') {
         option.items = this.items.length;
       } else {
-        const filtered = this.items.filter(
-          (item) => item[this.filterProp] === option.value
-        );
+        const filtered = this.items.filter((item) => item[this.filterProp] === option.value);
         option.items = filtered.length;
       }
     });
@@ -89,9 +87,7 @@ export class TimeLineFilterComponent implements OnInit {
     let filteredItems: any[] = this.items;
 
     if (this.items && filterValue) {
-      filteredItems = this.items.filter(
-        (study) => study[this.filterProp] === filterValue
-      );
+      filteredItems = this.items.filter((study) => study[this.filterProp] === filterValue);
     }
 
     this.filteredItems.emit(filteredItems);

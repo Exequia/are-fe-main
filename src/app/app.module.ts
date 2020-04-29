@@ -27,6 +27,8 @@ import { PageNotFoundComponent } from "./template/views/page-not-found/page-not-
 import { CardComponent } from "./template/components/card/card.component";
 import { ListCardsComponent } from "./template/views/list-cards/list-cards.component";
 import { ConfigurationComponent } from "./template/components/configuration/configuration.component";
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -50,6 +52,7 @@ import { ConfigurationComponent } from "./template/components/configuration/conf
         deps: [HttpClient],
       },
     }),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

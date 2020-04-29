@@ -1,20 +1,20 @@
-import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FormsModule } from "@angular/forms";
-import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { FormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-import { DatepickerI18nComponent } from "./datepicker-i18n.component";
+import { DatepickerI18nComponent } from './datepicker-i18n.component';
 
-import { HttpClientTestingModule } from "@angular/common/http/testing";
-import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
-import { TranslateHttpLoader } from "@ngx-translate/http-loader";
-import { HttpClient } from "@angular/common/http";
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient } from '@angular/common/http';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
 }
 
-describe("DatepickerI18nComponent", () => {
+describe('DatepickerI18nComponent', () => {
   let component: DatepickerI18nComponent;
   let fixture: ComponentFixture<DatepickerI18nComponent>;
 
@@ -42,7 +42,7 @@ describe("DatepickerI18nComponent", () => {
     fixture.detectChanges();
   });
 
-  it("should create", () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });

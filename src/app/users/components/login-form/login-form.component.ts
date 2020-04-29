@@ -1,8 +1,8 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 // import { Login } from "../../models/Users";
-import { AuthService } from "src/app/services/auth.service";
-import { environment } from "../../../../environments/environment";
-import { Router } from "@angular/router";
+import { AuthService } from 'src/app/services/auth.service';
+import { environment } from '../../../../environments/environment';
+import { Router } from '@angular/router';
 
 interface Login {
   email: string;
@@ -10,9 +10,9 @@ interface Login {
 }
 
 @Component({
-  selector: "app-login-form",
-  templateUrl: "./login-form.component.html",
-  styleUrls: ["./login-form.component.scss"]
+  selector: 'app-login-form',
+  templateUrl: './login-form.component.html',
+  styleUrls: ['./login-form.component.scss']
 })
 export class LoginFormComponent implements OnInit {
   public loginModel: Login;
@@ -35,7 +35,7 @@ export class LoginFormComponent implements OnInit {
     this.loading = true;
     this.authService.login(requestData).then(() => {
       this.loading = false;
-      this.router.navigate(["/home"]);
+      this.router.navigate(['/home']);
     });
   }
 }

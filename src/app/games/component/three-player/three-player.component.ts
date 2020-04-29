@@ -1,10 +1,10 @@
-import { Component, OnInit, Input } from "@angular/core";
-import { Player, GameStatus } from "../models/three-in-line";
+import { Component, OnInit, Input } from '@angular/core';
+import { Player, GameStatus } from '../models/three-in-line';
 
 @Component({
-  selector: "app-three-player",
-  templateUrl: "./three-player.component.html",
-  styleUrls: ["./three-player.component.scss"],
+  selector: 'app-three-player',
+  templateUrl: './three-player.component.html',
+  styleUrls: ['./three-player.component.scss']
 })
 export class ThreePlayerComponent implements OnInit {
   @Input() player!: Player;
@@ -15,7 +15,7 @@ export class ThreePlayerComponent implements OnInit {
     if (!this.player) {
       this.player = {
         name: `Jugador`,
-        status: GameStatus.Waiting,
+        status: GameStatus.Waiting
       };
     }
   }
@@ -25,10 +25,10 @@ export class ThreePlayerComponent implements OnInit {
    * @returns string class name for htmlelement
    */
   public getClass(): string {
-    let className = "inactive";
+    let className = 'inactive';
 
     if (this.player.status === GameStatus.Active) {
-      className = "active";
+      className = 'active';
     }
 
     return className;
@@ -39,23 +39,23 @@ export class ThreePlayerComponent implements OnInit {
    * @retuns string with the translated text
    */
   public getStatusText(): string {
-    let text = "";
+    let text = '';
 
     switch (this.player.status) {
       case GameStatus.Waiting:
-        text = "games.3x3.waiting";
+        text = 'games.3x3.waiting';
         break;
 
       case GameStatus.Finished:
-        text = "games.3x3.finished";
+        text = 'games.3x3.finished';
         break;
 
       case GameStatus.Tie:
-        text = "games.3x3.tie";
+        text = 'games.3x3.tie';
         break;
 
       default:
-        text = "games.3x3.active";
+        text = 'games.3x3.active';
         break;
     }
 
