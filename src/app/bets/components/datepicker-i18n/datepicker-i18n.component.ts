@@ -6,7 +6,7 @@ import { CustomDatepickerI18nService } from '../../services/custom-datepicker-i1
   selector: 'app-datepicker-i18n',
   templateUrl: './datepicker-i18n.component.html',
   styleUrls: ['./datepicker-i18n.component.scss'],
-  providers: [{provide: NgbDatepickerI18n, useClass: CustomDatepickerI18nService}]
+  providers: [{ provide: NgbDatepickerI18n, useClass: CustomDatepickerI18nService }]
 })
 export class DatepickerI18nComponent {
   model: NgbDateStruct;

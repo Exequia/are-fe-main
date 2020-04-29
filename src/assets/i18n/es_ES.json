@@ -44,7 +44,7 @@
       "contact": {
         "subject": "Solicitud de contacto desde nuestra web"
       },
-      "videoError": "Your browser does not support HTML5 video",
+      "videoError": "Este navegador web no soporta vídeos en HTML5",
       "description": "Desarrollador informático de aplicaciones completas adaptadas a cualquier necesidad",
       "moreInfo": "Si quieres más información, puedes enviar un mail a",
       "contactMailSubject": "Contacto%20a%20través%20de%20la%20web"
@@ -52,8 +52,8 @@
     "news": {
       "title": "Últimas Noticias",
       "0": {
-        "title": "Inauguración web",
-        "body": "Se actualiza la página y se inagura con nuevas tecnologías destacando Angular 6 en el FrontEnd e Spring Microservices en Back End"
+        "title": "¡Nueva secció Jocs!",
+        "body": "Se inicia una nueva sección de juegos para implementar funcionalidades front más complejas con la esperanza de amenizar la navegación"
       },
       "1": {
         "title": "Inauguración web",
@@ -85,7 +85,7 @@
       },
       "back": {
         "title": "Negocio",
-        "summary": "Para aplicaciones medianas o grandes, es necesario tener la lógica de negocio separada de la presentación web. Se ofrecen soluciones con microservidios basados en los principales lenguajes de programación y sus frameworks más potentes para garantizar eficiencia y seguridad."
+        "summary": "Para aplicaciones medianas o grandes, es necesario tener la lógica de negocio separada de la presentación web. Se ofrecen soluciones con microservicios basados en los principales lenguajes de programación y sus frameworks más potentes para garantizar eficiencia y seguridad."
       },
       "data": {
         "title": "Datos",
@@ -208,16 +208,16 @@
     },
     "dam": {
       "title": "Desarrollo de Aplicaciones Multiplataforma",
-      "description": "Certificate of Higher Education of platform application development. 2 200 hours"
+      "description": "Ciclo superior de desarrollo de aplicaciones multiplataforma. 2.200h"
     },
     "admin": {
       "title": "Administración y finances",
-      "description": "Higher cycle of administration and finance. 2,500h"
+      "description": "Ciclo superior de administración y finanzas. 2,500h"
     }
   },
   "works": {
     "admin": {
-      "description": "Administrativo Contable durante más de 10 años como administrativo contable en varias compañías antes de hacer un cambio profesional al mundo de la programación"
+      "description": "Administrativo Contable durante más de 10 años de experiencia contable en varias compañías antes de hacer un cambio profesional al mundo de la programación"
     },
     "i3e": {
       "description": "Desarrollo en diferentes proyectos tanto en Java, JEE, PHP, .Net Oracle SQLServer, Java Script, Hibernate, Maven, Swing, Apache, IIS, Laravel, etc Clientes como Aigües de Barcelona, Xarxa Oberta, Merak, etc... Web services, formularios, módulos para Sugar CRM, migración de bases de datos"

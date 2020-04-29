@@ -1,16 +1,16 @@
-import { Component, OnInit } from "@angular/core";
-import { TranslateService } from "@ngx-translate/core";
-import { environment } from "../../../../environments/environment";
+import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { environment } from '../../../../environments/environment';
 
 @Component({
-  selector: "app-summary",
-  templateUrl: "./summary.component.html",
-  styleUrls: ["./summary.component.scss"]
+  selector: 'app-summary',
+  templateUrl: './summary.component.html',
+  styleUrls: ['./summary.component.scss']
 })
 export class SummaryComponent implements OnInit {
   constructor(private translate: TranslateService) {}
 
-  private subject = "";
+  private subject = '';
 
   ngOnInit() {
     this.getSubject();
@@ -21,11 +21,9 @@ export class SummaryComponent implements OnInit {
   }
 
   getSubject() {
-    this.translate
-      .get("template.summary.contact.subject")
-      .subscribe((res: string) => {
-        this.subject = res;
-      });
+    this.translate.get('template.summary.contact.subject').subscribe((res: string) => {
+      this.subject = res;
+    });
   }
 
   getEmail(): string {

@@ -8,9 +8,8 @@ describe('ThreeDashboardComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ThreeDashboardComponent ]
-    })
-    .compileComponents();
+      declarations: [ThreeDashboardComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

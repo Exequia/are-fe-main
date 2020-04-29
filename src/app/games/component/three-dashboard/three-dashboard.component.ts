@@ -1,11 +1,11 @@
-import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
-import { GameRound, CellPosition, GameStatus } from "../models/three-in-line";
-import { UtilsService } from "src/app/services/utils/utils.service";
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { GameRound, CellPosition, GameStatus } from '../models/three-in-line';
+import { UtilsService } from 'src/app/services/utils/utils.service';
 
 @Component({
-  selector: "app-three-dashboard",
-  templateUrl: "./three-dashboard.component.html",
-  styleUrls: ["./three-dashboard.component.scss"],
+  selector: 'app-three-dashboard',
+  templateUrl: './three-dashboard.component.html',
+  styleUrls: ['./three-dashboard.component.scss']
 })
 export class ThreeDashboardComponent implements OnInit {
   @Input() data: Array<Array<GameRound>>;
@@ -32,12 +32,9 @@ export class ThreeDashboardComponent implements OnInit {
    * @param col number
    */
   public emitPosition(row: number, col: number) {
-    if (
-      this.status === GameStatus.Active &&
-      this.data[row][col] === GameRound.Empty
-    ) {
+    if (this.status === GameStatus.Active && this.data[row][col] === GameRound.Empty) {
       this.cellSelected.emit({ row: row, col: col });
-      const target: HTMLElement = document.querySelector(".col:hover");
+      const target: HTMLElement = document.querySelector('.col:hover');
       if (target) {
         target.blur();
       }
@@ -50,23 +47,23 @@ export class ThreeDashboardComponent implements OnInit {
    * @returns string with the classes to set in the cell
    */
   public getCellClass(content: GameRound): string {
-    let className = "hidden";
+    let className = 'hidden';
 
     if (this.status === GameStatus.Finished) {
       if (content === this.currentRound) {
-        className = "bg-success";
+        className = 'bg-success';
       } else if (!content) {
-        className = "finished-hidden";
+        className = 'finished-hidden';
       } else {
-        className = "bg-danger";
+        className = 'bg-danger';
       }
     } else if (this.status === GameStatus.Tie) {
-      className = "bg-danger";
+      className = 'bg-danger';
     } else if (content) {
       if (content === GameRound.X) {
-        className = "text-danger";
+        className = 'text-danger';
       } else {
-        className = "text-success";
+        className = 'text-success';
       }
     }
 
@@ -79,16 +76,16 @@ export class ThreeDashboardComponent implements OnInit {
    * @returns string with the icon to render
    */
   public getIcon(content: GameRound): string {
-    let icon = "far fa-circle";
+    let icon = 'far fa-circle';
 
     if (content) {
       if (content === GameRound.X) {
-        icon = "fas fa-times";
+        icon = 'fas fa-times';
       }
     }
 
     if (!content && this.currentRound === GameRound.X) {
-      icon = "fas fa-times";
+      icon = 'fas fa-times';
     }
 
     return `<i class="${icon}"></i>`;
@@ -99,14 +96,14 @@ export class ThreeDashboardComponent implements OnInit {
    * @returns string classes to add at col
    */
   public getClass(): string {
-    let classes = "col";
+    let classes = 'col';
 
     if (!this.utils.isMobile()) {
-      classes += " web";
+      classes += ' web';
     }
 
     if (this.status !== GameStatus.Active) {
-      classes += " cursor-invalid";
+      classes += ' cursor-invalid';
     }
 
     return classes;

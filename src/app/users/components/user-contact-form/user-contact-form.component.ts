@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 // import { Contact } from "../../models/Users";
 interface Contact {
   email: string;
@@ -7,9 +7,9 @@ interface Contact {
 }
 
 @Component({
-  selector: "app-user-contact-form",
-  templateUrl: "./user-contact-form.component.html",
-  styleUrls: ["./user-contact-form.component.scss"]
+  selector: 'app-user-contact-form',
+  templateUrl: './user-contact-form.component.html',
+  styleUrls: ['./user-contact-form.component.scss']
 })
 export class UserContactFormComponent implements OnInit {
   @Input() contact: Contact;
@@ -21,9 +21,9 @@ export class UserContactFormComponent implements OnInit {
     this.contact = this.contact
       ? this.contact
       : {
-          email: "",
-          phone: "",
-          confirmEmail: ""
+          email: '',
+          phone: '',
+          confirmEmail: ''
         };
   }
 }
