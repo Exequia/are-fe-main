@@ -1,19 +1,19 @@
-import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TimeLineListComponent } from "./time-line-list.component";
-import { TimeLineComponent } from "../time-line/time-line.component";
-import { TimeLineFilterComponent } from "../time-line-filter/time-line-filter.component";
+import { TimeLineListComponent } from './time-line-list.component';
+import { TimeLineComponent } from '../time-line/time-line.component';
+import { TimeLineFilterComponent } from '../time-line-filter/time-line-filter.component';
 
-import { HttpClientTestingModule } from "@angular/common/http/testing";
-import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
-import { TranslateHttpLoader } from "@ngx-translate/http-loader";
-import { HttpClient } from "@angular/common/http";
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient } from '@angular/common/http';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
 }
 
-describe("TimeLineListComponent", () => {
+describe('TimeLineListComponent', () => {
   let component: TimeLineListComponent;
   let fixture: ComponentFixture<TimeLineListComponent>;
 
@@ -29,11 +29,7 @@ describe("TimeLineListComponent", () => {
           }
         })
       ],
-      declarations: [
-        TimeLineListComponent,
-        TimeLineComponent,
-        TimeLineFilterComponent
-      ]
+      declarations: [TimeLineListComponent, TimeLineComponent, TimeLineFilterComponent]
     }).compileComponents();
   }));
 
@@ -43,7 +39,7 @@ describe("TimeLineListComponent", () => {
     fixture.detectChanges();
   });
 
-  it("should create", () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });

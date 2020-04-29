@@ -1,10 +1,10 @@
-import { Component, OnInit, Input, TemplateRef } from "@angular/core";
-import { TranslateService, LangChangeEvent } from "@ngx-translate/core";
+import { Component, OnInit, Input, TemplateRef } from '@angular/core';
+import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
 
 @Component({
-  selector: "app-time-line-list",
-  templateUrl: "./time-line-list.component.html",
-  styleUrls: ["./time-line-list.component.scss"],
+  selector: 'app-time-line-list',
+  templateUrl: './time-line-list.component.html',
+  styleUrls: ['./time-line-list.component.scss']
 })
 export class TimeLineListComponent implements OnInit {
   @Input() items: any[];
@@ -19,11 +19,9 @@ export class TimeLineListComponent implements OnInit {
     this.filteredItems = this.items;
     this.locale = this._translateService.currentLang;
     // don't forget to unsubscribe!
-    this._translateService.onLangChange.subscribe(
-      (langChangeEvent: LangChangeEvent) => {
-        this.locale = langChangeEvent.lang;
-      }
-    );
+    this._translateService.onLangChange.subscribe((langChangeEvent: LangChangeEvent) => {
+      this.locale = langChangeEvent.lang;
+    });
   }
 
   public doFilteredItems(filterResults: any[]) {
@@ -31,10 +29,10 @@ export class TimeLineListComponent implements OnInit {
   }
 
   public getClass(odd: boolean): string {
-    return odd ? "right" : "left";
+    return odd ? 'right' : 'left';
   }
 
   public getAos(odd: boolean): string {
-    return odd ? "fade-left" : "fade-right";
+    return odd ? 'fade-left' : 'fade-right';
   }
 }

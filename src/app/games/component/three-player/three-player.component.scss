@@ -1,0 +1,44 @@
+@import "../../../../assets/css/variables.scss";
+
+$inactive-height: 50px;
+$active-height: 180px;
+
+.player {
+  border-radius: 25px;
+}
+
+.active {
+  animation-name: activeAction;
+  min-height: $active-height;
+  background-color: $bg-success;
+  animation-duration: 1s;
+}
+
+.inactive {
+  animation-name: inactiveAction;
+  min-height: $inactive-height;
+  background-color: $bg-warning;
+  animation-duration: 1s;
+}
+
+@keyframes activeAction {
+  0% {
+    min-height: $inactive-height;
+    background-color: $bg-warning;
+  }
+  100% {
+    min-height: $active-height;
+    background-color: $bg-success;
+  }
+}
+
+@-webkit-keyframes inactiveAction {
+  0% {
+    min-height: $active-height;
+    background-color: $bg-success;
+  }
+  100% {
+    min-height: $inactive-height;
+    background-color: $bg-warning;
+  }
+}

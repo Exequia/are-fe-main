@@ -1,18 +1,18 @@
-import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ListCardsComponent } from "./list-cards.component";
-import { CardComponent } from "../../components/card/card.component";
+import { ListCardsComponent } from './list-cards.component';
+import { CardComponent } from '../../components/card/card.component';
 
-import { HttpClientTestingModule } from "@angular/common/http/testing";
-import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
-import { TranslateHttpLoader } from "@ngx-translate/http-loader";
-import { HttpClient } from "@angular/common/http";
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient } from '@angular/common/http';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
 }
 
-describe("ListCardsComponent", () => {
+describe('ListCardsComponent', () => {
   let component: ListCardsComponent;
   let fixture: ComponentFixture<ListCardsComponent>;
 
@@ -38,7 +38,7 @@ describe("ListCardsComponent", () => {
     fixture.detectChanges();
   });
 
-  it("should create", () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });

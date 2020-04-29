@@ -1,6 +1,6 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 // import { BetModel, TypeBet } from "../../models/BetModel";
-import { environment } from "src/environments/environment";
+import { environment } from 'src/environments/environment';
 interface BetModel {
   id: number;
   name: string;
@@ -24,9 +24,9 @@ enum TypeBet {
 }
 
 @Component({
-  selector: "app-list-bets",
-  templateUrl: "./list-bets.component.html",
-  styleUrls: ["./list-bets.component.scss"]
+  selector: 'app-list-bets',
+  templateUrl: './list-bets.component.html',
+  styleUrls: ['./list-bets.component.scss']
 })
 export class ListBetsComponent implements OnInit {
   public bets: Array<BetModel>;
@@ -38,7 +38,7 @@ export class ListBetsComponent implements OnInit {
       this.bets = [
         {
           id: 0,
-          name: "fnxWorkChange",
+          name: 'fnxWorkChange',
           type: TypeBet.Date,
           config: {
             private: true,

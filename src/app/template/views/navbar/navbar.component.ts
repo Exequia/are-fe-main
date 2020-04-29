@@ -1,114 +1,50 @@
-import { Component, OnInit } from "@angular/core";
-// import { User } from "../../../models/Users";
-import { Router } from "@angular/router";
-import { AuthService } from "../../../services/auth.service";
-import {
-  NabvarMenu,
-  NabvarMenuItem,
-  NabvarCredentials,
-} from "../../../models/NabvarMenu";
-interface User {
-  id?: number;
-  username: string;
-  password?: string;
-  email?: string;
-  token?: string;
-  role?: Role;
-}
-
-interface Role {
-  id: number;
-  name: string;
-}
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from '../../../services/auth.service';
+import { NavbarMenu, NavbarCredentials, User } from '../../../models/';
+import { FilesService } from 'src/app/services/files/files.service';
 
 @Component({
-  selector: "app-navbar",
-  templateUrl: "./navbar.component.html",
-  styleUrls: ["./navbar.component.scss"],
+  selector: 'app-navbar',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
   public user: User;
-  public menus: NabvarMenu[] = [];
+  public menus: NavbarMenu[] = [];
+  public loadingMenu = false;
 
-  constructor(private router: Router, private authService: AuthService) {
+  constructor(private router: Router, private authService: AuthService, private filesService: FilesService) {
     this.authService.currentUser.subscribe((user: User) => {
       this.user = user;
     });
-    this.menus = this.getMenus();
+    this.invokeGetMenus();
   }
 
   ngOnInit() {}
 
   public logout() {
     this.authService.logout();
-    this.router.navigate(["/"]);
+    this.router.navigate(['/']);
   }
 
-  private getMenus() {
-    const pro: NabvarMenu = this.getProMenu();
-    const bets: NabvarMenu = this.getBetsMenu();
-    return [pro, bets];
+  private invokeGetMenus() {
+    this.loadingMenu = true;
+    this.filesService.getLocalFile('assets/files/navbar.json').subscribe(
+      (menuResponse: NavbarMenu[]) => {
+        this.loadingMenu = false;
+        this.menus = menuResponse;
+      },
+      (error) => {
+        this.loadingMenu = false;
+        console.error('invokeGetMenus', error);
+      }
+    );
   }
 
-  /** Return array for nabvar menú with profesional info */
-  private getProMenu(): NabvarMenu {
-    const proItems: NabvarMenuItem[] = this.getProMenuItems();
-    const pro: NabvarMenu = {
-      authorized: [NabvarCredentials.All],
-      key: "pro",
-      link: "pro",
-      icon: "fa-user-tie",
-      items: proItems,
-    };
-    return pro;
-  }
-
-  /**Return Profesional items of the navbar menú */
-  private getProMenuItems(): NabvarMenuItem[] {
-    const proArchitectureItem: NabvarMenuItem = {
-      key: "architecture",
-      icon: "fa-object-group",
-      link: "home",
-    };
-    const proWorksItem: NabvarMenuItem = {
-      key: "works",
-      icon: "fa-laptop-code",
-      link: "works",
-    };
-    const proStudiesItem: NabvarMenuItem = {
-      key: "studies",
-      icon: "fa-user-graduate",
-      link: "studies",
-    };
-    return [proArchitectureItem, proWorksItem, proStudiesItem];
-  }
-
-  /** Return array for nabvar menú with bets info */
-  private getBetsMenu(): NabvarMenu {
-    const betsItems: NabvarMenuItem[] = this.getBetsMenuItems();
-    const bets: NabvarMenu = {
-      authorized: [NabvarCredentials.Admin, NabvarCredentials.Bets],
-      key: "bets",
-      link: "bets",
-      icon: "fa-dice",
-      items: betsItems,
-    };
-    return bets;
-  }
-
-  /**Return Bets items of the navbar menú */
-  private getBetsMenuItems(): NabvarMenuItem[] {
-    const betSummaryItem: NabvarMenuItem = {
-      key: "summary",
-      icon: "fa-tachometer-alt",
-      link: "summary",
-    };
-    return [betSummaryItem];
-  }
-
-  public checkCredentials(menu: NabvarMenu): boolean {
+  public checkCredentials(menu: NavbarMenu): boolean {
     let renderItem = true;
-    if (menu.authorized.indexOf(NabvarCredentials.All) < 0) {
+    if (menu.authorized.indexOf(NavbarCredentials.All) < 0) {
       if (!this.user) {
         renderItem = false;
       }

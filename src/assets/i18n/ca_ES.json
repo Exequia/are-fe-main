@@ -3,11 +3,11 @@
     "yes": "Sí",
     "no": "No",
     "validations": {
-      "required": "És necessari informar aquest camp",
-      "minLength": "El campo debe tener al menos {{value}} carácteres",
-      "maxLength": "El campo debe tener máximo {{value}} carácteres",
-      "mustMatch": "Error confirmación. Los valores de los campos son diferentes",
-      "email": "El formato indicado no es correcto"
+      "required": "Es necessari informar aquest camp",
+      "minLength": "El camp ha de tenir al menys {{value}} caràcters",
+      "maxLength": "El camp ha de tenir com a màxim {{value}} caràcters",
+      "mustMatch": "Error de confirmació. Els valors dels camps són diferents",
+      "email": "El format indicat no és correcte"
     },
     "languages": {
       "es_ES": "Castellà",
@@ -21,12 +21,19 @@
       "login": "Entrar",
       "logout": "Tancar sessió",
       "pro": {
-        "title": "Profesional",
-        "architecture": "Arquitectura"
+        "title": "Professional",
+        "architecture": "Arquitectura",
+        "works": "Experiència",
+        "studies": "Estudis"
+      },
+      "games": {
+        "title": "Jocs",
+        "summary": "Resum",
+        "3x3": "Tren en línia"
       },
       "bets": {
-        "title": "Apostas",
-        "summary": "Resumen"
+        "title": "Apostes",
+        "summary": "Resum"
       },
       "configuration": {
         "title": "Configuració",
@@ -35,83 +42,225 @@
     },
     "summary": {
       "contact": {
-        "subject": "Solicitud de contacto desde nuestra web"
+        "subject": "Solicitut de contacte des de la nostra web"
       },
-      "videoError": "Your browser does not support HTML5 video",
-      "description": "Desarrollador informático de aplicaciones completas adaptadas a cualquier necesidad",
-      "moreInfo": "Si quieres más información, puedes enviar un mail a",
-      "contactMailSubject": "Contacto%20a%20través%20de%20la%20web"
+      "videoError": "Aquest navegador web no soporta vídeos en HTML5",
+      "description": "Desenvolupador informàtic d’aplicacions completes adaptades a qualsevol necessitat",
+      "moreInfo": "Si vol més informació, pots enviar un mail a",
+      "contactMailSubject": "Contacte%20a%20través%20de%20la%20web"
     },
     "news": {
-      "title": "Últimas Noticias",
+      "title": "Últimes Noticies",
       "0": {
-        "title": "Inauguración web",
-        "body": "Se actualiza la página y se inagura con nuevas tecnologías destacando Angular 6 en el FrontEnd e Spring Microservices en Back End"
+        "title": "¡Nueva secció Jocs!",
+        "body": "S’inicia una nova secció de jocs per a implementar funcionalitats front més complexes amb la esperança de amenitzar la navegació"
       },
       "1": {
-        "title": "Inauguración web",
-        "body": "Se actualiza la página y se inagura con nuevas tecnologías destacando Angular 6 en el FrontEnd e Spring Microservices en Back End"
+        "title": "Inauguració  web",
+        "body": "S’actualitza la pàgina i amb noves tecnologies destacant Angular 8 en el Frontend i Microserveis Java al Backend"
       }
     },
     "studies": {
-      "title": "Últimas Formaciones",
+      "title": "Últimes Formacions",
       "0": {
-        "title": "Diseño de patrones",
-        "body": "Autoformación de los principales patroñes de diseño de programación"
+        "title": "Disseny de patrons",
+        "body": "Autoformació de les principals patrons de disseny de programació"
       },
       "1": {
         "title": "Web Components",
-        "body": "Autoformación de funcionamiento y creación de web components para API HTML5"
+        "body": "Autoformació de funcionaments i creació de web components per a API HTML5"
       }
     }
   },
   "pro": {
     "architecture": {
-      "title": "Arquitectura de las aplicaciones",
+      "title": "Arquitectura de les aplicacions",
       "cloud": {
-        "title": "Nube",
-        "summary": "So ofrece (y recomienda) el alojamiento de la aplicación en 'La Nube' (o cloud).<br/>'La Nube' es un espacio virtual donde instalaremos y almacenaremos todo lo necesario para nuestras aplicaciones. Así bastará con disponer de una conexión a internet para acceder nuestras aplicaciones desde cualquier parte del mundo y con cualquier dispositivo con conexión a internet (móvil, PC, tablet, etc)."
+        "title": "núvol",
+        "summary": "s’ofereix (i es recomana) l’allotjament de les aplicació 'Al Núvol' (o cloud).<br/>'El núvol' és un espai virtual on instal·larem i emmagatzerem tot el necessari per a les nostres aplicacions. Així només caldrà disposar d’una connexió a internet per accedir a les nostres aplicacions des de qualsevol part del mon i amb qualsevol dispositiu amb connexió a internet (mòbil, PC, Tablet, etc)."
       },
       "front": {
         "title": "Webs",
-        "summary": "Se ofrecen creaciónes de páginas web para poder maximizar el alcance de nuestra presencia en la red, a la vez que facilitar el acceso de los clientes u usuarios.<br>Aplicaciones basadas en HTML5 y CSS3 para facilitar visualización en cualquier dispositivo y/o plataforma."
+        "summary": "S’ofereixen creacions de pàgines web per a poder maximitzar l’abast de la nostre presencia en la xarxa, a l’hora de facilitar l’accés dels clients o usuaris .<br/>Aplicacions basades en HTML5 i CSS3 per facilitar visualitzacions en qualsevol dispositiu i/o plataforma."
       },
       "back": {
-        "title": "Negocio",
-        "summary": "Para aplicaciones medianas o grandes, es necesario tener la lógica de negocio separada de la presentación web. Se ofrecen soluciones con microservidios basados en los principales lenguajes de programación y sus frameworks más potentes para garantizar eficiencia y seguridad."
+        "title": "Negoci",
+        "summary": "Per a aplicacions mitjanes o grans, és necessari tenir la lògica de negoci separada de la presentació web. S’ofereixen solucions amb microserveis basats en els principals llenguatges de programació i els seus frameworks més potents per a garantitzar eficiència i seguretat."
       },
       "data": {
-        "title": "Datos",
-        "summary": "Se ofrecen recursos de bases de datos de todo tipo. Desde gratuitas para pequeños presupuestos, a grandes y solidas utilizadas por grandes compañías de nivel mundial."
+        "title": "Dades",
+        "summary": "S’ofereixen recursos de bases de dades de tots els tipus. Des de gratuïtes per a pressupostos ajustats o grans i sòlides utilitzades per a companyies de nivell mundial."
       }
+    },
+    "works": {
+      "title": "Experiencia Laboral",
+      "workingIn": "En",
+      "forCustomer": "per a",
+      "fullstack": "Fullstack",
+      "frontend": "Frontend",
+      "backend": "Backend"
+    },
+    "studies": {
+      "title": "Formació"
+    },
+    "timeLine": {
+      "qualify": "Qualificació",
+      "filter": {
+        "itemsMatch": "Resultats",
+        "": " Totes",
+        "regular": "Reglada",
+        "other": "Complementaria",
+        "admin": "Administració",
+        "developer": "Programador",
+        "management": "Gestió"
+      },
+      "noTemplate": "No s’ha trobat una estructura per a mostrar les dades"
     }
   },
   "users": {
     "login": {
-      "signIn": "Acceso",
+      "signIn": "Accés",
       "email": "Email",
-      "password": "Contraseña",
-      "rememberMe": "Recordarme",
+      "password": "Contrasenya",
+      "rememberMe": "Recorda-me",
       "login": "Entrar",
-      "haveNotAccount": "Aun no tienes cuenta",
-      "signUp": "Registrarse",
-      "getNewPassword": "Conseguir una nueva contraseña"
+      "haveNotAccount": "Encara no tens compte",
+      "signUp": "Registrar-se",
+      "getNewPassword": "Conseguir una nueva contrasenya"
     },
     "userForm": {
-      "userData": "Datos del usuario",
+      "userData": "Dades del usuari",
       "alias": "Alias",
-      "aliasPH": "Nombre de usuario público",
-      "password": "Contraseña",
-      "passwordPH": "Contraseña del usuario",
-      "confirmPassword": "Confirmar contraseña",
-      "confirmPasswordPH": "Volver a escribir la constraseña"
+      "aliasPH": "Nombre de usuari al públic",
+      "password": "Contrasenya",
+      "passwordPH": "Contrasenya del usuari",
+      "confirmPassword": "Confirmar contrasenya",
+      "confirmPasswordPH": "Volver a escriure la constrasenya"
     },
     "contactForm": {
-      "contactData": "Datos de contacto",
-      "email": "Correo electrónico",
-      "emailPH": "Introducir email",
-      "phone": "Teléfono",
-      "phonePH": "Número de teléfono de contacto"
+      "contactData": "Dades del contacte",
+      "email": "Correu electrònic",
+      "emailPH": "Introduir email",
+      "phone": "Telèfono",
+      "phonePH": "Número de telèfon de contacto"
+    }
+  },
+  "studies": {
+    "webComponents": {
+      "title": "Web Components",
+      "description": "Curso de creació de web componentes amb API HTML 5"
+    },
+    "designPatterns": {
+      "title": "Patrons de disenys",
+      "description": "Curs dels principals patrons de dissenys amb ejemples en Java"
+    },
+    "aws": {
+      "title": "Amazon Web Service",
+      "description": "Curs de las principals funcionalitats de AWS. Instancies, EBS, VPC, Cloud, LB, RDS, IAM, KMS, S3, Lambdas, SQS, Developers Tools"
+    },
+    "angular8": {
+      "title": "Angular 8",
+      "description": "Revisió de les millores i noves funcionalitats de la nova versió 8 del framework Angular"
+    },
+    "java11": {
+      "title": "Java 11",
+      "description": "Revisió de les millores i noves funcionalitats de la nova versió 11 de Java LTS"
+    },
+    "netcore": {
+      "title": ".NET Core",
+      "description": "Formació de les principals novetats del nuevo framework"
+    },
+    "vue": {
+      "title": "Vue.js",
+      "description": "Curs de formació sobre el framework Vue.js per a aplicacions frontend"
+    },
+    "angular67": {
+      "title": "Angular 6 & 7",
+      "description": "Revisió de les millores i nuevas funcionalitats de las versiones 6 i 7 del framework Angular"
+    },
+    "java8": {
+      "title": "Java 8",
+      "description": "Revisión de las millores i nuevas funcionalitats de la nueva versión de Java"
+    },
+    "springboot": {
+      "title": "Microservicios amb Springboot",
+      "description": "Curso para creación de microservicios basados en springboot"
+    },
+    "spring": {
+      "title": "Spring",
+      "description": "Curso del framework de spring para Java"
+    },
+    "angular2": {
+      "title": "Angular +",
+      "description": "Curso del framework Angular para conocer los cambios respecto a Angular.js"
+    },
+    "angularjs": {
+      "title": "Angular.js",
+      "description": "Curso del framework Angular Js para creaciones de aplicaciones web"
+    },
+    "frameworkNet": {
+      "title": ".NET Framework",
+      "description": "Curso Fundamentos en tecnología i programació .NET Framework. 250horas"
+    },
+    "jee": {
+      "title": "Aplicaciones web",
+      "description": "Certificat de profesionalitat (nivel 3) Desenvolupament d'aplicacions amb tecnología web. 610h"
+    },
+    "dam": {
+      "title": "Desenvolupament d'Aplicacions Multiplataforma",
+      "description": "Cicle superior de desenvolupament d'aplicacions multiplataforma. 2.200h"
+    },
+    "admin": {
+      "title": "Administració i finances",
+      "description": "Cicle superior d'administración i finances. 2,500h"
+    }
+  },
+  "works": {
+    "admin": {
+      "description": "Administratiu comptable amb més de 10 anys d'experiencia en varies companyies abans de fer un canvi professional al mon de la programació"
+    },
+    "i3e": {
+      "description": "Desenvolupament en diferents projectes tant en Java, JEE, PHP, .Net, Oracle, SQL Server, Java Script, Hibernate, Maven, Swing, Apache, IIS, Laravel, etc. Clients com aigües de Barcelona, Xarxa Oberta, Merak, etc. Web services, formularis, mòduls per a Sugar CRM, migració de base de dades"
+    },
+    "disalfarm": {
+      "description": "Actualizació de códi de Borlan C++ a formularis Java SWING. DDBB Oracle, PL/SQL"
+    },
+    "mediaMarkt": {
+      "description": "Gestió de informació d'artículos, comandes, consultes, per a Media Markt. Arquitectura del projecte basada en J2EE, Maven, JUnit, SQL Server, Web services, ficheros XML e Interfaces. Repositori Git"
+    },
+    "optimissa1": {
+      "description": "Desenvolupador Java: Mantenimient d'aplicació web amb J2EE (Hibernate, JSF, EJB, Maven, Spring) i evolutiu d'aplicació Java amb Swing. Base de dades Oracle. Repositori Subversion"
+    },
+    "optimissa2": {
+      "description": "Analista Java: Toma de requeriments i redacció de documentació funcional i disseny de probes unitaries i implementació amb Junit4"
+    },
+    "optimissa3": {
+      "description": "Responsable de departament de suport técnico: Gestió d'un equipo de 6 personas per a donar soport d'incidencias a les aplicacions de la entitat basades en J2EE (Maven) i Swing"
+    },
+    "cerba": {
+      "description": "Gestió d'un quip de 2 programadors per a un nou programa de laboratori propi basat en Angular 5 amb Caché i Java microserveis (MVC + JPA) amb Maven. Evolutiu de Mirth (Java) per a comunicacions i integracions amb SQL Server. Mantenimient d'aplicacions internes en .NET. Repositori TFS"
+    },
+    "deloitte": {
+      "description": "Cap d'equip i desenvolupador en un projecte internacional. SCRUM amb meeting en anglés. projecte d'Angular JS, Angular+ i Java microserveis (MVC + JPA) amb connexió a Oracle. Repositori GIT amb GITLAB"
+    },
+    "antares": {
+      "description": "Cap d'equip i desenvolupador com a Full Stack. Front End amb VueJs i serveis Rest amb .Net Core. Azure Devops per a CI/CD. SQL server i metodologies SCRUM i Kanban. Repositori GIT"
+    },
+    "dxc": {
+      "description": "Cap d'equip i desenvolupador de FrontEnd amb Stenciljs. Creació de webcomponentes propis per a la importació i us en totes les webs de la entidad del cliente. Repositori GIT"
+    }
+  },
+  "games": {
+    "newGame": "Nova partida",
+    "3x3": {
+      "title": "3 en línia",
+      "description": "Es tracta de una simple aplicació local en Angular 8 para reproduir el popular joc de 3 en línia",
+      "newGame": "Nova partida",
+      "tie": "Empate",
+      "active": "És el teu torn",
+      "waiting": "Esperant",
+      "finished": "Fi de joc",
+      "winner": "¡{{winner}} Ganen!"
     }
   }
 }
