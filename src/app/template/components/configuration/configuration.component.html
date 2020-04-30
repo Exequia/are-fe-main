@@ -1,40 +1,14 @@
 <li class="nav-item dropdown">
-  <a
-    routerLink=""
-    class="nav-link dropdown-toggle"
-    role="button"
-    data-toggle="dropdown"
-    aria-haspopup="true"
-    aria-expanded="false"
-  >
-    <i
-      class="fas fa-cog"
-      [title]="'template.navbar.configuration.title' | translate"
-    ></i
+  <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <i class="fas fa-cog" [title]="'template.navbar.configuration.title' | translate"></i
   ></a>
-  <div
-    class="dropdown-menu dropdown-menu-right submenu"
-    aria-labelledby="navbarDropdown"
-  >
-    <a
-      routerLink=""
-      class="dropdown-item nav-link dropdown-toggle"
-      role="button"
-      data-toggle="dropdown"
-      aria-haspopup="true"
-      aria-expanded="false"
-    >
-      <i class="fas fa-language"></i>&nbsp;{{
-        "template.navbar.configuration.languages" | translate
-      }}
+  <div class="dropdown-menu dropdown-menu-right submenu" aria-labelledby="navbarDropdown">
+    <a class="dropdown-item nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <i class="fas fa-language"></i>&nbsp;{{ 'template.navbar.configuration.languages' | translate }}
     </a>
     <div class="dropdown-menu dropdown-menu-right submenu">
-      <a
-        routerLink=""
-        class="dropdown-item"
-        *ngFor="let language of languages"
-        (click)="setLanguage(language)"
-        >{{ "common.languages." + language | translate }}
+      <a class="dropdown-item" *ngFor="let language of languages" (click)="setLanguage(language)"
+        >{{ 'common.languages.' + language | translate }}
       </a>
     </div>
   </div>

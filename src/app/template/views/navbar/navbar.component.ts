@@ -51,4 +51,15 @@ export class NavbarComponent implements OnInit {
     }
     return renderItem;
   }
+
+  /**
+   * Close the navbar menú
+   * @param event optional
+   */
+  public closeNavBarMenu(event?: any) {
+    const element = document.getElementById('navBarMenu');
+    if (element) {
+      element.classList.remove('show');
+    }
+  }
 }
