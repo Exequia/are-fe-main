@@ -14,21 +14,13 @@
   <div class="navbar-collapse collapse" id="navBarMenu">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a
-          class="nav-link text-capitalize"
-          routerLink=""
-          routerLinkActive="active"
-        >
+        <a class="nav-link text-capitalize" routerLink="" routerLinkActive="active" (click)="closeNavBarMenu()">
           <i class="fas fa-home mr-2"></i>
-          {{ "template.navbar.home" | translate }}
+          {{ 'template.navbar.home' | translate }}
           <span class="sr-only">(current)</span>
         </a>
       </li>
-      <li
-        class="nav-item dropdown"
-        *ngFor="let menu of menus"
-        routerLinkActive="active"
-      >
+      <li class="nav-item dropdown" *ngFor="let menu of menus" routerLinkActive="active">
         <a
           class="nav-link dropdown-toggle"
           role="button"
@@ -37,7 +29,7 @@
           aria-expanded="false"
           *ngIf="checkCredentials(menu)"
           ><i class="fas {{ menu.icon }}"></i>
-          {{ "template.navbar." + menu.key + ".title" | translate }}
+          {{ 'template.navbar.' + menu.key + '.title' | translate }}
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a
@@ -45,9 +37,10 @@
             *ngFor="let item of menu.items"
             [routerLink]="'/' + menu.link + '/' + item.link"
             routerLinkActive="active"
+            (click)="closeNavBarMenu()"
           >
             <i class="{{ item.icon }}"></i>
-            {{ "template.navbar." + menu.key + "." + item.key | translate }}</a
+            {{ 'template.navbar.' + menu.key + '.' + item.key | translate }}</a
           >
         </div>
       </li>
@@ -56,33 +49,22 @@
     <div class="align-middle">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item" *ngIf="!user">
-          <a
-            class="nav-link"
-            routerLink="/users/login"
-            routerLinkActive="active"
-          >
-            {{ "template.navbar.login" | translate }}
+          <a class="nav-link" routerLink="/users/login" routerLinkActive="active" (click)="closeNavBarMenu()">
+            {{ 'template.navbar.login' | translate }}
             <i class="fas fa-sign-in-alt"></i
           ></a>
         </li>
         <li class="nav-item" *ngIf="user">
-          <a
-            class="nav-link"
-            routerLink="/users/update"
-            routerLinkActive="active"
-          >
+          <a class="nav-link" routerLink="/users/update" routerLinkActive="active" (click)="closeNavBarMenu()">
             <span>
               {{ user.username }}
             </span>
-            <span
-              (click)="logout()"
-              [title]="'template.navbar.logout' | translate"
-            >
+            <span (click)="logout()" [title]="'template.navbar.logout' | translate">
               <i class="fas fa-sign-out-alt"></i>
             </span>
           </a>
         </li>
-        <app-configuration></app-configuration>
+        <app-configuration (closeNavBarMenu)="closeNavBarMenu($event)"></app-configuration>
       </ul>
     </div>
   </div>

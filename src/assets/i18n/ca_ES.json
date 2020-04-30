@@ -77,7 +77,7 @@
       "title": "Arquitectura de les aplicacions",
       "cloud": {
         "title": "núvol",
-        "summary": "s’ofereix (i es recomana) l’allotjament de les aplicació 'Al Núvol' (o cloud).<br/>'El núvol' és un espai virtual on instal·larem i emmagatzerem tot el necessari per a les nostres aplicacions. Així només caldrà disposar d’una connexió a internet per accedir a les nostres aplicacions des de qualsevol part del mon i amb qualsevol dispositiu amb connexió a internet (mòbil, PC, Tablet, etc)."
+        "summary": "S’ofereix (i es recomana) l’allotjament de les aplicació 'al núvol' (o cloud).<br/>'El núvol' és un espai virtual on instal·larem i emmagatzerem tot el necessari per a les nostres aplicacions. Així només caldrà disposar d’una connexió a internet per accedir a les nostres aplicacions des de qualsevol part del mon i amb qualsevol dispositiu amb connexió a internet (mòbil, PC, Tablet, etc)."
       },
       "front": {
         "title": "Webs",
@@ -256,7 +256,7 @@
       "title": "3 en línia",
       "description": "Es tracta de una simple aplicació local en Angular 8 para reproduir el popular joc de 3 en línia",
       "newGame": "Nova partida",
-      "tie": "Empate",
+      "tie": "Empat",
       "active": "És el teu torn",
       "waiting": "Esperant",
       "finished": "Fi de joc",
