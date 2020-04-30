@@ -1,9 +1,13 @@
-<div class="row">
-  <div class="col-sm-6 col-md-3">
-    <app-three-player
-      *ngIf="game.playerX"
-      [player]="game.playerX"
-    ></app-three-player>
+<div class="row items-center">
+  <div class="col-sm-12 col-md-6 pb-4">
+    <div class="row">
+      <div class="col">
+        <app-three-player *ngIf="game.playerX" [player]="game.playerX"></app-three-player>
+      </div>
+      <div class="col">
+        <app-three-player *ngIf="game.playerO" [player]="game.playerO"></app-three-player>
+      </div>
+    </div>
   </div>
 
   <div class="col-sm-12 col-md-6">
@@ -15,20 +19,13 @@
       (cellSelected)="getCellSelected($event)"
     ></app-three-dashboard>
   </div>
-
-  <div class="col-sm-6 col-md-3">
-    <app-three-player
-      *ngIf="game.playerO"
-      [player]="game.playerO"
-    ></app-three-player>
-  </div>
 </div>
 
 <div class="row" *ngIf="checkFinishStatus()">
   <div class="col text-center">
     <h5>{{ getFinishedText() | translate }}</h5>
     <button type="button" class="btn btn-primary" (click)="resetGame()">
-      {{ "games.3x3.newGame" | translate }}
+      {{ 'games.3x3.newGame' | translate }}
     </button>
   </div>
 </div>

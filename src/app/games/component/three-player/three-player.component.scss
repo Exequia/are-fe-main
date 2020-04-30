@@ -1,4 +1,4 @@
-@import "../../../../assets/css/variables.scss";
+@import '../../../../assets/css/variables.scss';
 
 $inactive-height: 50px;
 $active-height: 180px;
@@ -9,36 +9,51 @@ $active-height: 180px;
 
 .active {
   animation-name: activeAction;
-  min-height: $active-height;
+  // min-height: $active-height;
   background-color: $bg-success;
+  -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+
   animation-duration: 1s;
 }
 
 .inactive {
   animation-name: inactiveAction;
-  min-height: $inactive-height;
+  // min-height: $inactive-height;
   background-color: $bg-warning;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
   animation-duration: 1s;
 }
 
-@keyframes activeAction {
+@-webkit-keyframes activeAction {
   0% {
-    min-height: $inactive-height;
     background-color: $bg-warning;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
   }
   100% {
-    min-height: $active-height;
     background-color: $bg-success;
+    -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
   }
 }
 
 @-webkit-keyframes inactiveAction {
   0% {
-    min-height: $active-height;
     background-color: $bg-success;
+    -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
   }
   100% {
-    min-height: $inactive-height;
     background-color: $bg-warning;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
   }
 }
