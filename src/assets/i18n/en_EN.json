@@ -111,7 +111,7 @@
       "filter": {
         "itemsMatch": "Results",
         "": " All",
-        "regular": "Reglada",
+        "regular": "Regular",
         "other": "Complementary",
         "admin": "Administration",
         "developer": "Developer",
@@ -223,7 +223,7 @@
       "description": "Accounting Clerk with over 10 years of accounting experience at various companies before making a professional change to the programming world"
     },
     "i3e": {
-      "description": "Development in different projects both in Java, JEE, PHP, .Net Oracle SQLServer, Java Script, Hibernate, Maven, Swing, Apache, IIS, Laravel, etc. Clients such as Aigües de Barcelona, ​​Xarxa Oberta, Merak, etc. ... Web services, forms, modules for Sugar CRM, database migration "
+      "description": "Development in different projects both in Java, JEE, PHP, .Net Oracle SQLServer, Java Script, Hibernate, Maven, Swing, Apache, IIS, Laravel, etc. Customers as Aigües de Barcelona, ​​Xarxa Oberta, Merak, etc. ... Web services, forms, modules for Sugar CRM, database migration "
     },
     "disalfarm": {
       "description": "Updating Borlan C ++ code to Java SWING forms. DDBB Oracle, PL / SQL"

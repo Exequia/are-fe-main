@@ -7,7 +7,6 @@ import { Card } from 'src/app/template/components/card/models/card';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
-  //VARS
   @Input() card: Card;
   constructor() {}
 

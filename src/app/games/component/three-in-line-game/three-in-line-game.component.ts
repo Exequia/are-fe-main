@@ -69,7 +69,7 @@ export class ThreeInLineGameComponent implements OnInit {
   }
 
   /**
-   * Set the data nedded to start the game
+   * Set the data needed to start the game
    */
   private initGame() {
     this.game.data = this.initGameData();
@@ -95,7 +95,7 @@ export class ThreeInLineGameComponent implements OnInit {
   }
 
   /**
-   * Check the current Round, and change the Rount of game and players status
+   * Check the current Round, and change the Round of game and players status
    */
   public changeRound() {
     if (this.game.round === GameRound.X) {
@@ -305,7 +305,7 @@ export class ThreeInLineGameComponent implements OnInit {
   }
 
   /**
-   * Check the statsu and return a translation for that status
+   * Check the status and return a translation for that status
    * @returns string with the text to render
    */
   public getFinishedText(): string {

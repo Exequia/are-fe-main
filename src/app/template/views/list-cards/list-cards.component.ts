@@ -17,7 +17,6 @@ export class ListCardsComponent implements OnInit {
     this.cards = this.initCards();
   }
 
-  //Functions
   private initCards(): Array<Card> {
     const card0: Card = {
       id: 0,
