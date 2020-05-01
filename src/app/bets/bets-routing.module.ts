@@ -8,7 +8,8 @@ const routes: Routes = [
   {
     path: '',
     component: BetsHomeComponent,
-    canActivate: [AuthGuardService]
+    canActivate: [AuthGuardService],
+    data: { animation: 'BetsHome' }
   }
 ];
 
