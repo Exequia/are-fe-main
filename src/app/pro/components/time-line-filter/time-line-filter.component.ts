@@ -1,10 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-// import { FilterButtons } from "./models/filters";
-
-export interface FilterButtons {
-  value: string;
-  items: number;
-}
+import { FilterButtons } from './models/filters';
 
 @Component({
   selector: 'app-time-line-filter',
@@ -21,7 +16,7 @@ export class TimeLineFilterComponent implements OnInit {
   /** Return an array of filtered items */
   @Output() filteredItems: EventEmitter<any[]> = new EventEmitter();
 
-  /** String array to display buttons colecctions to filter on html */
+  /** String array to display buttons collections to filter on html */
   public filterButtons: FilterButtons[];
 
   constructor() {}
@@ -70,7 +65,9 @@ export class TimeLineFilterComponent implements OnInit {
       if (option.value === '') {
         option.items = this.items.length;
       } else {
-        const filtered = this.items.filter((item) => item[this.filterProp] === option.value);
+        const filtered = this.items.filter(
+          (item) => item[this.filterProp] === option.value
+        );
         option.items = filtered.length;
       }
     });
@@ -87,7 +84,9 @@ export class TimeLineFilterComponent implements OnInit {
     let filteredItems: any[] = this.items;
 
     if (this.items && filterValue) {
-      filteredItems = this.items.filter((study) => study[this.filterProp] === filterValue);
+      filteredItems = this.items.filter(
+        (study) => study[this.filterProp] === filterValue
+      );
     }
 
     this.filteredItems.emit(filteredItems);

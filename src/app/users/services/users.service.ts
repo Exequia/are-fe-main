@@ -2,22 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
-// import { User } from "../../models/Users";
+import { User } from '../../models/Users';
 import { environment } from '../../../environments/environment';
 import { AuthService } from 'src/app/services/auth.service';
-interface User {
-  id?: number;
-  username: string;
-  password?: string;
-  email?: string;
-  token?: string;
-  role?: Role;
-}
-
-interface Role {
-  id: number;
-  name: string;
-}
 
 @Injectable({
   providedIn: 'root'
@@ -39,11 +26,11 @@ export class UserService {
   //     .post<any>(this.baseurl + "authenticate", JSON.stringify(data), {
   //       observe: "response"
   //     })
-  //     .pipe(retry(1), catchError(this.errorHandl));
+  //     .pipe(retry(1), catchError(this.errorHandel));
   // }
 
   // Error handling
-  errorHandl(error) {
+  errorHandel(error) {
     let errorMessage = '';
     if (error.error instanceof ErrorEvent) {
       // Get client-side error
@@ -64,6 +51,8 @@ export class UserService {
     //   this.authService.getAuthorizationToken()
     // );
 
-    return this.http.get<User>(this.baseurl + 'getByEmail?email=' + email, this.httpOptions).pipe(retry(2), catchError(this.errorHandl));
+    return this.http
+      .get<User>(this.baseurl + 'getByEmail?email=' + email, this.httpOptions)
+      .pipe(retry(2), catchError(this.errorHandel));
   }
 }

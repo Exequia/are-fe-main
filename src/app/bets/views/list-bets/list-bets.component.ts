@@ -1,27 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-// import { BetModel, TypeBet } from "../../models/BetModel";
+import { BetModel, TypeBet } from '../../models/BetModel';
 import { environment } from 'src/environments/environment';
-interface BetModel {
-  id: number;
-  name: string;
-  type: TypeBet;
-  config: BetConfig;
-}
-
-interface BetConfig {
-  private: boolean;
-  dateInit: Date;
-  dateEnd: Date;
-  active: boolean;
-}
-
-enum TypeBet {
-  Date,
-  Import,
-  Number,
-  Options,
-  Composed
-}
 
 @Component({
   selector: 'app-list-bets',

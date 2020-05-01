@@ -1,0 +1,270 @@
+{
+  "common": {
+    "yes": "Yes",
+    "no": "No",
+    "validations": {
+      "required": "This field needs to be reported",
+      "minLength": "The field must have at least {{value}} characters",
+      "maxLength": "The field must have maximum {{value}} characters",
+      "mustMatch": "Confirmation error. The values ​​of the fields are different",
+      "email": "The indicated format is not correct"
+    },
+    "languages": {
+      "es_ES": "Castellano",
+      "ca_ES": "Catalan",
+      "en_EN": "English"
+    }
+  },
+  "template": {
+    "navbar": {
+      "home": "Home",
+      "login": "Login",
+      "logout": "Logout",
+      "pro": {
+        "title": "Professional",
+        "architecture": "Architecture",
+        "works": "Experience",
+        "studies": "Studies"
+      },
+      "games": {
+        "title": "Games",
+        "summary": "Summary",
+        "3x3": "Tic Tac Toe"
+      },
+      "bets": {
+        "title": "Betting",
+        "summary": "Summary"
+      },
+      "configuration": {
+        "title": "Configuration",
+        "languages": "Languages"
+      }
+    },
+    "summary": {
+      "contact": {
+        "subject": "Contact request from our website"
+      },
+      "videoError": "This web browser does not support HTML5 videos",
+      "description": "Complete application software developer adapted to any need",
+      "moreInfo": "If you want more information, you can send an email to",
+      "contactMailSubject": "Contact% 20a% 20traves% 20de% 20la% 20web"
+    },
+    "news": {
+      "title": "Latest News",
+      "0": {
+        "title": "New Games section!",
+        "body": "A new games section is launched to implement more complex front features in the hope of making navigation easier"
+      },
+      "one": {
+        "title": "Web launch",
+        "body": "The page is updated and opens with new technologies highlighting Angular 6 in the FrontEnd and Spring Microservices in Back End"
+      }
+    },
+    "studies": {
+      "title": "Latest Formations",
+      "0": {
+        "title": "Pattern design",
+        "body": "Self-training of the main programming design sponsors"
+      },
+      "one": {
+        "title": "Web Components",
+        "body": "Operation self-training and creation of web components for HTML5 API"
+      }
+    }
+  },
+  "notifications": {
+    "welcome": "Welcome to my application"
+  },
+  "pro": {
+    "architecture": {
+      "title": "Application architecture",
+      "cloud": {
+        "title": "Cloud",
+        "summary": "So offers (and recommends) hosting the application in 'The Cloud' (or cloud). <br/> 'The Cloud' is a virtual space where we will install and store everything necessary for our applications. it will be enough to have an internet connection to access our applications from anywhere in the world and with any device with an internet connection (mobile, PC, tablet, etc). "
+      },
+      "front": {
+        "title": "Webs",
+        "summary": "Web page creations are offered to maximize the reach of our presence on the net, while facilitating access for customers or users. <br> HTML5 and CSS3 based applications to facilitate viewing on any device and / or platform. "
+      },
+      "back": {
+        "title": "Business",
+        "summary": "For medium or large applications, it is necessary to have the business logic separate from the web presentation. Solutions are offered with microservices based on the main programming languages ​​and their most powerful frameworks to guarantee efficiency and security."
+      },
+      "data": {
+        "title": "Data",
+        "summary": "Database resources of all kinds are offered. From free for small budgets, to large and robust used by large world-class companies."
+      }
+    },
+    "works": {
+      "title": "Work Experience",
+      "workingIn": "In",
+      "forCustomer": "for",
+      "fullstack": "Fullstack",
+      "frontend": "Frontend",
+      "backend": "Backend"
+    },
+    "studies": {
+      "title": "Training"
+    },
+    "timeLine": {
+      "qualify": "Qualification",
+      "filter": {
+        "itemsMatch": "Results",
+        "": " All",
+        "regular": "Regular",
+        "other": "Complementary",
+        "admin": "Administration",
+        "developer": "Developer",
+        "management": "Management"
+      },
+      "noTemplate": "A structure to display the data was not found"
+    }
+  },
+  "users": {
+    "login": {
+      "signIn": "Access",
+      "email": "Email",
+      "password": "Password",
+      "rememberMe": "Remember me",
+      "login": "Login",
+      "haveNotAccount": "You don't have an account yet",
+      "signUp": "Register",
+      "getNewPassword": "Get a new password"
+    },
+    "userForm": {
+      "userData": "User data",
+      "alias": "Alias",
+      "aliasPH": "Public username",
+      "password": "Password",
+      "passwordPH": "User password",
+      "confirmPassword": "Confirm password",
+      "confirmPasswordPH": "Retype password"
+    },
+    "contactForm": {
+      "contactData": "Contact details",
+      "email": "Email",
+      "emailPH": "Enter email",
+      "phone": "Telephone",
+      "phonePH": "Contact phone number"
+    }
+  },
+  "studies": {
+    "webComponents": {
+      "title": "Web Components",
+      "description": "Component web creation course with HTML 5 API"
+    },
+    "designPatterns": {
+      "title": "Design patterns",
+      "description": "Course of the main design patterns with examples in Java"
+    },
+    "aws": {
+      "title": "Amazon Web Service",
+      "description": "Course of the main AWS functionalities. Instances, EBS, VPC, Cloud, LB, RDS, IAM, KMS, S3, Lambdas, SQS, Developers Tools"
+    },
+    "angular8": {
+      "title": "Angular 8",
+      "description": "Review of the improvements and new functionalities of the new version 8 of the Angular framework"
+    },
+    "java11": {
+      "title": "Java 11",
+      "description": "Review of the improvements and new functionalities of the new version of Java LTS"
+    },
+    "netcore": {
+      "title": ".NET Core",
+      "description": "Training of the main new features of the new framework"
+    },
+    "vue": {
+      "title": "Vue.js",
+      "description": "Training course on the Vue.js framework for frontend applications"
+    },
+    "angular67": {
+      "title": "Angular 6 & 7",
+      "description": "Review of the improvements and new functionalities of versions 6 and 7 of the Angular framework"
+    },
+    "java8": {
+      "title": "Java 8",
+      "description": "Review of the improvements and new functionalities of the new version of Java"
+    },
+    "springboot": {
+      "title": "Microservices with Springboot",
+      "description": "Course for creating microservices based on springboot"
+    },
+    "spring": {
+      "title": "Spring",
+      "description": "Spring framework course for Java"
+    },
+    "angular2": {
+      "title": "Angular +",
+      "description": "Angular framework course to know the changes regarding Angular.js"
+    },
+    "angularjs": {
+      "title": "Angular.js",
+      "description": "Angular Js framework course for creating web applications"
+    },
+    "frameworkNet": {
+      "title": ".NET Framework",
+      "description": "Course Fundamentals in technology and programming .NET Framework. 250 hours"
+    },
+    "jee": {
+      "title": "Web applications",
+      "description": "Certificate of professionalism (level 3) Development of applications with web technology. 610h"
+    },
+    "dam": {
+      "title": "Multiplatform Application Development",
+      "description": "Higher cycle of multiplatform application development. 2,200h"
+    },
+    "admin": {
+      "title": "Administration and finances",
+      "description": "Higher cycle of administration and finance. 2,500h"
+    }
+  },
+  "works": {
+    "admin": {
+      "description": "Accounting Clerk with over 10 years of accounting experience at various companies before making a professional change to the programming world"
+    },
+    "i3e": {
+      "description": "Development in different projects both in Java, JEE, PHP, .Net Oracle SQLServer, Java Script, Hibernate, Maven, Swing, Apache, IIS, Laravel, etc. Customers as Aigües de Barcelona, ​​Xarxa Oberta, Merak, etc. ... Web services, forms, modules for Sugar CRM, database migration "
+    },
+    "disalfarm": {
+      "description": "Updating Borlan C ++ code to Java SWING forms. DDBB Oracle, PL / SQL"
+    },
+    "mediaMarkt": {
+      "description": "Information Management of articles, orders, queries, for Media Markt. Project architecture based on J2EE, Maven, JUnit, SQL Server, Web services, XML files and Interfaces. Git repository"
+    },
+    "optimissa1": {
+      "description": "Java developer: Maintenance of web application with J2EE (Hibernate, JSF, EJB, Maven, Spring) and evolutionary of Java application with Swing. Oracle database. Subversion repository"
+    },
+    "optimissa2": {
+      "description": "Java Analyst: Requirements taking and functional writing. And unit test design and implementation with Junit4"
+    },
+    "optimissa3": {
+      "description": "Head of Technical Support Department: Management of a team of 6 people to provide incident support to the entity's applications based on J2EE (Maven) and Swing"
+    },
+    "cerba": {
+      "description": "Team management of 2 programmers for a new own laboratory program based on Angular 5 with Caché and Java Microservices (MVC + JPA) with Maven. Evolutionary of Mirth (Java) for communications and integrations with SQL Server. Maintenance internal applications in .NET. TFS repository "
+    },
+    "deloitte": {
+      "description": "Team leader and developer in an international project. SCRUM with meeting in English. Angular JS, Angular + and Java Microservices (MVC + JPA) project with connection to Oracle. GIT repository with GITLAB"
+    },
+    "antares": {
+      "description": "Team leader and developer as Full Stack. Front End with VueJs and Rest Services with .Net Core. Azure Devops for CI / CD. SQL server and SCRUM and Kanban methodologies. GIT repository"
+    },
+    "dxc": {
+      "description": "FrontEnd team leader and developer with Stenciljs. Creation of own web components for import and use on all the websites of the client's entity. GIT repository"
+    }
+  },
+  "games": {
+    "newGame": "New game",
+    "player": "Player {{value}}",
+    "3x3": {
+      "title": "3 in a row",
+      "description": "This is a simple local application in Angular 8 for the popular game 3 in a row",
+      "newGame": "New game",
+      "tie": "Tie",
+      "active": "Your turn",
+      "waiting": "Waiting",
+      "finished": "End of game",
+      "winner": "{{winner}} Win!"
+    }
+  }
+}
