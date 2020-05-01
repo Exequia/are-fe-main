@@ -7,16 +7,22 @@ import { UpdateUserComponent } from './views/update-user/update-user.component';
 import { AuthGuardService } from '../services/auth-guard.service';
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent },
+  {
+    path: 'login',
+    component: LoginComponent,
+    data: { animation: 'Login' }
+  },
   {
     path: 'signUp',
     component: NewUserComponent,
-    canActivate: [AuthGuardService]
+    canActivate: [AuthGuardService],
+    data: { animation: 'NewUser' }
   },
   {
     path: 'update',
     component: UpdateUserComponent,
-    canActivate: [AuthGuardService]
+    canActivate: [AuthGuardService],
+    data: { animation: 'UpdateUser' }
   }
 ];
 

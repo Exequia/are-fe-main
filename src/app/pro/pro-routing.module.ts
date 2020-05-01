@@ -9,17 +9,20 @@ const routes: Routes = [
   {
     path: 'home',
     component: ProHomeComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: { animation: 'ProHome' }
   },
   {
     path: 'works',
     component: WorksComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: { animation: 'Works' }
   },
   {
     path: 'studies',
     component: StudiesComponent,
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: { animation: 'Studies' }
   }
 ];
 
