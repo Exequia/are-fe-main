@@ -1,19 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-// import { Card } from "src/app/template/components/card/models/card";
-interface Card {
-  id: number;
-  title: string;
-  date: Date;
-  body: string;
-  link?: Link;
-}
-
-interface Link {
-  url: string;
-  text: string;
-  icon?: string;
-}
+import { Card } from 'src/app/template/components/card/models/card';
 
 @Component({
   selector: 'app-list-cards',
@@ -54,8 +41,10 @@ export class ListCardsComponent implements OnInit {
   }
 
   private fillText(card: Card, target: string) {
-    this.translate.get(`template.${this.type}.${card.id}.${target}`).subscribe((res: string) => {
-      card[target] = res;
-    });
+    this.translate
+      .get(`template.${this.type}.${card.id}.${target}`)
+      .subscribe((res: string) => {
+        card[target] = res;
+      });
   }
 }
