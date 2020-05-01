@@ -2,9 +2,22 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
-import { User } from '../../models/Users';
+// import { User } from "../../models/Users";
 import { environment } from '../../../environments/environment';
 import { AuthService } from 'src/app/services/auth.service';
+interface User {
+  id?: number;
+  username: string;
+  password?: string;
+  email?: string;
+  token?: string;
+  role?: Role;
+}
+
+interface Role {
+  id: number;
+  name: string;
+}
 
 @Injectable({
   providedIn: 'root'

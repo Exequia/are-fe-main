@@ -1,7 +1,31 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { EventEmitter } from 'events';
-import { User } from '../../models/Users';
+// import { User } from "../../models/Users";
+interface User {
+  alias: string;
+  password: string;
+  person: Person;
+  contact: Contact;
+}
+interface Person {
+  name: string;
+  firstSurname: string;
+  secondSurname: string;
+  gender: EnumGender;
+  birthDate: Date;
+  dni: string;
+}
+enum EnumGender {
+  male,
+  female
+}
+interface Contact {
+  email: string;
+  confirmEmail: string;
+  phone: string;
+}
+
 @Component({
   selector: 'app-user-form',
   templateUrl: './user-form.component.html',

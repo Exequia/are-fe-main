@@ -1,6 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { FilesService } from 'src/app/services/files/files.service';
-import { TimeLineItem } from '../../components/time-line/models/TimeLine';
+// import { TimeLineItem } from "../../components/time-line/models/TimeLine";
+interface TimeLineItem {
+  id: number;
+  type: StudiesType;
+  key: string;
+  center: string;
+  dateInit: string;
+  endDate: string;
+  qualify?: string;
+  comments?: string;
+  link?: string;
+}
 
 enum StudiesType {
   All = '',

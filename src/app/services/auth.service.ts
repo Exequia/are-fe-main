@@ -3,7 +3,20 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { retry, delay } from 'rxjs/operators';
 import { environment } from '../../environments/environment';
-import { User } from '../models/Users';
+// import { User } from "../models/Users";
+interface User {
+  id?: number;
+  username: string;
+  password?: string;
+  email?: string;
+  token?: string;
+  role?: Role;
+}
+
+interface Role {
+  id: number;
+  name: string;
+}
 
 @Injectable({
   providedIn: 'root'
@@ -13,9 +26,7 @@ export class AuthService {
   public currentUser: Observable<User>;
 
   constructor(private http: HttpClient) {
-    this.currentUserSubject = new BehaviorSubject<User>(
-      JSON.parse(localStorage.getItem('currentUser'))
-    );
+    this.currentUserSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('currentUser')));
     this.currentUser = this.currentUserSubject.asObservable();
   }
 
@@ -34,25 +45,21 @@ export class AuthService {
 
       this.currentUserSubject.next(user);
 
-      this.getUserByEmail(requestData.email).subscribe((_user: User) => {
+      this.getUserByEmail(requestData.email).subscribe((user: User) => {
         // store user details and jwt token in local storage to keep user logged in between page refreshes
-        _user.token = token;
-        this.currentUserSubject.next(_user);
-        localStorage.setItem('currentUser', JSON.stringify(_user));
-        return _user;
+        user.token = token;
+        this.currentUserSubject.next(user);
+        localStorage.setItem('currentUser', JSON.stringify(user));
+        return user;
       });
     });
   }
 
   invokeAuthenticate(data): Observable<any> {
     return this.http
-      .post<any>(
-        `${environment.apiUrl}/${environment.apiVersion}/users/authenticate`,
-        JSON.stringify(data),
-        {
-          observe: 'response'
-        }
-      )
+      .post<any>(`${environment.apiUrl}/${environment.apiVersion}/users/authenticate`, JSON.stringify(data), {
+        observe: 'response'
+      })
       .pipe(retry(2));
   }
 
@@ -67,10 +74,7 @@ export class AuthService {
     // headers.append("Content-Type", "application/json");
     const params = new HttpParams().set('email', email);
     return this.http
-      .get<User>(
-        `${environment.apiUrl}/${environment.apiVersion}/users/getByEmail`,
-        { params: params }
-      )
+      .get<User>(`${environment.apiUrl}/${environment.apiVersion}/users/getByEmail`, { params: params })
       .pipe(retry(2));
   }
 }
