@@ -1,4 +1,4 @@
 <div class="player px-2 py-2 text-center" [ngClass]="getClass()">
-  <h5>{{ player.name }}</h5>
+  <h5>{{ 'games.player' | translate: { value: player.name } }}</h5>
   <p>{{ getStatusText() | translate }}</p>
 </div>

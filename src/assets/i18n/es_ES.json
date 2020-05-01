@@ -29,7 +29,7 @@
       "games": {
         "title": "Juegos",
         "summary": "Resumen",
-        "3x3": "Tren en raya"
+        "3x3": "Tres en raya"
       },
       "bets": {
         "title": "Apuestas",
@@ -71,6 +71,9 @@
         "body": "Autoformación de funcionamiento y creación de web components para API HTML5"
       }
     }
+  },
+  "notifications": {
+    "welcome": "Bienvenido a mi aplicación"
   },
   "pro": {
     "architecture": {
@@ -252,6 +255,7 @@
   },
   "games": {
     "newGame": "Nueva partida",
+    "player": "Jugador {{value}}",
     "3x3": {
       "title": "3 en raya",
       "description": "Se trata de un simple aplicación local en Angular 8 para el popular juego 3 en raya",

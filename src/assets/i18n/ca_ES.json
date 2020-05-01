@@ -29,7 +29,7 @@
       "games": {
         "title": "Jocs",
         "summary": "Resum",
-        "3x3": "Tren en línia"
+        "3x3": "Tres en línia"
       },
       "bets": {
         "title": "Apostes",
@@ -71,6 +71,9 @@
         "body": "Autoformació de funcionaments i creació de web components per a API HTML5"
       }
     }
+  },
+  "notifications": {
+    "welcome": "Benvingut a la meva aplicació"
   },
   "pro": {
     "architecture": {
@@ -252,6 +255,7 @@
   },
   "games": {
     "newGame": "Nova partida",
+    "player": "Jugador {{value}}",
     "3x3": {
       "title": "3 en línia",
       "description": "Es tracta de una simple aplicació local en Angular 8 para reproduir el popular joc de 3 en línia",

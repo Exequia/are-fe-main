@@ -1,5 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { GameConfig, Player, GameStatus, GameRound, GameDashboard, CellPosition } from '../models/three-in-line';
+import {
+  GameConfig,
+  Player,
+  GameStatus,
+  GameRound,
+  GameDashboard,
+  CellPosition
+} from '../models/three-in-line';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -45,7 +52,7 @@ export class ThreeInLineGameComponent implements OnInit {
    */
   private getDefaultPlayer(alias: GameRound): Player {
     return {
-      name: `Jugador ${alias}`,
+      name: `${alias}`,
       status: GameStatus.Waiting
     };
   }
@@ -182,7 +189,8 @@ export class ThreeInLineGameComponent implements OnInit {
   private checkValues(values: GameRound[]): boolean {
     let finished = false;
 
-    finished = values[0] !== '' && values[0] === values[1] && values[1] === values[2];
+    finished =
+      values[0] !== '' && values[0] === values[1] && values[1] === values[2];
 
     return finished;
   }
@@ -290,7 +298,10 @@ export class ThreeInLineGameComponent implements OnInit {
    * @returns boolean true when status is finished or tie
    */
   public checkFinishStatus(): boolean {
-    return this.game.status === GameStatus.Finished || this.game.status === GameStatus.Tie;
+    return (
+      this.game.status === GameStatus.Finished ||
+      this.game.status === GameStatus.Tie
+    );
   }
 
   /**

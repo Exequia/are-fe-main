@@ -24,6 +24,7 @@ export class AppComponent {
     this.translate.use(environment.locale);
     AOS.init();
     this.utils.setDevice();
+    this.notify();
   }
 
   prepareRoute(outlet: RouterOutlet) {
@@ -32,5 +33,32 @@ export class AppComponent {
       outlet.activatedRouteData &&
       outlet.activatedRouteData['animation']
     );
+  }
+
+  /**
+   * Let's check if the browser supports notifications.
+   * Let's check whether notification permissions have already been granted
+   * If it's okay let's create a notification, Otherwise, we need to ask the user for permission
+   */
+  private notify() {
+    if (!('Notification' in window)) {
+      console.warn('This browser does not support desktop notification');
+    } else {
+      this.translate
+        .get('notifications.welcome')
+        .subscribe((welcome: string) => {
+          let notification;
+          if (Notification.permission === 'granted') {
+            notification = new Notification(welcome);
+          } else if (Notification.permission !== 'denied') {
+            Notification.requestPermission((permission) => {
+              // If the user accepts, let's create a notification
+              if (permission === 'granted') {
+                notification = new Notification(welcome);
+              }
+            });
+          }
+        });
+    }
   }
 }
