@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { Card } from 'src/app/template/components/card/models/card';
+import { Card } from '../../components/card/models/card';
 
 @Component({
   selector: 'app-list-cards',
