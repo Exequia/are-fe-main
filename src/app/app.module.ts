@@ -11,7 +11,11 @@ import { NavbarComponent } from './template/views/navbar/navbar.component';
 import { HomeComponent } from './template/views/home/home.component';
 import { SummaryComponent } from './template/views/summary/summary.component';
 
-import { HttpClientModule, HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
+import {
+  HttpClientModule,
+  HttpClient,
+  HTTP_INTERCEPTORS
+} from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 // AoT requires an exported function for factories
@@ -22,7 +26,7 @@ import { JwtInterceptor } from './services/jwt.interceptor';
 import { ErrorInterceptor } from './services/error.interceptor';
 import { PageNotFoundComponent } from './template/views/page-not-found/page-not-found.component';
 import { CardComponent } from './template/components/card/card.component';
-import { ListCardsComponent } from './template/views/list-cards/list-cards.component';
+import { ListCardsComponent } from './template/components/list-cards/list-cards.component';
 import { ConfigurationComponent } from './template/components/configuration/configuration.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
@@ -50,7 +54,9 @@ import { environment } from '../environments/environment';
         deps: [HttpClient]
       }
     }),
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production
+    })
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

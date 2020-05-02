@@ -15,6 +15,9 @@
       "en_EN": "Inglés"
     }
   },
+  "notifications": {
+    "welcome": "Bienvenido a mi aplicación"
+  },
   "template": {
     "navbar": {
       "home": "Inicio",
@@ -48,32 +51,18 @@
       "description": "Desarrollador informático de aplicaciones completas adaptadas a cualquier necesidad",
       "moreInfo": "Si quieres más información, puedes enviar un mail a",
       "contactMailSubject": "Contacto%20a%20través%20de%20la%20web"
-    },
-    "news": {
-      "title": "Últimas Noticias",
-      "0": {
-        "title": "¡Nueva sección de Juegos!",
-        "body": "Se inicia una nueva sección de juegos para implementar funcionalidades front más complejas con la esperanza de amenizar la navegación"
-      },
-      "1": {
-        "title": "Inauguración web",
-        "body": "Se actualiza la página y se inagura con nuevas tecnologías destacando Angular 6 en el FrontEnd e Spring Microservices en Back End"
-      }
-    },
-    "studies": {
-      "title": "Últimas Formaciones",
-      "0": {
-        "title": "Diseño de patrones",
-        "body": "Autoformación de los principales patroñes de diseño de programación"
-      },
-      "1": {
-        "title": "Web Components",
-        "body": "Autoformación de funcionamiento y creación de web components para API HTML5"
-      }
     }
   },
-  "notifications": {
-    "welcome": "Bienvenido a mi aplicación"
+  "news": {
+    "title": "Últimas Noticias",
+    "gamesSection": {
+      "title": "¡Nueva sección de Juegos!",
+      "description": "Se inicia una nueva sección de juegos para implementar funcionalidades front más complejas con la esperanza de amenizar la navegación"
+    },
+    "newWebsite": {
+      "title": "Inauguración web",
+      "description": "Se actualiza la página y se inagura con nuevas tecnologías destacando Angular 6 en el FrontEnd e Spring Microservices en Back End"
+    }
   },
   "pro": {
     "architecture": {
@@ -149,6 +138,7 @@
     }
   },
   "studies": {
+    "title": "Últimas Formaciones",
     "webComponents": {
       "title": "Web Components",
       "description": "Curso de creación de web componentes con API HTML 5"

@@ -20,19 +20,15 @@ export enum CardTypes {
 }
 
 @Component({
-  selector: 'app-card',
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.css']
+  selector: 'app-list-cards',
+  templateUrl: './list-cards.component.html',
+  styleUrls: ['./list-cards.component.scss']
 })
-export class CardComponent implements OnInit {
-  @Input() type: CardTypes;
-  @Input() card: Card;
+export class ListCardsComponent implements OnInit {
+  @Input() type = CardTypes;
+  @Input() cardsList: Array<Card>;
 
   constructor() {}
 
   ngOnInit() {}
-
-  public getPath(path: string): string {
-    return `${this.type}.${this.card.key}.${path}`;
-  }
 }

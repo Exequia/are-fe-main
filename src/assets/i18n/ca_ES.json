@@ -15,6 +15,9 @@
       "en_EN": "Anglés"
     }
   },
+  "notifications": {
+    "welcome": "Benvingut a la meva aplicació"
+  },
   "template": {
     "navbar": {
       "home": "Inici",
@@ -48,32 +51,18 @@
       "description": "Desenvolupador informàtic d’aplicacions completes adaptades a qualsevol necessitat",
       "moreInfo": "Si vol més informació, pots enviar un mail a",
       "contactMailSubject": "Contacte%20a%20través%20de%20la%20web"
-    },
-    "news": {
-      "title": "Últimes Noticies",
-      "0": {
-        "title": "¡Nueva secció Jocs!",
-        "body": "S’inicia una nova secció de jocs per a implementar funcionalitats front més complexes amb la esperança de amenitzar la navegació"
-      },
-      "1": {
-        "title": "Inauguració  web",
-        "body": "S’actualitza la pàgina i amb noves tecnologies destacant Angular 8 en el Frontend i Microserveis Java al Backend"
-      }
-    },
-    "studies": {
-      "title": "Últimes Formacions",
-      "0": {
-        "title": "Disseny de patrons",
-        "body": "Autoformació de les principals patrons de disseny de programació"
-      },
-      "1": {
-        "title": "Web Components",
-        "body": "Autoformació de funcionaments i creació de web components per a API HTML5"
-      }
     }
   },
-  "notifications": {
-    "welcome": "Benvingut a la meva aplicació"
+  "news": {
+    "title": "Últimes Noticies",
+    "gamesSection": {
+      "title": "¡Nueva secció Jocs!",
+      "body": "S’inicia una nova secció de jocs per a implementar funcionalitats front més complexes amb la esperança de amenitzar la navegació"
+    },
+    "newWebsite": {
+      "title": "Inauguració  web",
+      "body": "S’actualitza la pàgina i amb noves tecnologies destacant Angular 8 en el Frontend i Microserveis Java al Backend"
+    }
   },
   "pro": {
     "architecture": {
@@ -149,9 +138,10 @@
     }
   },
   "studies": {
+    "title": "Últimes Formacions",
     "webComponents": {
       "title": "Web Components",
-      "description": "Curso de creació de web componentes amb API HTML 5"
+      "description": "Curs de creació de web componentes amb API HTML 5"
     },
     "designPatterns": {
       "title": "Patrons de disenys",

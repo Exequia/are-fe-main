@@ -1,3 +1,7 @@
 <app-summary></app-summary>
-<app-list-cards [type]="'news'"></app-list-cards>
-<app-list-cards [type]="'studies'"></app-list-cards>
+<app-list-cards [type]="cardTypes.News" [cardsList]="appNews"></app-list-cards>
+<!-- <app-list-cards [type]="'studies'"></app-list-cards> -->
+<app-list-cards
+  [type]="cardTypes.Studies"
+  [cardsList]="appStudies"
+></app-list-cards>

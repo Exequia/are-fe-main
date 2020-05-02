@@ -15,6 +15,9 @@
       "en_EN": "English"
     }
   },
+  "notifications": {
+    "welcome": "Welcome to my application"
+  },
   "template": {
     "navbar": {
       "home": "Home",
@@ -48,32 +51,18 @@
       "description": "Complete application software developer adapted to any need",
       "moreInfo": "If you want more information, you can send an email to",
       "contactMailSubject": "Contact% 20a% 20traves% 20de% 20la% 20web"
-    },
-    "news": {
-      "title": "Latest News",
-      "0": {
-        "title": "New Games section!",
-        "body": "A new games section is launched to implement more complex front features in the hope of making navigation easier"
-      },
-      "one": {
-        "title": "Web launch",
-        "body": "The page is updated and opens with new technologies highlighting Angular 6 in the FrontEnd and Spring Microservices in Back End"
-      }
-    },
-    "studies": {
-      "title": "Latest Formations",
-      "0": {
-        "title": "Pattern design",
-        "body": "Self-training of the main programming design sponsors"
-      },
-      "one": {
-        "title": "Web Components",
-        "body": "Operation self-training and creation of web components for HTML5 API"
-      }
     }
   },
-  "notifications": {
-    "welcome": "Welcome to my application"
+  "news": {
+    "title": "Latest News",
+    "gamesSection": {
+      "title": "New Games section!",
+      "body": "A new games section is launched to implement more complex front features in the hope of making navigation easier"
+    },
+    "newWebsite": {
+      "title": "Web launch",
+      "body": "The page is updated and opens with new technologies highlighting Angular 6 in the FrontEnd and Spring Microservices in Back End"
+    }
   },
   "pro": {
     "architecture": {
@@ -149,6 +138,7 @@
     }
   },
   "studies": {
+    "title": "Latest Formations",
     "webComponents": {
       "title": "Web Components",
       "description": "Component web creation course with HTML 5 API"
