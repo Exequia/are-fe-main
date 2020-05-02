@@ -32,7 +32,12 @@ export class CardComponent implements OnInit {
 
   ngOnInit() {}
 
-  public getPath(path: string): string {
-    return `${this.type}.${this.card.key}.${path}`;
+  /**
+   * Combine the type of card, the card key and the path of the param
+   * @param property string, with the property to show
+   * @returns string, with the i18n path to translate
+   */
+  public getPath(property: string): string {
+    return `${this.type}.${this.card.key}.${property}`;
   }
 }
