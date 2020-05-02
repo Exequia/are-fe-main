@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ListCardsComponent } from './list-cards.component';
-import { CardComponent } from '../../components/card/card.component';
+import { CardComponent } from '../card/card.component';
 
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';

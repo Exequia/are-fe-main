@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HomeComponent } from './home.component';
 import { SummaryComponent } from '../summary/summary.component';
-import { ListCardsComponent } from '../list-cards/list-cards.component';
+import { ListCardsComponent } from '../../components/list-cards/list-cards.component';
 import { CardComponent } from '../../components/card/card.component';
 
 import { HttpClientTestingModule } from '@angular/common/http/testing';
@@ -20,7 +20,12 @@ describe('HomeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [HomeComponent, SummaryComponent, ListCardsComponent, CardComponent],
+      declarations: [
+        HomeComponent,
+        SummaryComponent,
+        ListCardsComponent,
+        CardComponent
+      ],
       imports: [
         HttpClientTestingModule,
         TranslateModule.forRoot({
