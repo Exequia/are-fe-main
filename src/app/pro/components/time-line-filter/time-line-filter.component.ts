@@ -21,7 +21,7 @@ export class TimeLineFilterComponent implements OnInit {
   /** Return an array of filtered items */
   @Output() filteredItems: EventEmitter<any[]> = new EventEmitter();
 
-  /** String array to display buttons colecctions to filter on html */
+  /** String array to display buttons collections to filter on html */
   public filterButtons: FilterButtons[];
 
   constructor() {}

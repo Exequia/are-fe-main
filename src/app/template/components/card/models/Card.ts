@@ -1,8 +1,7 @@
 export interface Card {
   id: number;
-  title: string;
-  date: Date;
-  body: string;
+  dateInit: Date;
+  key: string;
   link?: Link;
 }
 
