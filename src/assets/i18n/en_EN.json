@@ -57,11 +57,11 @@
     "title": "Latest News",
     "gamesSection": {
       "title": "New Games section!",
-      "body": "A new games section is launched to implement more complex front features in the hope of making navigation easier"
+      "description": "A new games section is launched to implement more complex front features in the hope of making navigation easier"
     },
     "newWebsite": {
       "title": "Web launch",
-      "body": "The page is updated and opens with new technologies highlighting Angular 6 in the FrontEnd and Spring Microservices in Back End"
+      "description": "The page is updated and opens with new technologies highlighting Angular 6 in the FrontEnd and Spring Microservices in Back End"
     }
   },
   "pro": {
