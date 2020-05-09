@@ -6,8 +6,7 @@ interface Architecture {
   key: string;
   title: string;
   description: string;
-  imagesIds: number[];
-  images?: Image[];
+  images: Image[];
 }
 
 interface Image {
@@ -31,7 +30,7 @@ export class ArchitectureComponent implements OnInit {
 
   ngOnInit() {
     this.invokeGetArchitecture();
-    this.invokeGetImages();
+    // this.invokeGetImages();
   }
 
   /**
@@ -43,7 +42,6 @@ export class ArchitectureComponent implements OnInit {
       (architecturesResponse: Architecture[]) => {
         this.loadingArchitecture = false;
         this.architectures = architecturesResponse;
-        this.completeImages();
       },
       (error) => {
         this.loadingArchitecture = false;
@@ -52,38 +50,38 @@ export class ArchitectureComponent implements OnInit {
     );
   }
 
-  /**
-   * Consume service to recover the data on images.json local file
-   */
-  private invokeGetImages() {
-    this.loadingImages = true;
-    this.filesService.getLocalFile('assets/files/images.json').subscribe(
-      (imagesResponse: Image[]) => {
-        this.loadingImages = false;
-        this.images = imagesResponse;
-        this.completeImages();
-      },
-      (error) => {
-        this.loadingImages = false;
-        console.error('invokeGetImages', error);
-      }
-    );
-  }
+  // /**
+  //  * Consume service to recover the data on images.json local file
+  //  */
+  // private invokeGetImages() {
+  //   this.loadingImages = true;
+  //   this.filesService.getLocalFile('assets/files/images.json').subscribe(
+  //     (imagesResponse: Image[]) => {
+  //       this.loadingImages = false;
+  //       this.images = imagesResponse;
+  //       this.completeImages();
+  //     },
+  //     (error) => {
+  //       this.loadingImages = false;
+  //       console.error('invokeGetImages', error);
+  //     }
+  //   );
+  // }
 
-  private completeImages() {
-    if (this.architectures && this.images) {
-      this.architectures.forEach((_arc) => {
-        if (!_arc.images) {
-          _arc.images = [];
-        }
+  // private completeImages() {
+  //   if (this.architectures && this.images) {
+  //     this.architectures.forEach((_arc) => {
+  //       if (!_arc.images) {
+  //         _arc.images = [];
+  //       }
 
-        _arc.images = _arc.imagesIds.map((_id) => {
-          const matchImage = this.images.find((image) => _id === image.id);
-          if (matchImage) {
-            return matchImage;
-          }
-        });
-      });
-    }
-  }
+  //       _arc.images = _arc.imagesIds.map((_id) => {
+  //         const matchImage = this.images.find((image) => _id === image.id);
+  //         if (matchImage) {
+  //           return matchImage;
+  //         }
+  //       });
+  //     });
+  //   }
+  // }
 }
