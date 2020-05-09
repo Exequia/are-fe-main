@@ -68,7 +68,7 @@
     "architecture": {
       "title": "Arquitectura de les aplicacions",
       "cloud": {
-        "title": "núvol",
+        "title": "Núvol",
         "summary": "S’ofereix (i es recomana) l’allotjament de les aplicació 'al núvol' (o cloud).<br/>'El núvol' és un espai virtual on instal·larem i emmagatzerem tot el necessari per a les nostres aplicacions. Així només caldrà disposar d’una connexió a internet per accedir a les nostres aplicacions des de qualsevol part del mon i amb qualsevol dispositiu amb connexió a internet (mòbil, PC, Tablet, etc)."
       },
       "front": {

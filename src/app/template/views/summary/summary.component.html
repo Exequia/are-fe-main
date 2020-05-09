@@ -1,4 +1,4 @@
-<div class="jumbotron shadow px-1 py-4">
+<div class="jumbotron shadow px-1 py-4" [attr.data-aos]="'zoom-out'">
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-md-6">
@@ -9,7 +9,12 @@
           <a [href]="getMailTo()" target="_top">{{ getEmail() }}</a>
         </p>
       </div>
-      <div class="col-xs-12 col-md-6">
+      <div
+        class="col-xs-12 col-md-6"
+        [attr.data-aos]="'flip-down'"
+        [attr.data-aos-easing]="'linear'"
+        [attr.data-aos-duration]="'1500'"
+      >
         <video autoplay loop class="w-100">
           <source src="./assets/videos/scriptsTyped.mp4" type="video/mp4" />
           {{ 'template.summary.videoError' | translate }}
