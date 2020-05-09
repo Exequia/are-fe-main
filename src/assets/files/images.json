@@ -1,0 +1,32 @@
+[
+  {
+    "id": 5,
+    "name": "Oracle",
+    "src": "https://i1.wp.com/unaaldia.hispasec.com/wp-content/uploads/2019/01/oracle-logo.png?fit=1024%2C559&ssl=1"
+  },
+  {
+    "id": 4,
+    "name": "SQL Server",
+    "src": "https://www.abd.es/wp-content/uploads/2018/11/sql-server-logo.png"
+  },
+  {
+    "id": 3,
+    "name": "MySQL",
+    "src": "https://banner2.cleanpng.com/20180803/abq/kisspng-mysql-cluster-database-management-system-%E4%B8%93-%E9%A2%98-%E5%92%96-%E5%95%A1-%E4%B8%8E-%E4%BB%A3-%E7%A0%81-5b640d8b2a2e53.6067051415332837231728.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Mongo DB",
+    "src": "https://img.favpng.com/12/9/4/mongodb-logo-database-nosql-postgresql-png-favpng-mcEPKatsp6vtFjnFRhApvc5Z5.jpg"
+  },
+  {
+    "id": 1,
+    "name": "Exist DB",
+    "src": "http://exist-db.org/exist/apps/homepage/resources/img/existdb.gif"
+  },
+  {
+    "id": 0,
+    "name": "Caché",
+    "src": "http://www.computing.es/siteresources/files/684/19.jpg"
+  }
+]
