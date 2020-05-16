@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FilesService } from 'src/app/services/files/files.service';
+import { Observable } from 'rxjs';
 
 interface Architecture {
   id: number;
@@ -22,33 +23,36 @@ interface Image {
 })
 export class ArchitectureComponent implements OnInit {
   private loadingArchitecture = false;
-  public architectures: Architecture[];
+  public architectures: Observable<Architecture[]>;
   private loadingImages = false;
   public images: Image[];
 
   constructor(private filesService: FilesService) {}
 
   ngOnInit() {
-    this.invokeGetArchitecture();
+    this.architectures = this.filesService.getLocalFile(
+      'assets/files/architecture.json'
+    );
+    // this.invokeGetArchitecture();
     // this.invokeGetImages();
   }
 
-  /**
-   * Consume service to recover the data on architecture.json local file
-   */
-  private invokeGetArchitecture() {
-    this.loadingArchitecture = true;
-    this.filesService.getLocalFile('assets/files/architecture.json').subscribe(
-      (architecturesResponse: Architecture[]) => {
-        this.loadingArchitecture = false;
-        this.architectures = architecturesResponse;
-      },
-      (error) => {
-        this.loadingArchitecture = false;
-        console.error('invokeGetStudies', error);
-      }
-    );
-  }
+  // /**
+  //  * Consume service to recover the data on architecture.json local file
+  //  */
+  // private invokeGetArchitecture() {
+  //   this.loadingArchitecture = true;
+  //   this.filesService.getLocalFile('assets/files/architecture.json').subscribe(
+  //     (architecturesResponse: Architecture[]) => {
+  //       this.loadingArchitecture = false;
+  //       this.architectures = architecturesResponse;
+  //     },
+  //     (error) => {
+  //       this.loadingArchitecture = false;
+  //       console.error('invokeGetStudies', error);
+  //     }
+  //   );
+  // }
 
   // /**
   //  * Consume service to recover the data on images.json local file

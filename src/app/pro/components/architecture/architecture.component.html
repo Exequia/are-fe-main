@@ -6,7 +6,7 @@
 
 <div
   class="row"
-  *ngFor="let architecture of architectures"
+  *ngFor="let architecture of architectures | async"
   [attr.data-aos]="'zoom-out-up'"
 >
   <div class="col">
