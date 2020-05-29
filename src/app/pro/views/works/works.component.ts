@@ -12,6 +12,12 @@ interface Work {
   dateInit: Date;
   endDate: Date;
   role: string;
+  skills?: Skill[];
+}
+
+interface Skill {
+  id: string;
+  name: string;
 }
 
 @Component({

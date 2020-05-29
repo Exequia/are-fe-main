@@ -9,7 +9,54 @@
     "customerURL": "https://www.bancsabadell.com/cs/Satellite/SabAtl/",
     "dateInit": "2019-08-01T00:00:00.000Z",
     "endDate": "",
-    "role": "fullstack"
+    "role": "fullstack",
+    "skills": [
+      {
+        "id": 0,
+        "name": "Webcomponents",
+        "status": "default"
+      },
+      {
+        "id": 1,
+        "name": "Stencil",
+        "status": "default"
+      },
+      {
+        "id": 2,
+        "name": "Angular",
+        "status": "default"
+      },
+      {
+        "id": 3,
+        "name": "Jenkins",
+        "status": "default"
+      },
+      {
+        "id": 4,
+        "name": "API Rest",
+        "status": "default"
+      },
+      {
+        "id": 5,
+        "name": "SCRUM",
+        "status": "default"
+      },
+      {
+        "id": 6,
+        "name": "GIT",
+        "status": "default"
+      },
+      {
+        "id": 7,
+        "name": "BitBucket",
+        "status": "default"
+      },
+      {
+        "id": 8,
+        "name": "Team Lead",
+        "status": "default"
+      }
+    ]
   },
   {
     "id": 10,
@@ -21,7 +68,49 @@
     "customerURL": "",
     "dateInit": "2019-01-01T00:00:00.000Z",
     "endDate": "2019-08-01T00:00:00.000Z",
-    "role": "fullstack"
+    "role": "fullstack",
+    "skills": [
+      {
+        "id": 9,
+        "name": "Vue js",
+        "status": "default"
+      },
+      {
+        "id": 6,
+        "name": "GIT",
+        "status": "default"
+      },
+      {
+        "id": 10,
+        "name": "Azure DevOps",
+        "status": "default"
+      },
+      {
+        "id": 4,
+        "name": "API Rest",
+        "status": "default"
+      },
+      {
+        "id": 11,
+        "name": ".Net Core",
+        "status": "default"
+      },
+      {
+        "id": 8,
+        "name": "Team Lead",
+        "status": "default"
+      },
+      {
+        "id": 5,
+        "name": "SCRUM",
+        "status": "default"
+      },
+      {
+        "id": 18,
+        "name": "SQL SERVER",
+        "status": "default"
+      }
+    ]
   },
   {
     "id": 9,
@@ -33,7 +122,49 @@
     "customerURL": "https://www.allianz.es/seguros/landing/seguros-allianz?utm_source=google&utm_medium=cpc&utm_campaign=ES_ESP_S_TOP_Brand&utm_content=&utm_term=%2Ballianz&ramo=1115&utm_adgroup=TOP_Brand_Pura_Broad&gclid=EAIaIQobChMImZj86OLW6AIVh-d3Ch3ZKgegEAAYASAAEgL9E_D_BwE&gclsrc=aw.ds",
     "dateInit": "2018-07-01T00:00:00.000Z",
     "endDate": "2019-01-01T00:00:00.000Z",
-    "role": "fullstack"
+    "role": "fullstack",
+    "skills": [
+      {
+        "id": 2,
+        "name": "Angular",
+        "status": "default"
+      },
+      {
+        "id": 12,
+        "name": "Springboot",
+        "status": "default"
+      },
+      {
+        "id": 13,
+        "name": "Spring MVC",
+        "status": "default"
+      },
+      {
+        "id": 14,
+        "name": "Spring JPA",
+        "status": "default"
+      },
+      {
+        "id": 6,
+        "name": "GIT",
+        "status": "default"
+      },
+      {
+        "id": 8,
+        "name": "Team Lead",
+        "status": "default"
+      },
+      {
+        "id": 5,
+        "name": "SCRUM",
+        "status": "default"
+      },
+      {
+        "id": 17,
+        "name": "ORACLE",
+        "status": "default"
+      }
+    ]
   },
   {
     "id": 8,
@@ -45,7 +176,49 @@
     "customerURL": "",
     "dateInit": "2017-07-01T00:00:00.000Z",
     "endDate": "2018-07-01T00:00:00.000Z",
-    "role": "fullstack"
+    "role": "fullstack",
+    "skills": [
+      {
+        "id": 2,
+        "name": "Angular",
+        "status": "default"
+      },
+      {
+        "id": 12,
+        "name": "Springboot",
+        "status": "default"
+      },
+      {
+        "id": 13,
+        "name": "Spring MVC",
+        "status": "default"
+      },
+      {
+        "id": 14,
+        "name": "Spring JPA",
+        "status": "default"
+      },
+      {
+        "id": 8,
+        "name": "Team Lead",
+        "status": "default"
+      },
+      {
+        "id": 5,
+        "name": "SCRUM",
+        "status": "default"
+      },
+      {
+        "id": 15,
+        "name": "TFS",
+        "status": "default"
+      },
+      {
+        "id": 16,
+        "name": "Caché DB",
+        "status": "default"
+      }
+    ]
   },
   {
     "id": 7,
@@ -57,7 +230,39 @@
     "customerURL": "https://www.bancsabadell.com/cs/Satellite/SabAtl/",
     "dateInit": "2016-10-01T00:00:00.000Z",
     "endDate": "2017-07-01T00:00:00.000Z",
-    "role": "fullstack"
+    "role": "fullstack",
+    "skills": [
+      {
+        "id": 19,
+        "name": "J2EE",
+        "status": "default"
+      },
+      {
+        "id": 20,
+        "name": "Maven",
+        "status": "default"
+      },
+      {
+        "id": 21,
+        "name": "Java Swing",
+        "status": "default"
+      },
+      {
+        "id": 22,
+        "name": "Subversion",
+        "status": "default"
+      },
+      {
+        "id": 17,
+        "name": "ORACLE",
+        "status": "default"
+      },
+      {
+        "id": 8,
+        "name": "Team Lead",
+        "status": "default"
+      }
+    ]
   },
   {
     "id": 6,
@@ -69,7 +274,29 @@
     "customerURL": "https://www.bancsabadell.com/cs/Satellite/SabAtl/",
     "dateInit": "2016-07-01T00:00:00.000Z",
     "endDate": "2016-10-01T00:00:00.000Z",
-    "role": "fullstack"
+    "role": "fullstack",
+    "skills": [
+      {
+        "id": 19,
+        "name": "J2EE",
+        "status": "default"
+      },
+      {
+        "id": 20,
+        "name": "Maven",
+        "status": "default"
+      },
+      {
+        "id": 23,
+        "name": "J4Unit",
+        "status": "default"
+      },
+      {
+        "id": 17,
+        "name": "ORACLE",
+        "status": "default"
+      }
+    ]
   },
   {
     "id": 5,
@@ -81,7 +308,39 @@
     "customerURL": "https://www.bancsabadell.com/cs/Satellite/SabAtl/",
     "dateInit": "2016-05-01T00:00:00.000Z",
     "endDate": "2016-07-01T00:00:00.000Z",
-    "role": "fullstack"
+    "role": "fullstack",
+    "skills": [
+      {
+        "id": 19,
+        "name": "J2EE",
+        "status": "default"
+      },
+      {
+        "id": 20,
+        "name": "Maven",
+        "status": "default"
+      },
+      {
+        "id": 22,
+        "name": "Subversion",
+        "status": "default"
+      },
+      {
+        "id": 17,
+        "name": "ORACLE",
+        "status": "default"
+      },
+      {
+        "id": 23,
+        "name": "SOAP",
+        "status": "default"
+      },
+      {
+        "id": 24,
+        "name": "Axis",
+        "status": "default"
+      }
+    ]
   },
   {
     "id": 4,
@@ -93,7 +352,29 @@
     "customerURL": "https://www.mediamarkt.es/?ds_rl=1275860&ds_rl=1275860&gclid=EAIaIQobChMI2c3dmN_W6AIVB-d3Ch3KSQ9fEAAYASAAEgLnxPD_BwE&gclsrc=aw.ds",
     "dateInit": "2016-02-01T00:00:00.000Z",
     "endDate": "2016-05-01T00:00:00.000Z",
-    "role": "fullstack"
+    "role": "fullstack",
+    "skills": [
+      {
+        "id": 19,
+        "name": "J2EE",
+        "status": "default"
+      },
+      {
+        "id": 20,
+        "name": "Maven",
+        "status": "default"
+      },
+      {
+        "id": 6,
+        "name": "GIT",
+        "status": "default"
+      },
+      {
+        "id": 23,
+        "name": "SOAP",
+        "status": "default"
+      }
+    ]
   },
   {
     "id": 3,
@@ -105,7 +386,29 @@
     "customerURL": "https://www.disalfarm.com/",
     "dateInit": "2015-04-01T00:00:00.000Z",
     "endDate": "2016-02-01T00:00:00.000Z",
-    "role": "fullstack"
+    "role": "fullstack",
+    "skills": [
+      {
+        "id": 19,
+        "name": "J2EE",
+        "status": "default"
+      },
+      {
+        "id": 21,
+        "name": "Java Swing",
+        "status": "default"
+      },
+      {
+        "id": 17,
+        "name": "ORACLE",
+        "status": "default"
+      },
+      {
+        "id": 25,
+        "name": "PL/SQL",
+        "status": "default"
+      }
+    ]
   },
   {
     "id": 2,
@@ -117,7 +420,34 @@
     "customerURL": "https://atos.net/es/spain",
     "dateInit": "2014-04-01T00:00:00.000Z",
     "endDate": "2013-08-01T00:00:00.000Z",
-    "role": "fullstack"
+    "role": "fullstack",
+    "skills": [
+      {
+        "id": 19,
+        "name": "J2EE",
+        "status": "default"
+      },
+      {
+        "id": 21,
+        "name": "Java Swing",
+        "status": "default"
+      },
+      {
+        "id": 17,
+        "name": "ORACLE",
+        "status": "default"
+      },
+      {
+        "id": 18,
+        "name": "SQL SERVER",
+        "status": "default"
+      },
+      {
+        "id": 26,
+        "name": "MySQL",
+        "status": "default"
+      }
+    ]
   },
   {
     "id": 1,

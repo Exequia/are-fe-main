@@ -21,8 +21,8 @@
       <ng-template #studiesTemplate>
         <div class="content">
           <h4>
-            {{ item.dateInit | date: "MMMM yyyy":undefined:locale }} -
-            {{ item.endDate | date: "MMMM yyyy":undefined:locale }}
+            {{ item.dateInit | date: 'MMMM yyyy':undefined:locale }} -
+            {{ item.endDate | date: 'MMMM yyyy':undefined:locale }}
           </h4>
           <h5 [innerHTML]="'studies.' + item.key + '.title' | translate"></h5>
           <p
@@ -32,7 +32,7 @@
             {{ item.comments }}
           </p>
           <p *ngIf="item.qualify">
-            {{ "pro.timeLine.qualify" | translate }}: {{ item.qualify }}
+            {{ 'pro.timeLine.qualify' | translate }}: {{ item.qualify }}
           </p>
           <p *ngIf="item.link" class="text-right">
             <a
@@ -49,11 +49,11 @@
       <ng-template #worksTemplate>
         <div class="content text-capitalize">
           <h4>
-            {{ item.dateInit | date: "MMMM yyyy":undefined:locale }} -
-            {{ item.endDate | date: "MMMM yyyy":undefined:locale }}
+            {{ item.dateInit | date: 'MMMM yyyy':undefined:locale }} -
+            {{ item.endDate | date: 'MMMM yyyy':undefined:locale }}
           </h4>
           <h5 *ngIf="item.company">
-            {{ "pro.works.workingIn" | translate }}
+            {{ 'pro.works.workingIn' | translate }}
             <a
               *ngIf="item.company"
               [href]="item.companyUrl"
@@ -62,7 +62,7 @@
               >{{ item.company }}</a
             >
             <span *ngIf="item.customer">
-              {{ "pro.works.forCustomer" | translate }}
+              {{ 'pro.works.forCustomer' | translate }}
             </span>
             <a
               *ngIf="item.customer"
@@ -73,6 +73,16 @@
             >
           </h5>
           <p [innerHTML]="'works.' + item.key + '.description' | translate"></p>
+          <div *ngIf="item.skills">
+            <span
+              *ngFor="let skill of item.skills"
+              class="my-skill mr-2 badge badge-pill"
+              [ngClass]="getBackgroundColor(skill)"
+              (mouseenter)="selectSkill(skill)"
+              (click)="selectSkill(skill)"
+              >{{ skill.name }}</span
+            >
+          </div>
         </div>
       </ng-template>
 

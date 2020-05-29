@@ -1,4 +1,4 @@
-@import "../../../../assets/css/variables.scss";
+@import '../../../../assets/css/variables.scss';
 
 /* The actual timeline (the vertical ruler) */
 .timeline {
@@ -19,7 +19,7 @@
 
 /* The circles on the timeline */
 .h-line::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 6px;
   background-color: black;
@@ -32,7 +32,7 @@
 
 /* The circles on the timeline */
 .container::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 25px;
   height: 25px;
@@ -60,7 +60,7 @@
 
 /* Add arrows to the left container (pointing right) */
 .left::before {
-  content: " ";
+  content: ' ';
   height: 0;
   position: absolute;
   top: 22px;
@@ -74,7 +74,7 @@
 
 /* Add arrows to the right container (pointing left) */
 .right::before {
-  content: " ";
+  content: ' ';
   height: 0;
   position: absolute;
   top: 22px;
@@ -109,7 +109,7 @@
 
   /* The circles on the timeline */
   .h-line::after {
-    content: "";
+    content: '';
     position: absolute;
     width: 6px;
     background-color: black;
@@ -152,4 +152,8 @@
   .right {
     left: 0%;
   }
+}
+
+.my-skill {
+  cursor: pointer;
 }
