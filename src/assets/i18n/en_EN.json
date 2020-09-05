@@ -57,11 +57,11 @@
     "title": "Latest News",
     "gamesSection": {
       "title": "New Games section!",
-      "body": "A new games section is launched to implement more complex front features in the hope of making navigation easier"
+      "description": "A new games section is launched to implement more complex front features in the hope of making navigation easier"
     },
     "newWebsite": {
       "title": "Web launch",
-      "body": "The page is updated and opens with new technologies highlighting Angular 6 in the FrontEnd and Spring Microservices in Back End"
+      "description": "The page is updated and opens with new technologies highlighting Angular 6 in the FrontEnd and Spring Microservices in Back End"
     }
   },
   "pro": {
@@ -206,6 +206,18 @@
     "admin": {
       "title": "Administration and finances",
       "description": "Higher cycle of administration and finance. 2,500h"
+    },
+    "angularMaterial": {
+      "title": "Angular Material",
+      "description": "Course of the main fundamentals and components of Material to implement it in Angular projects"
+    },
+    "react": {
+      "title": "React JS",
+      "description": "Course on the main fundamentals of the React library for creating web applications"
+    },
+    "redux": {
+      "title": "Ng Redux",
+      "description": "Course on the use of the State pattern and the implementation of the Ng Redux library with examples in Angular applications"
     }
   },
   "works": {

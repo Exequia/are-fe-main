@@ -1,13 +1,6 @@
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-custom">
-  <button
-    class="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navBarMenu"
-    aria-controls="navBarMenu"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
+<nav class="navbar navbar-expand-md navbar-dark sticky-top bg-custom">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBarMenu"
+    aria-controls="navBarMenu" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
@@ -21,27 +14,15 @@
         </a>
       </li>
       <li class="nav-item dropdown" *ngFor="let menu of menus" routerLinkActive="active">
-        <a
-          class="nav-link dropdown-toggle"
-          role="button"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-          *ngIf="checkCredentials(menu)"
-          ><i class="fas {{ menu.icon }}"></i>
+        <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false" *ngIf="checkCredentials(menu)"><i class="fas {{ menu.icon }}"></i>
           {{ 'template.navbar.' + menu.key + '.title' | translate }}
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a
-            class="dropdown-item"
-            *ngFor="let item of menu.items"
-            [routerLink]="'/' + menu.link + '/' + item.link"
-            routerLinkActive="active"
-            (click)="closeNavBarMenu()"
-          >
+          <a class="dropdown-item" *ngFor="let item of menu.items" [routerLink]="'/' + menu.link + '/' + item.link"
+            routerLinkActive="active" (click)="closeNavBarMenu()">
             <i class="{{ item.icon }}"></i>
-            {{ 'template.navbar.' + menu.key + '.' + item.key | translate }}</a
-          >
+            {{ 'template.navbar.' + menu.key + '.' + item.key | translate }}</a>
         </div>
       </li>
     </ul>
@@ -51,8 +32,7 @@
         <li class="nav-item" *ngIf="!user">
           <a class="nav-link" routerLink="/users/login" routerLinkActive="active" (click)="closeNavBarMenu()">
             {{ 'template.navbar.login' | translate }}
-            <i class="fas fa-sign-in-alt"></i
-          ></a>
+            <i class="fas fa-sign-in-alt"></i></a>
         </li>
         <li class="nav-item" *ngIf="user">
           <a class="nav-link" routerLink="/users/update" routerLinkActive="active" (click)="closeNavBarMenu()">

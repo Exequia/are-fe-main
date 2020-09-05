@@ -1,17 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 /* Show it is fixed to the top */
 body {
-  padding-top: 3.5rem;
+  // padding-top: 3.5rem;
 }
 
 // .ng-valid[required],
 // .ng-valid.required {
 .ng-valid:not(form) .ng-valid:not(ngb-datepicker) {
-  border-left: 5px solid #42a948 !important; /* green */
+  border-left: 5px solid #42a948 !important;
+  /* green */
 }
 
 .ng-invalid:not(form) {
-  border-left: 5px solid #a94442 !important; /* red */
+  border-left: 5px solid #a94442 !important;
+  /* red */
 }
 
 .form-error {
@@ -20,6 +22,6 @@ body {
   z-index: 10 !important;
 }
 
-fieldset > legend {
+fieldset>legend {
   text-decoration: underline;
 }

@@ -1,0 +1,72 @@
+[
+  {
+    "id": 13,
+    "name": "Amazon Web Services",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1200px-Amazon_Web_Services_Logo.svg.png"
+  },
+  {
+    "id": 12,
+    "name": "Digital Ocean",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/DigitalOcean_logo.svg/1200px-DigitalOcean_logo.svg.png"
+  },
+  {
+    "id": 11,
+    "name": "Angular",
+    "src": "https://angular.io/assets/images/logos/angular/angular.svg"
+  },
+  {
+    "id": 10,
+    "name": "Vue",
+    "src": "https://vuejs.org/images/logo.png"
+  },
+  {
+    "id": 9,
+    "name": "PHP",
+    "src": "//upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/200px-PHP-logo.svg.png"
+  },
+  {
+    "id": 8,
+    "name": "python",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png"
+  },
+  {
+    "id": 7,
+    "name": "Java EE",
+    "src": "http://www.manualweb.net/img/logos/javaee.png"
+  },
+  {
+    "id": 6,
+    "name": "dot net",
+    "src": "https://dotnet.microsoft.com/static/images/redesign/downloads-dot-net-core.svg?v=U_8I9gzFF2Cqi5zUNx-kHJuou_BWNurkhN_kSm3mCmo"
+  },
+  {
+    "id": 5,
+    "name": "Oracle",
+    "src": "https://i1.wp.com/unaaldia.hispasec.com/wp-content/uploads/2019/01/oracle-logo.png?fit=1024%2C559&ssl=1"
+  },
+  {
+    "id": 4,
+    "name": "SQL Server",
+    "src": "https://www.abd.es/wp-content/uploads/2018/11/sql-server-logo.png"
+  },
+  {
+    "id": 3,
+    "name": "MySQL",
+    "src": "https://banner2.cleanpng.com/20180803/abq/kisspng-mysql-cluster-database-management-system-%E4%B8%93-%E9%A2%98-%E5%92%96-%E5%95%A1-%E4%B8%8E-%E4%BB%A3-%E7%A0%81-5b640d8b2a2e53.6067051415332837231728.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Mongo DB",
+    "src": "https://img.favpng.com/12/9/4/mongodb-logo-database-nosql-postgresql-png-favpng-mcEPKatsp6vtFjnFRhApvc5Z5.jpg"
+  },
+  {
+    "id": 1,
+    "name": "Exist DB",
+    "src": "http://exist-db.org/exist/apps/homepage/resources/img/existdb.gif"
+  },
+  {
+    "id": 0,
+    "name": "Caché",
+    "src": "http://www.computing.es/siteresources/files/684/19.jpg"
+  }
+]

@@ -57,18 +57,18 @@
     "title": "Últimes Noticies",
     "gamesSection": {
       "title": "¡Nueva secció Jocs!",
-      "body": "S’inicia una nova secció de jocs per a implementar funcionalitats front més complexes amb la esperança de amenitzar la navegació"
+      "description": "S’inicia una nova secció de jocs per a implementar funcionalitats front més complexes amb la esperança de amenitzar la navegació"
     },
     "newWebsite": {
       "title": "Inauguració  web",
-      "body": "S’actualitza la pàgina i amb noves tecnologies destacant Angular 8 en el Frontend i Microserveis Java al Backend"
+      "description": "S’actualitza la pàgina i amb noves tecnologies destacant Angular 8 en el Frontend i Microserveis Java al Backend"
     }
   },
   "pro": {
     "architecture": {
       "title": "Arquitectura de les aplicacions",
       "cloud": {
-        "title": "núvol",
+        "title": "Núvol",
         "summary": "S’ofereix (i es recomana) l’allotjament de les aplicació 'al núvol' (o cloud).<br/>'El núvol' és un espai virtual on instal·larem i emmagatzerem tot el necessari per a les nostres aplicacions. Així només caldrà disposar d’una connexió a internet per accedir a les nostres aplicacions des de qualsevol part del mon i amb qualsevol dispositiu amb connexió a internet (mòbil, PC, Tablet, etc)."
       },
       "front": {
@@ -206,6 +206,18 @@
     "admin": {
       "title": "Administració i finances",
       "description": "Cicle superior d'administración i finances. 2,500h"
+    },
+    "angularMaterial": {
+      "title": "Angular Material",
+      "description": "Curs dels principals fonaments i components de Material per a implementar-los a projectes Angular"
+    },
+    "react": {
+      "title": "React JS",
+      "description": "Curs dels principals fonaments de la llibreria React per a creació d'aplicacions web"
+    },
+    "redux": {
+      "title": "Ng Redux",
+      "description": "Curs del patró d'Estats i la implementació de la llibreria Ng Redux amb exemples en aplicaciones Angular"
     }
   },
   "works": {
